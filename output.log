@@ -1,0 +1,413 @@
+INFO    -  Building documentation...
+INFO    -  Cleaning site directory
+INFO    -  Documentation built in 0.27 seconds
+INFO    -  [09:55:16] Watching paths for changes: 'docs', 'mkdocs.yml'
+INFO    -  [09:55:16] Serving on http://127.0.0.1:8000/
+INFO    -  [09:55:22] Browser connected: http://127.0.0.1:8000/
+INFO    -  [10:16:36] Detected file changes
+INFO    -  Building documentation...
+INFO    -  Documentation built in 0.30 seconds
+INFO    -  [10:16:36] Reloading browsers
+INFO    -  [10:16:37] Browser connected: http://127.0.0.1:8000/
+INFO    -  [10:16:46] Detected file changes
+INFO    -  Building documentation...
+INFO    -  Documentation built in 0.22 seconds
+INFO    -  [10:16:46] Reloading browsers
+INFO    -  [10:16:46] Browser connected: http://127.0.0.1:8000/
+INFO    -  [10:16:58] Detected file changes
+INFO    -  Building documentation...
+INFO    -  Documentation built in 0.23 seconds
+INFO    -  [10:16:59] Reloading browsers
+INFO    -  [10:16:59] Browser connected: http://127.0.0.1:8000/
+INFO    -  [10:18:44] Detected file changes
+INFO    -  Building documentation...
+INFO    -  [10:18:44] Reloading browsers
+INFO    -  [10:18:44] Browser connected: http://127.0.0.1:8000/
+INFO    -  [10:19:10] Detected file changes
+INFO    -  Building documentation...
+INFO    -  [10:19:11] Reloading browsers
+INFO    -  [10:19:11] Browser connected: http://127.0.0.1:8000/
+INFO    -  [10:28:25] Detected file changes
+INFO    -  Building documentation...
+INFO    -  Documentation built in 0.29 seconds
+INFO    -  [10:28:25] Reloading browsers
+INFO    -  [10:28:26] Browser connected: http://127.0.0.1:8000/
+INFO    -  [10:28:39] Detected file changes
+INFO    -  Building documentation...
+INFO    -  [10:28:39] Reloading browsers
+INFO    -  [10:28:40] Browser connected: http://127.0.0.1:8000/
+INFO    -  [10:28:53] Detected file changes
+INFO    -  Building documentation...
+INFO    -  [10:28:54] Reloading browsers
+INFO    -  [10:29:00] Detected file changes
+INFO    -  Building documentation...
+INFO    -  [10:29:00] Reloading browsers
+INFO    -  [10:29:01] Browser connected: http://127.0.0.1:8000/
+INFO    -  [10:31:58] Detected file changes
+INFO    -  Building documentation...
+INFO    -  [10:31:58] Reloading browsers
+INFO    -  [10:31:58] Browser connected: http://127.0.0.1:8000/
+INFO    -  [10:33:30] Detected file changes
+INFO    -  Building documentation...
+INFO    -  [10:33:30] Reloading browsers
+INFO    -  [10:33:32] Browser connected: http://127.0.0.1:8000/
+INFO    -  [10:33:57] Detected file changes
+INFO    -  Building documentation...
+INFO    -  [10:33:57] Reloading browsers
+INFO    -  [10:33:57] Browser connected: http://127.0.0.1:8000/
+INFO    -  [10:36:20] Detected file changes
+INFO    -  Building documentation...
+INFO    -  [10:36:21] Reloading browsers
+INFO    -  [10:36:48] Detected file changes
+INFO    -  Building documentation...
+INFO    -  [10:36:48] Reloading browsers
+INFO    -  [10:36:49] Browser connected: http://127.0.0.1:8000/
+INFO    -  [10:37:31] Detected file changes
+INFO    -  Building documentation...
+INFO    -  Documentation built in 0.31 seconds
+INFO    -  [10:37:32] Reloading browsers
+INFO    -  [10:37:34] Browser connected: http://127.0.0.1:8000/
+INFO    -  [10:38:15] Detected file changes
+INFO    -  Building documentation...
+INFO    -  [10:38:16] Reloading browsers
+INFO    -  [10:38:16] Browser connected: http://127.0.0.1:8000/
+INFO    -  [10:40:39] Detected file changes
+INFO    -  Building documentation...
+INFO    -  Documentation built in 0.33 seconds
+INFO    -  [10:40:39] Reloading browsers
+INFO    -  [10:40:40] Browser connected: http://127.0.0.1:8000/
+INFO    -  [10:43:59] Detected file changes
+INFO    -  Building documentation...
+INFO    -  [10:44:00] Reloading browsers
+INFO    -  [10:44:01] Browser connected: http://127.0.0.1:8000/
+INFO    -  [10:45:09] Detected file changes
+INFO    -  Building documentation...
+INFO    -  [10:45:09] Reloading browsers
+INFO    -  [10:45:13] Browser connected: http://127.0.0.1:8000/
+INFO    -  [10:45:49] Detected file changes
+INFO    -  Building documentation...
+INFO    -  [10:45:49] Reloading browsers
+INFO    -  [10:46:08] Detected file changes
+INFO    -  Building documentation...
+INFO    -  [10:46:09] Reloading browsers
+INFO    -  [10:46:11] Browser connected: http://127.0.0.1:8000/
+INFO    -  [10:46:37] Detected file changes
+INFO    -  Building documentation...
+INFO    -  Documentation built in 0.25 seconds
+INFO    -  [10:46:37] Reloading browsers
+INFO    -  [10:46:37] Browser connected: http://127.0.0.1:8000/
+INFO    -  [10:47:44] Detected file changes
+INFO    -  Building documentation...
+INFO    -  [10:47:45] Reloading browsers
+INFO    -  [10:47:45] Browser connected: http://127.0.0.1:8000/
+INFO    -  [10:48:11] Detected file changes
+INFO    -  Building documentation...
+INFO    -  [10:48:11] Reloading browsers
+INFO    -  [10:48:12] Browser connected: http://127.0.0.1:8000/
+INFO    -  [10:48:34] Detected file changes
+INFO    -  Building documentation...
+INFO    -  [10:48:34] Reloading browsers
+INFO    -  [10:48:35] Browser connected: http://127.0.0.1:8000/
+INFO    -  [10:48:48] Detected file changes
+INFO    -  Building documentation...
+INFO    -  Documentation built in 0.24 seconds
+INFO    -  [10:48:48] Reloading browsers
+INFO    -  [10:48:48] Browser connected: http://127.0.0.1:8000/
+INFO    -  [10:49:11] Detected file changes
+INFO    -  Building documentation...
+INFO    -  [10:49:11] Reloading browsers
+INFO    -  [10:49:12] Browser connected: http://127.0.0.1:8000/
+INFO    -  [10:49:22] Detected file changes
+INFO    -  Building documentation...
+INFO    -  [10:49:22] Reloading browsers
+INFO    -  [10:49:23] Browser connected: http://127.0.0.1:8000/
+INFO    -  [10:49:32] Detected file changes
+INFO    -  Building documentation...
+INFO    -  [10:49:33] Reloading browsers
+INFO    -  [10:49:33] Browser connected: http://127.0.0.1:8000/
+INFO    -  [10:50:49] Detected file changes
+INFO    -  Building documentation...
+INFO    -  [10:50:49] Reloading browsers
+INFO    -  [10:50:50] Browser connected: http://127.0.0.1:8000/
+INFO    -  [10:51:10] Detected file changes
+INFO    -  Building documentation...
+INFO    -  [10:51:11] Reloading browsers
+INFO    -  [10:51:11] Browser connected: http://127.0.0.1:8000/
+INFO    -  [10:52:44] Detected file changes
+INFO    -  Building documentation...
+INFO    -  [10:52:44] Reloading browsers
+INFO    -  [10:52:45] Browser connected: http://127.0.0.1:8000/
+INFO    -  [10:53:25] Detected file changes
+INFO    -  Building documentation...
+INFO    -  [10:53:25] Reloading browsers
+INFO    -  [10:53:26] Browser connected: http://127.0.0.1:8000/
+INFO    -  [10:54:14] Detected file changes
+INFO    -  Building documentation...
+INFO    -  [10:54:14] Reloading browsers
+INFO    -  [10:54:15] Browser connected: http://127.0.0.1:8000/
+INFO    -  [10:54:30] Detected file changes
+INFO    -  Building documentation...
+INFO    -  [10:54:31] Reloading browsers
+INFO    -  [10:54:32] Browser connected: http://127.0.0.1:8000/
+INFO    -  [10:54:52] Detected file changes
+INFO    -  Building documentation...
+INFO    -  Documentation built in 0.28 seconds
+INFO    -  [10:54:52] Reloading browsers
+INFO    -  [10:54:53] Browser connected: http://127.0.0.1:8000/
+INFO    -  [10:55:04] Detected file changes
+INFO    -  Building documentation...
+INFO    -  [10:55:04] Reloading browsers
+INFO    -  [10:55:06] Browser connected: http://127.0.0.1:8000/
+INFO    -  [10:55:59] Detected file changes
+INFO    -  Building documentation...
+INFO    -  Documentation built in 0.32 seconds
+INFO    -  [10:56:00] Reloading browsers
+INFO    -  [10:56:00] Browser connected: http://127.0.0.1:8000/
+INFO    -  [10:57:57] Detected file changes
+INFO    -  Building documentation...
+INFO    -  [10:57:58] Reloading browsers
+INFO    -  [10:57:58] Browser connected: http://127.0.0.1:8000/
+INFO    -  [10:58:04] Detected file changes
+INFO    -  Building documentation...
+INFO    -  [10:58:04] Reloading browsers
+INFO    -  [10:58:05] Browser connected: http://127.0.0.1:8000/
+INFO    -  [10:58:43] Detected file changes
+INFO    -  Building documentation...
+INFO    -  [10:58:43] Reloading browsers
+INFO    -  [10:58:44] Browser connected: http://127.0.0.1:8000/
+INFO    -  [11:02:04] Detected file changes
+INFO    -  Building documentation...
+INFO    -  [11:02:04] Reloading browsers
+INFO    -  [11:02:05] Browser connected: http://127.0.0.1:8000/
+INFO    -  [11:05:25] Detected file changes
+INFO    -  Building documentation...
+INFO    -  [11:05:25] Reloading browsers
+INFO    -  [11:05:26] Browser connected: http://127.0.0.1:8000/
+INFO    -  [11:05:45] Detected file changes
+INFO    -  Building documentation...
+INFO    -  [11:05:45] Reloading browsers
+INFO    -  [11:05:46] Browser connected: http://127.0.0.1:8000/
+INFO    -  [11:06:03] Detected file changes
+INFO    -  Building documentation...
+INFO    -  [11:06:03] Reloading browsers
+INFO    -  [11:06:04] Browser connected: http://127.0.0.1:8000/
+INFO    -  [11:08:14] Detected file changes
+INFO    -  Building documentation...
+INFO    -  [11:08:14] Reloading browsers
+INFO    -  [11:08:20] Browser connected: http://127.0.0.1:8000/
+INFO    -  [11:08:48] Detected file changes
+INFO    -  Building documentation...
+INFO    -  [11:08:48] Reloading browsers
+INFO    -  [11:08:49] Browser connected: http://127.0.0.1:8000/
+INFO    -  [11:10:07] Detected file changes
+INFO    -  Building documentation...
+INFO    -  [11:10:08] Reloading browsers
+INFO    -  [11:10:09] Browser connected: http://127.0.0.1:8000/
+INFO    -  [11:10:45] Detected file changes
+INFO    -  Building documentation...
+INFO    -  [11:10:45] Reloading browsers
+INFO    -  [11:10:46] Browser connected: http://127.0.0.1:8000/
+INFO    -  [11:10:55] Detected file changes
+INFO    -  Building documentation...
+INFO    -  [11:10:56] Reloading browsers
+INFO    -  [11:10:56] Browser connected: http://127.0.0.1:8000/
+INFO    -  [11:11:21] Detected file changes
+INFO    -  Building documentation...
+INFO    -  [11:11:21] Reloading browsers
+INFO    -  [11:11:22] Browser connected: http://127.0.0.1:8000/
+INFO    -  [11:11:31] Detected file changes
+INFO    -  Building documentation...
+INFO    -  [11:11:31] Reloading browsers
+INFO    -  [11:11:59] Detected file changes
+INFO    -  Building documentation...
+INFO    -  [11:11:59] Reloading browsers
+INFO    -  [11:12:00] Browser connected: http://127.0.0.1:8000/
+INFO    -  [11:12:27] Detected file changes
+INFO    -  Building documentation...
+INFO    -  [11:12:27] Reloading browsers
+INFO    -  [11:12:28] Browser connected: http://127.0.0.1:8000/
+INFO    -  [11:12:46] Detected file changes
+INFO    -  Building documentation...
+INFO    -  [11:12:47] Reloading browsers
+INFO    -  [11:12:47] Browser connected: http://127.0.0.1:8000/
+INFO    -  [11:13:56] Detected file changes
+INFO    -  Building documentation...
+INFO    -  [11:13:56] Reloading browsers
+INFO    -  [11:13:57] Browser connected: http://127.0.0.1:8000/
+INFO    -  [11:14:15] Detected file changes
+INFO    -  Building documentation...
+INFO    -  [11:14:15] Reloading browsers
+INFO    -  [11:14:16] Browser connected: http://127.0.0.1:8000/
+INFO    -  [11:14:42] Detected file changes
+INFO    -  Building documentation...
+INFO    -  [11:14:43] Reloading browsers
+INFO    -  [11:14:43] Browser connected: http://127.0.0.1:8000/
+INFO    -  [11:15:22] Detected file changes
+INFO    -  Building documentation...
+INFO    -  [11:15:22] Reloading browsers
+INFO    -  [11:15:22] Browser connected: http://127.0.0.1:8000/
+INFO    -  [11:15:42] Detected file changes
+INFO    -  Building documentation...
+INFO    -  [11:15:43] Reloading browsers
+INFO    -  [11:15:43] Browser connected: http://127.0.0.1:8000/
+INFO    -  [11:16:14] Detected file changes
+INFO    -  Building documentation...
+INFO    -  [11:16:14] Reloading browsers
+INFO    -  [11:16:15] Browser connected: http://127.0.0.1:8000/
+INFO    -  [11:16:29] Detected file changes
+INFO    -  Building documentation...
+INFO    -  [11:16:29] Reloading browsers
+INFO    -  [11:16:30] Browser connected: http://127.0.0.1:8000/
+INFO    -  [11:17:43] Detected file changes
+INFO    -  Building documentation...
+INFO    -  [11:17:43] Reloading browsers
+INFO    -  [11:17:44] Browser connected: http://127.0.0.1:8000/
+INFO    -  [11:18:29] Detected file changes
+INFO    -  Building documentation...
+INFO    -  [11:18:30] Reloading browsers
+INFO    -  [11:18:30] Browser connected: http://127.0.0.1:8000/
+INFO    -  [12:19:06] Detected file changes
+INFO    -  Building documentation...
+INFO    -  [12:19:06] Reloading browsers
+INFO    -  [12:19:08] Browser connected: http://127.0.0.1:8000/
+INFO    -  [12:20:32] Detected file changes
+INFO    -  Building documentation...
+INFO    -  [12:20:33] Reloading browsers
+INFO    -  [12:20:34] Browser connected: http://127.0.0.1:8000/
+INFO    -  [12:20:54] Detected file changes
+INFO    -  Building documentation...
+INFO    -  [12:20:55] Reloading browsers
+INFO    -  [12:20:55] Browser connected: http://127.0.0.1:8000/
+INFO    -  [12:24:34] Detected file changes
+INFO    -  Building documentation...
+INFO    -  [12:24:35] Reloading browsers
+INFO    -  [12:24:37] Browser connected: http://127.0.0.1:8000/
+INFO    -  [12:27:00] Detected file changes
+INFO    -  Building documentation...
+INFO    -  [12:27:00] Reloading browsers
+INFO    -  [12:27:11] Browser connected: http://127.0.0.1:8000/
+INFO    -  [12:32:55] Detected file changes
+INFO    -  Building documentation...
+INFO    -  [12:32:55] Reloading browsers
+INFO    -  [12:32:58] Browser connected: http://127.0.0.1:8000/
+INFO    -  [12:33:41] Detected file changes
+INFO    -  Building documentation...
+INFO    -  [12:33:41] Reloading browsers
+INFO    -  [12:33:42] Browser connected: http://127.0.0.1:8000/
+INFO    -  [12:36:35] Detected file changes
+INFO    -  Building documentation...
+INFO    -  [12:36:36] Reloading browsers
+INFO    -  [12:36:36] Browser connected: http://127.0.0.1:8000/
+INFO    -  [12:41:10] Detected file changes
+INFO    -  Building documentation...
+INFO    -  [12:41:11] Reloading browsers
+INFO    -  [12:41:36] Detected file changes
+INFO    -  Building documentation...
+INFO    -  [12:41:36] Reloading browsers
+INFO    -  [12:41:40] Browser connected: http://127.0.0.1:8000/
+INFO    -  [12:50:01] Detected file changes
+INFO    -  Building documentation...
+INFO    -  [12:50:01] Reloading browsers
+INFO    -  [12:50:02] Browser connected: http://127.0.0.1:8000/
+INFO    -  [12:51:14] Detected file changes
+INFO    -  Building documentation...
+INFO    -  [12:51:15] Reloading browsers
+INFO    -  [12:51:16] Detected file changes
+INFO    -  Building documentation...
+INFO    -  [12:51:17] Reloading browsers
+INFO    -  [12:51:17] Browser connected: http://127.0.0.1:8000/
+INFO    -  [12:51:20] Browser connected: http://127.0.0.1:8000/
+INFO    -  [12:53:09] Detected file changes
+INFO    -  Building documentation...
+INFO    -  [12:53:10] Reloading browsers
+INFO    -  [12:53:14] Browser connected: http://127.0.0.1:8000/
+INFO    -  [12:55:25] Detected file changes
+INFO    -  Building documentation...
+INFO    -  [12:55:25] Reloading browsers
+INFO    -  [12:55:26] Browser connected: http://127.0.0.1:8000/
+INFO    -  [12:56:53] Detected file changes
+INFO    -  Building documentation...
+INFO    -  [12:56:53] Reloading browsers
+INFO    -  [12:56:54] Browser connected: http://127.0.0.1:8000/
+INFO    -  [13:00:11] Detected file changes
+INFO    -  Building documentation...
+INFO    -  [13:00:12] Reloading browsers
+INFO    -  [13:00:14] Browser connected: http://127.0.0.1:8000/
+INFO    -  [13:09:09] Browser connected: http://127.0.0.1:8000/
+INFO    -  [13:37:54] Browser connected: http://127.0.0.1:8000/
+INFO    -  [16:47:54] Browser connected: http://127.0.0.1:8000/
+INFO    -  [11:01:41] Detected file changes
+INFO    -  Building documentation...
+INFO    -  [11:01:42] Reloading browsers
+INFO    -  [11:01:47] Browser connected: http://127.0.0.1:8000/
+WARNING -  [11:01:47] "GET /apple-touch-icon-precomposed.png HTTP/1.1" code 404
+WARNING -  [11:01:47] "GET /apple-touch-icon.png HTTP/1.1" code 404
+INFO    -  [11:02:40] Detected file changes
+INFO    -  Building documentation...
+INFO    -  [11:02:40] Reloading browsers
+INFO    -  [11:02:41] Browser connected: http://127.0.0.1:8000/
+INFO    -  [11:03:55] Detected file changes
+INFO    -  Building documentation...
+INFO    -  Documentation built in 0.21 seconds
+INFO    -  [11:03:55] Reloading browsers
+INFO    -  [11:03:56] Browser connected: http://127.0.0.1:8000/
+INFO    -  [11:04:04] Detected file changes
+INFO    -  Building documentation...
+INFO    -  [11:04:04] Reloading browsers
+INFO    -  [11:04:04] Browser connected: http://127.0.0.1:8000/
+INFO    -  [11:04:13] Detected file changes
+INFO    -  Building documentation...
+INFO    -  Documentation built in 0.20 seconds
+INFO    -  [11:04:13] Reloading browsers
+INFO    -  [11:04:14] Browser connected: http://127.0.0.1:8000/
+INFO    -  [11:04:29] Detected file changes
+INFO    -  Building documentation...
+INFO    -  [11:04:29] Reloading browsers
+INFO    -  [11:04:30] Browser connected: http://127.0.0.1:8000/
+INFO    -  [11:04:39] Detected file changes
+INFO    -  Building documentation...
+INFO    -  [11:04:40] Reloading browsers
+INFO    -  [11:04:40] Browser connected: http://127.0.0.1:8000/
+INFO    -  [11:13:03] Detected file changes
+INFO    -  Building documentation...
+INFO    -  [11:13:04] Reloading browsers
+INFO    -  [11:13:04] Browser connected: http://127.0.0.1:8000/
+INFO    -  [11:13:29] Detected file changes
+INFO    -  Building documentation...
+INFO    -  [11:13:29] Reloading browsers
+INFO    -  [11:13:30] Browser connected: http://127.0.0.1:8000/
+INFO    -  [11:13:37] Detected file changes
+INFO    -  Building documentation...
+INFO    -  [11:13:38] Reloading browsers
+INFO    -  [11:13:39] Browser connected: http://127.0.0.1:8000/
+INFO    -  [11:15:53] Detected file changes
+INFO    -  Building documentation...
+INFO    -  [11:15:53] Reloading browsers
+INFO    -  [11:15:54] Browser connected: http://127.0.0.1:8000/
+INFO    -  [11:23:28] Detected file changes
+INFO    -  Building documentation...
+INFO    -  [11:23:29] Reloading browsers
+INFO    -  [11:23:30] Browser connected: http://127.0.0.1:8000/
+INFO    -  [11:33:36] Detected file changes
+INFO    -  Building documentation...
+INFO    -  [11:33:37] Reloading browsers
+INFO    -  [11:33:37] Browser connected: http://127.0.0.1:8000/
+INFO    -  [11:33:55] Detected file changes
+INFO    -  Building documentation...
+INFO    -  [11:33:56] Reloading browsers
+INFO    -  [11:33:56] Browser connected: http://127.0.0.1:8000/
+INFO    -  [11:37:53] Detected file changes
+INFO    -  Building documentation...
+INFO    -  [11:37:53] Reloading browsers
+INFO    -  [11:37:54] Browser connected: http://127.0.0.1:8000/
+INFO    -  [11:47:12] Detected file changes
+INFO    -  Building documentation...
+INFO    -  [11:47:12] Reloading browsers
+INFO    -  [11:47:13] Browser connected: http://127.0.0.1:8000/
+INFO    -  [11:52:31] Detected file changes
+INFO    -  Building documentation...
+INFO    -  [11:52:32] Reloading browsers
+INFO    -  [12:00:29] Detected file changes
+INFO    -  Building documentation...
+INFO    -  [12:00:30] Reloading browsers
+INFO    -  [12:00:31] Browser connected: http://127.0.0.1:8000/
