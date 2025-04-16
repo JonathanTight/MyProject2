@@ -1,0 +1,156 @@
+INFO    -  Building documentation...
+INFO    -  Cleaning site directory
+INFO    -  Documentation built in 0.04 seconds
+INFO    -  [10:53:33] Watching paths for changes: 'docs', 'mkdocs.yml'
+INFO    -  [10:53:33] Serving on http://127.0.0.1:8000/
+INFO    -  [10:53:41] Browser connected: http://127.0.0.1:8000/
+INFO    -  [10:53:47] Browser connected: http://127.0.0.1:8000/
+INFO    -  [10:53:48] Browser connected: http://127.0.0.1:8000/
+INFO    -  [10:59:02] Detected file changes
+INFO    -  Building documentation...
+INFO    -  Documentation built in 0.07 seconds
+INFO    -  [10:59:02] Reloading browsers
+INFO    -  [10:59:06] Detected file changes
+INFO    -  Building documentation...
+INFO    -  [10:59:06] Reloading browsers
+INFO    -  [11:40:17] Browser connected: http://127.0.0.1:8000/
+INFO    -  [11:40:24] Browser connected: http://127.0.0.1:8000/
+INFO    -  [11:54:38] Browser connected: http://127.0.0.1:8000/
+INFO    -  [11:55:16] Detected file changes
+INFO    -  Building documentation...
+INFO    -  [11:55:16] Reloading browsers
+INFO    -  [11:55:16] Browser connected: http://127.0.0.1:8000/
+INFO    -  [12:02:24] Detected file changes
+INFO    -  Building documentation...
+ERROR   -  Config value 'theme': Unrecognised theme name: 'material'. The available installed themes are: mkdocs, readthedocs
+Aborted with a configuration error!
+ERROR   -  [12:02:25] An error happened during the rebuild. The server will appear stuck until build errors are resolved.
+INFO    -  [12:02:54] Detected file changes
+INFO    -  Building documentation...
+ERROR   -  Config value 'theme': Unrecognised theme name: 'material'. The available installed themes are: mkdocs, readthedocs
+Aborted with a configuration error!
+ERROR   -  [12:02:54] An error happened during the rebuild. The server will appear stuck until build errors are resolved.
+INFO    -  [12:16:19] Detected file changes
+INFO    -  Building documentation...
+INFO    -  Documentation built in 0.09 seconds
+INFO    -  [12:16:19] Reloading browsers
+INFO    -  [12:16:20] Browser connected: http://127.0.0.1:8000/
+INFO    -  [12:16:21] Browser connected: http://127.0.0.1:8000/
+INFO    -  [12:16:26] Detected file changes
+INFO    -  Building documentation...
+INFO    -  Documentation built in 0.24 seconds
+INFO    -  [12:16:26] Reloading browsers
+INFO    -  [12:16:27] Browser connected: http://127.0.0.1:8000/
+INFO    -  [12:17:01] Detected file changes
+INFO    -  Building documentation...
+INFO    -  Documentation built in 0.08 seconds
+INFO    -  [12:17:01] Reloading browsers
+INFO    -  [12:17:02] Browser connected: http://127.0.0.1:8000/
+INFO    -  [12:17:07] Detected file changes
+INFO    -  Building documentation...
+INFO    -  [12:17:07] Reloading browsers
+INFO    -  [12:17:08] Browser connected: http://127.0.0.1:8000/
+INFO    -  [12:19:36] Browser connected: http://127.0.0.1:8000/
+INFO    -  [12:22:41] Browser connected: http://127.0.0.1:8000/
+INFO    -  [12:23:29] Browser connected: http://127.0.0.1:8000/
+INFO    -  [12:25:10] Browser connected: http://127.0.0.1:8000/
+INFO    -  [12:25:30] Browser connected: http://127.0.0.1:8000/
+INFO    -  [12:25:33] Browser connected: http://127.0.0.1:8000/
+INFO    -  [12:25:56] Detected file changes
+INFO    -  Building documentation...
+ERROR   -  Config value 'theme': Unrecognised theme name: 'custommill'. The available installed themes are: mkdocs, readthedocs, material
+Aborted with a configuration error!
+ERROR   -  [12:25:56] An error happened during the rebuild. The server will appear stuck until build errors are resolved.
+INFO    -  [12:26:00] Detected file changes
+INFO    -  Building documentation...
+ERROR   -  Config value 'theme': Unrecognised theme name: 'custommill'. The available installed themes are: mkdocs, readthedocs, material
+Aborted with a configuration error!
+ERROR   -  [12:26:00] An error happened during the rebuild. The server will appear stuck until build errors are resolved.
+INFO    -  [12:26:41] Detected file changes
+INFO    -  Building documentation...
+ERROR   -  Config value 'theme': Unrecognised theme name: 'CustomMill'. The available installed themes are: mkdocs, readthedocs, material
+Aborted with a configuration error!
+ERROR   -  [12:26:41] An error happened during the rebuild. The server will appear stuck until build errors are resolved.
+INFO    -  [12:26:59] Detected file changes
+INFO    -  Building documentation...
+INFO    -  [12:26:59] Reloading browsers
+INFO    -  [12:27:01] Browser connected: http://127.0.0.1:8000/
+INFO    -  [12:27:02] Browser connected: http://127.0.0.1:8000/
+INFO    -  [12:27:10] Detected file changes
+INFO    -  Building documentation...
+ERROR   -  Config value 'theme': Unrecognised theme name: 'CustomMill'. The available installed themes are: mkdocs, readthedocs, material
+Aborted with a configuration error!
+ERROR   -  [12:27:10] An error happened during the rebuild. The server will appear stuck until build errors are resolved.
+INFO    -  [12:30:09] Detected file changes
+INFO    -  Building documentation...
+INFO    -  Documentation built in 0.25 seconds
+INFO    -  [12:30:10] Reloading browsers
+INFO    -  [12:30:10] Browser connected: http://127.0.0.1:8000/
+INFO    -  [12:32:11] Detected file changes
+INFO    -  Building documentation...
+ERROR   -  Config value 'theme': Unrecognised theme name: 'custommill'. The available installed themes are: mkdocs, readthedocs, material
+Aborted with a configuration error!
+ERROR   -  [12:32:12] An error happened during the rebuild. The server will appear stuck until build errors are resolved.
+INFO    -  [12:32:27] Detected file changes
+INFO    -  Building documentation...
+INFO    -  [12:32:27] Reloading browsers
+INFO    -  [12:32:28] Browser connected: http://127.0.0.1:8000/
+INFO    -  [12:34:44] Detected file changes
+INFO    -  Building documentation...
+ERROR   -  Config value 'theme': Unrecognised theme name: 'custommill'. The available installed themes are: mkdocs, readthedocs, material
+Aborted with a configuration error!
+ERROR   -  [12:34:44] An error happened during the rebuild. The server will appear stuck until build errors are resolved.
+INFO    -  [12:35:19] Detected file changes
+INFO    -  Building documentation...
+ERROR   -  Config value 'theme': Unrecognised theme name: 'materal'. The available installed themes are: mkdocs, readthedocs, material
+Aborted with a configuration error!
+ERROR   -  [12:35:19] An error happened during the rebuild. The server will appear stuck until build errors are resolved.
+INFO    -  [12:35:25] Detected file changes
+INFO    -  Building documentation...
+ERROR   -  Config value 'theme': Unrecognised theme name: 'materal'. The available installed themes are: mkdocs, readthedocs, material
+Aborted with a configuration error!
+ERROR   -  [12:35:25] An error happened during the rebuild. The server will appear stuck until build errors are resolved.
+INFO    -  [12:35:36] Detected file changes
+INFO    -  Building documentation...
+INFO    -  Documentation built in 0.26 seconds
+INFO    -  [12:35:36] Reloading browsers
+INFO    -  [12:35:37] Browser connected: http://127.0.0.1:8000/
+INFO    -  [12:39:50] Detected file changes
+INFO    -  Building documentation...
+ERROR   -  Config value 'theme': Unrecognised theme name: 'CustomMill'. The available installed themes are: mkdocs, readthedocs, material
+Aborted with a configuration error!
+ERROR   -  [12:39:50] An error happened during the rebuild. The server will appear stuck until build errors are resolved.
+INFO    -  [12:40:09] Detected file changes
+INFO    -  Building documentation...
+ERROR   -  Config value 'theme': Unrecognised theme name: 'CustomMill'. The available installed themes are: mkdocs, readthedocs, material
+Aborted with a configuration error!
+ERROR   -  [12:40:09] An error happened during the rebuild. The server will appear stuck until build errors are resolved.
+INFO    -  [12:40:48] Detected file changes
+INFO    -  Building documentation...
+ERROR   -  Config value 'theme': Unrecognised theme name: 'materal'. The available installed themes are: mkdocs, readthedocs, material
+Aborted with a configuration error!
+ERROR   -  [12:40:48] An error happened during the rebuild. The server will appear stuck until build errors are resolved.
+INFO    -  [12:40:56] Detected file changes
+INFO    -  Building documentation...
+INFO    -  [12:40:57] Reloading browsers
+INFO    -  [12:40:57] Browser connected: http://127.0.0.1:8000/
+INFO    -  [12:41:07] Detected file changes
+INFO    -  Building documentation...
+INFO    -  [12:41:08] Reloading browsers
+INFO    -  [12:41:08] Browser connected: http://127.0.0.1:8000/
+INFO    -  [12:41:24] Detected file changes
+INFO    -  Building documentation...
+INFO    -  [12:41:24] Reloading browsers
+INFO    -  [12:41:24] Browser connected: http://127.0.0.1:8000/
+INFO    -  [12:41:37] Detected file changes
+INFO    -  Building documentation...
+INFO    -  [12:41:37] Reloading browsers
+INFO    -  [12:41:38] Browser connected: http://127.0.0.1:8000/
+INFO    -  [16:05:33] Browser connected: http://127.0.0.1:8000/
+INFO    -  [16:06:00] Browser connected: http://127.0.0.1:8000/
+INFO    -  Building documentation...
+INFO    -  Cleaning site directory
+INFO    -  Documentation built in 0.31 seconds
+INFO    -  [17:49:46] Watching paths for changes: 'docs', 'mkdocs.yml'
+INFO    -  [17:49:46] Serving on http://127.0.0.1:8000/
+INFO    -  [17:49:51] Browser connected: http://127.0.0.1:8000/
