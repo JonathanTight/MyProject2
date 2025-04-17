@@ -1,4 +1,4 @@
-site_name: MySA
+site_name: MyProject
 theme: 
   name: material
 markdown_extensions:

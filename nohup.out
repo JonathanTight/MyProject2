@@ -166,3 +166,95 @@ INFO    -  Documentation built in 0.92 seconds
 INFO    -  [18:51:44] Reloading browsers
 INFO    -  [18:57:54] Browser connected: http://127.0.0.1:8000/
 INFO    -  [19:00:28] Browser connected: http://127.0.0.1:8000/
+INFO    -  [19:06:07] Detected file changes
+INFO    -  Building documentation...
+INFO    -  Documentation built in 0.98 seconds
+INFO    -  [19:06:08] Reloading browsers
+INFO    -  [19:06:59] Browser connected: http://127.0.0.1:8000/
+INFO    -  Building documentation...
+INFO    -  Cleaning site directory
+INFO    -  Documentation built in 0.73 seconds
+INFO    -  [19:15:50] Watching paths for changes: 'docs', 'mkdocs.yml'
+INFO    -  [19:15:50] Serving on http://127.0.0.1:8000/
+INFO    -  Building documentation...
+INFO    -  Cleaning site directory
+INFO    -  Documentation built in 0.60 seconds
+Traceback (most recent call last):
+  File "/Users/kirillsafin/Library/Python/3.9/bin/mkdocs", line 8, in <module>
+    sys.exit(cli())
+  File "/Users/kirillsafin/Library/Python/3.9/lib/python/site-packages/click/core.py", line 1161, in __call__
+    return self.main(*args, **kwargs)
+  File "/Users/kirillsafin/Library/Python/3.9/lib/python/site-packages/click/core.py", line 1082, in main
+    rv = self.invoke(ctx)
+  File "/Users/kirillsafin/Library/Python/3.9/lib/python/site-packages/click/core.py", line 1697, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/Users/kirillsafin/Library/Python/3.9/lib/python/site-packages/click/core.py", line 1443, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/Users/kirillsafin/Library/Python/3.9/lib/python/site-packages/click/core.py", line 788, in invoke
+    return __callback(*args, **kwargs)
+  File "/Users/kirillsafin/Library/Python/3.9/lib/python/site-packages/mkdocs/__main__.py", line 272, in serve_command
+    serve.serve(**kwargs)
+  File "/Users/kirillsafin/Library/Python/3.9/lib/python/site-packages/mkdocs/commands/serve.py", line 104, in serve
+    server.serve(open_in_browser=open_in_browser)
+  File "/Users/kirillsafin/Library/Python/3.9/lib/python/site-packages/mkdocs/livereload/__init__.py", line 173, in serve
+    self.server_bind()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/wsgiref/simple_server.py", line 50, in server_bind
+    HTTPServer.server_bind(self)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/http/server.py", line 138, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/socketserver.py", line 466, in server_bind
+    self.socket.bind(self.server_address)
+OSError: [Errno 48] Address already in use
+INFO    -  Building documentation...
+INFO    -  Cleaning site directory
+INFO    -  Documentation built in 0.62 seconds
+Traceback (most recent call last):
+  File "/Users/kirillsafin/Library/Python/3.9/bin/mkdocs", line 8, in <module>
+    sys.exit(cli())
+  File "/Users/kirillsafin/Library/Python/3.9/lib/python/site-packages/click/core.py", line 1161, in __call__
+    return self.main(*args, **kwargs)
+  File "/Users/kirillsafin/Library/Python/3.9/lib/python/site-packages/click/core.py", line 1082, in main
+    rv = self.invoke(ctx)
+  File "/Users/kirillsafin/Library/Python/3.9/lib/python/site-packages/click/core.py", line 1697, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/Users/kirillsafin/Library/Python/3.9/lib/python/site-packages/click/core.py", line 1443, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/Users/kirillsafin/Library/Python/3.9/lib/python/site-packages/click/core.py", line 788, in invoke
+    return __callback(*args, **kwargs)
+  File "/Users/kirillsafin/Library/Python/3.9/lib/python/site-packages/mkdocs/__main__.py", line 272, in serve_command
+    serve.serve(**kwargs)
+  File "/Users/kirillsafin/Library/Python/3.9/lib/python/site-packages/mkdocs/commands/serve.py", line 104, in serve
+    server.serve(open_in_browser=open_in_browser)
+  File "/Users/kirillsafin/Library/Python/3.9/lib/python/site-packages/mkdocs/livereload/__init__.py", line 173, in serve
+    self.server_bind()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/wsgiref/simple_server.py", line 50, in server_bind
+    HTTPServer.server_bind(self)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/http/server.py", line 138, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/socketserver.py", line 466, in server_bind
+    self.socket.bind(self.server_address)
+OSError: [Errno 48] Address already in use
+INFO    -  [19:16:19] Browser connected: http://127.0.0.1:8000/
+INFO    -  [19:20:38] Detected file changes
+INFO    -  Building documentation...
+INFO    -  Documentation built in 0.68 seconds
+INFO    -  [19:20:39] Reloading browsers
+INFO    -  [19:20:43] Detected file changes
+INFO    -  Building documentation...
+INFO    -  Documentation built in 0.55 seconds
+INFO    -  [19:20:43] Reloading browsers
+INFO    -  [19:22:35] Browser connected: http://127.0.0.1:8000/
+INFO    -  [19:27:05] Browser connected: http://127.0.0.1:8000/
+INFO    -  [16:24:52] Detected file changes
+INFO    -  Building documentation...
+INFO    -  Documentation built in 0.86 seconds
+INFO    -  [16:24:53] Reloading browsers
+INFO    -  [16:24:55] Detected file changes
+INFO    -  Building documentation...
+INFO    -  Documentation built in 0.65 seconds
+INFO    -  [16:24:55] Reloading browsers
+INFO    -  [16:30:16] Detected file changes
+INFO    -  Building documentation...
+INFO    -  Documentation built in 1.10 seconds
+INFO    -  [16:30:17] Reloading browsers
+INFO    -  [16:30:20] Browser connected: http://127.0.0.1:8000/
