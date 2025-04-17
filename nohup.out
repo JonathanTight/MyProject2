@@ -258,3 +258,7 @@ INFO    -  Building documentation...
 INFO    -  Documentation built in 1.10 seconds
 INFO    -  [16:30:17] Reloading browsers
 INFO    -  [16:30:20] Browser connected: http://127.0.0.1:8000/
+INFO    -  [16:39:09] Detected file changes
+INFO    -  Building documentation...
+INFO    -  Documentation built in 0.80 seconds
+INFO    -  [16:39:10] Reloading browsers
