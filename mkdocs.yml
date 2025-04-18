@@ -1,5 +1,5 @@
 site_name: MyProject2
-theme: 
+theme:
   name: material
 markdown_extensions:
   - admonition
@@ -7,3 +7,5 @@ markdown_extensions:
   - pymdownx.superfences
 extra_css:
   - css/styles.css
+nav:
+  - Home: index.md

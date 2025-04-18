@@ -290,3 +290,68 @@ INFO    -  [19:07:27] Reloading browsers
 INFO    -  [19:07:51] Browser connected: http://127.0.0.1:8000/
 INFO    -  [19:09:57] Browser connected: http://127.0.0.1:8000/
 INFO    -  [19:10:45] Browser connected: http://127.0.0.1:8000/
+INFO    -  [19:12:45] Browser connected: http://127.0.0.1:8000/
+INFO    -  [19:12:47] Browser connected: http://127.0.0.1:8000/
+INFO    -  [19:13:10] Detected file changes
+INFO    -  Building documentation...
+INFO    -  Documentation built in 0.71 seconds
+INFO    -  [19:13:11] Reloading browsers
+INFO    -  [19:13:14] Browser connected: http://127.0.0.1:8000/
+INFO    -  [19:13:31] Browser connected: http://127.0.0.1:8000/
+INFO    -  [19:14:25] Browser connected: http://127.0.0.1:8000/
+INFO    -  [19:15:53] Detected file changes
+INFO    -  Building documentation...
+INFO    -  Documentation built in 0.92 seconds
+INFO    -  [19:15:54] Reloading browsers
+INFO    -  [19:17:50] Detected file changes
+INFO    -  Building documentation...
+INFO    -  Documentation built in 0.83 seconds
+INFO    -  [19:17:51] Reloading browsers
+INFO    -  [19:17:56] Browser connected: http://127.0.0.1:8000/
+INFO    -  [19:17:58] Browser connected: http://127.0.0.1:8000/
+INFO    -  [19:18:43] Browser connected: http://127.0.0.1:8000/
+INFO    -  [19:21:10] Detected file changes
+INFO    -  Building documentation...
+INFO    -  Documentation built in 0.81 seconds
+INFO    -  [19:21:11] Reloading browsers
+INFO    -  [19:21:16] Browser connected: http://127.0.0.1:8000/
+INFO    -  [19:21:36] Browser connected: http://127.0.0.1:8000/
+INFO    -  [09:32:37] Browser connected: http://127.0.0.1:8000/
+INFO    -  [09:33:15] Detected file changes
+INFO    -  Building documentation...
+INFO    -  Documentation built in 0.95 seconds
+INFO    -  [09:33:16] Reloading browsers
+INFO    -  [09:33:21] Detected file changes
+INFO    -  Building documentation...
+INFO    -  Documentation built in 0.89 seconds
+INFO    -  [09:33:22] Reloading browsers
+INFO    -  [09:33:47] Detected file changes
+INFO    -  Building documentation...
+INFO    -  Documentation built in 0.72 seconds
+INFO    -  [09:33:48] Reloading browsers
+INFO    -  [09:33:54] Detected file changes
+INFO    -  Building documentation...
+INFO    -  Documentation built in 0.84 seconds
+INFO    -  [09:33:55] Reloading browsers
+INFO    -  [09:34:04] Detected file changes
+INFO    -  Building documentation...
+INFO    -  Documentation built in 0.65 seconds
+INFO    -  [09:34:05] Reloading browsers
+INFO    -  [09:34:20] Detected file changes
+INFO    -  Building documentation...
+INFO    -  Documentation built in 0.78 seconds
+INFO    -  [09:34:21] Reloading browsers
+INFO    -  [09:34:26] Detected file changes
+INFO    -  Building documentation...
+INFO    -  [09:34:26] Reloading browsers
+INFO    -  [09:34:36] Detected file changes
+INFO    -  Building documentation...
+INFO    -  [09:34:36] Reloading browsers
+INFO    -  [09:34:51] Detected file changes
+INFO    -  Building documentation...
+INFO    -  Documentation built in 0.63 seconds
+INFO    -  [09:34:52] Reloading browsers
+INFO    -  [11:43:36] Detected file changes
+INFO    -  Building documentation...
+INFO    -  [11:43:37] Reloading browsers
+INFO    -  [11:43:42] Browser connected: http://127.0.0.1:8000/
