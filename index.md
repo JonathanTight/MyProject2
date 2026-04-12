@@ -1,0 +1,2146 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.9">
+    
+    
+      
+        <title>MyProject2</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.4af4bdda.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="css/styles.css">
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#arig" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="." title="MyProject2" class="md-header__button md-logo" aria-label="MyProject2" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            MyProject2
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Home
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="MyProject2" class="md-nav__button md-logo" aria-label="MyProject2" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    MyProject2
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="." class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Сбор и анализ информации
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Формализация требований
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Приоритизация требований
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Разработка артефактов
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Декомпозиция задач
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Документирование
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Управление изменениями
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Оценка и контроль качества
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. Передача проекта в эксплуатацию
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10" class="md-nav__link">
+    <span class="md-ellipsis">
+      10. Завершение проекта
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Сбор и анализ информации. Интервью с заказчиком
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Сбор и анализ информации. Интервью с заказчиком">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1 Перед встречей
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2 Проведение интервью
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔎 Изучение информации о бизнесе
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔍 Интервьюирование заказчика
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Формализация данных
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Формализация данных">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-user-storie-us" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1. User Storie/Пользовательские требования (US/Пользовательская история)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2 Функциональные и нефункциональные требования
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-use-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3 Use Cases (Сценарии использования)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-acceptance-criteria" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.4 Acceptance Criteria (Критерии приемки)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25-c4-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.5 C4 Model для Мобильного приложения доставки еды
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usucfrnfrac" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚙️ US+UC+FR+NFR+AC:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      📄 Документы, в которых оформляют требования:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Сбор и анализ информации
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Формализация требований
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Приоритизация требований
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Разработка артефактов
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Декомпозиция задач
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Документирование
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Управление изменениями
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Оценка и контроль качества
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. Передача проекта в эксплуатацию
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10" class="md-nav__link">
+    <span class="md-ellipsis">
+      10. Завершение проекта
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Сбор и анализ информации. Интервью с заказчиком
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Сбор и анализ информации. Интервью с заказчиком">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1 Перед встречей
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2 Проведение интервью
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔎 Изучение информации о бизнесе
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔍 Интервьюирование заказчика
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Формализация данных
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Формализация данных">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-user-storie-us" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1. User Storie/Пользовательские требования (US/Пользовательская история)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2 Функциональные и нефункциональные требования
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-use-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3 Use Cases (Сценарии использования)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-acceptance-criteria" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.4 Acceptance Criteria (Критерии приемки)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25-c4-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.5 C4 Model для Мобильного приложения доставки еды
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usucfrnfrac" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚙️ US+UC+FR+NFR+AC:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      📄 Документы, в которых оформляют требования:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="arig"><strong>Мобильное приложение для доставки еды из сети ресторанов.</strong> <strong>ARIG</strong></h1>
+<h2 id="1">1. <strong>Сбор и анализ информации</strong></h2>
+<ul>
+<li>Интервью с заказчиком</li>
+<li>Опросы и анкеты</li>
+<li>Наблюдение за текущими процессами</li>
+<li>Анализ существующих данных и документации</li>
+<li>Анализ конкурентов и рынка — понимание текущих решений и потребностей пользователей на рынке</li>
+</ul>
+<h2 id="2">2. <strong>Формализация требований</strong></h2>
+<ul>
+<li>User Story (<em>пользовательская история</em>)— потребности пользователей, с фокусом на бизнес-ценность</li>
+<li>Функциональные требования (<em>ФТ</em>) — что должна делать система, в том числе специфические функции, такие как заказ, оплата, доставка и т.д.</li>
+<li>Нефункциональные требования (<em>НФТ</em>) — ограничения, производительность, безопасность, доступность, масштабируемость, требования к поддержке</li>
+<li>Use Cases (<em>Сценарий использования</em>) — сценарии взаимодействия пользователя с системой</li>
+<li>Acceptance Criteria (<em>Критерии приемки</em>) — когда задача считается выполненной, с чёткими метриками и показателями качества</li>
+<li>C4 модель</li>
+</ul>
+<h2 id="3">3. <strong>Приоритизация требований</strong></h2>
+<ul>
+<li>MoSCoW (<em>Must, Should, Could, Won’t</em>)</li>
+<li>Kano (<em>Основные, Ожидаемые, Привлекательные, Неважные, Отрицательные</em>)</li>
+<li>Методы оценки бизнес-ценности и рисков — для более сбалансированной приоритизации</li>
+<li>Другие методы по необходимости (<em>100 Points, Weighted Scoring</em>)</li>
+</ul>
+<h2 id="4">4. <strong>Разработка артефактов</strong></h2>
+<ul>
+<li>Диаграммы (<em>UML, BPMN, DFD и др.</em>)</li>
+<li>Прототипы интерфейсов</li>
+<li>ER-диаграммы, модели данных</li>
+<li>Таблицы соответствия требований</li>
+<li>Архитектурные схемы системы — для отображения компонентов и взаимодействий</li>
+<li>Тестовые сценарии и кейсы — для тестирования функциональности</li>
+</ul>
+<h2 id="5">5. <strong>Декомпозиция задач</strong></h2>
+<ul>
+<li>Разделение требований и юз кейсов на подзадачи</li>
+<li>Структура: Epic → Feature → Task → Subtask</li>
+<li>Формирование backlog — с детальной оценкой сложности и приоритетов</li>
+</ul>
+<h2 id="6">6. <strong>Документирование</strong></h2>
+<ul>
+<li>Оформление всей информации в документах:</li>
+<li>Confluence / Notion / Word / Excel</li>
+<li>Таблицы, схемы, вложения</li>
+<li>Ответственность за документацию — указание ответственного за хранение и актуализацию документации</li>
+<li>Передача документации разработке и тестированию</li>
+</ul>
+<h2 id="7">7. <strong>Управление изменениями</strong></h2>
+<ul>
+<li>Управление запросами на изменения требований</li>
+<li>Оценка влияния изменений на проект</li>
+<li>Обновление документации и артефактов в случае изменений</li>
+</ul>
+<h2 id="8">8. <strong>Оценка и контроль качества</strong></h2>
+<ul>
+<li>Ревизия требований и артефактов с участниками проекта</li>
+<li>Проверка соответствия выполненных задач требованиям</li>
+<li>Интеграционное тестирование, тестирование пользовательского опыта</li>
+</ul>
+<h2 id="9">9. <strong>Передача проекта в эксплуатацию</strong></h2>
+<ul>
+<li>Подготовка инструкций для пользователей</li>
+<li>Подготовка и проведение обучения для пользователей и сотрудников</li>
+<li>Пострелизная поддержка и мониторинг</li>
+</ul>
+<h2 id="10">10. <strong>Завершение проекта</strong></h2>
+<ul>
+<li>Оценка результатов проекта по заранее установленным критериям</li>
+<li>Составление отчета о проекте</li>
+<li>Архивирование всех материалов для возможных будущих обновлений или анализа</li>
+</ul>
+<hr />
+<hr />
+<h2 id="1_1">1. <strong>Сбор и анализ информации. Интервью с заказчиком</strong></h2>
+<h3 id="11">1.1 Перед встречей</h3>
+<ul>
+<li>
+<p>Изучается информация о бизнесе, целевой аудитории и текущих проблемах с доставкой.</p>
+</li>
+<li>
+<p>Разрабатывается список вопросов для выяснения потребностей заказчика.</p>
+</li>
+<li>
+<p>Определяется, кто еще из команды может участвовать в интервью.</p>
+</li>
+</ul>
+<h3 id="12">1.2 Проведение интервью</h3>
+<p>Интервью делится на несколько этапов:</p>
+<ul>
+<li>
+<p>Приветствие и объяснение цели встречи.</p>
+</li>
+<li>
+<p>Вопросы о ключевых функциях (заказ, оплата, доставка), интерфейсе, системе и взаимодействии с пользователями.</p>
+</li>
+<li>Дополнительные вопросы, чтобы понять детали.</li>
+<li>Подведение итогов и проверка понимания требований.</li>
+<li>Запрос на дополнительные пожелания, которые могут быть забыты.</li>
+</ul>
+<h3 id="_1">🔎 Изучение информации о бизнесе</h3>
+<details class="info">
+<summary>📋 Анкетирование:</summary>
+<ul>
+<li>🍽️ Формат сети ресторанов  </li>
+</ul>
+<p><strong>Тип заведения:</strong> <u><strong>фастфуд</strong></u> / кафе / ресторан / пиццерия</p>
+<ul>
+<li>🍔 Специализация кухни  </li>
+</ul>
+<p><strong>Основные блюда</strong> бургеры / суши / паста / <u><strong>вок</strong></u> </p>
+<ul>
+<li>🌍 География присутствия  </li>
+</ul>
+<p><strong>Количество заведений:</strong> <strong>1</strong><br />
+<strong>Локации:</strong> <strong>Москва / САО</strong></p>
+<ul>
+<li>📈 Планы развития  </li>
+</ul>
+<p><strong>Планируется расширение?:</strong> Да / <strong>Нет</strong><br />
+<strong>Будущая география:</strong> —</p>
+<ul>
+<li>💡 Уникальность бренда  </li>
+</ul>
+<p><strong>Чем отличается от конкурентов:</strong> <strong>Доставка своими силами</strong><br />
+<strong>УТП (уникальное торговое предложение):</strong> <strong>Только для жителей в пределах ТЦ</strong></p>
+<ul>
+<li>🧑‍🤝‍🧑 Целевая аудитория  </li>
+</ul>
+<p><strong>Возраст:</strong>  —<br />
+<strong>Поведение / привычки:</strong>  <strong>Не доверяют агрегаторам</strong><br />
+<strong>Потребности и боли:</strong> <strong>Нужна своя доставка</strong></p>
+<ul>
+<li>💻 Текущие цифровые решения  </li>
+</ul>
+<p><strong>Сайт:</strong> <u><strong>есть</strong></u> / нет<br />
+<strong>Агрегаторы доставки:</strong> <strong>Яндекск.Еда</strong><br />
+<strong>CRM / приложения:</strong> да / <u><strong>нет</strong></u> </p>
+</details>
+<h3 id="_2">🔍 Интервьюирование заказчика</h3>
+<details class="info">
+<summary>💬 Опрос:</summary>
+<ul>
+<li>❓ Какие основные функции вы ожидаете от мобильного приложения?  </li>
+</ul>
+<p>🗣️ <strong>заказ еды, отслеживание доставки, личный кабинет, отзывы.</strong></p>
+<ul>
+<li>❓ Какую проблему вы хотите решить с помощью этого приложения?</li>
+</ul>
+<p>🗣️ <strong>увеличить продажи, обойти агрегаторов.</strong></p>
+<ul>
+<li>❓ Опишите процесс оформления заказа  </li>
+</ul>
+<p>🗣️ <strong>клиент регистрируется, выбирает блюдо, выбирает способ доставки, оплачивает.</strong></p>
+<ul>
+<li>❓ Какой способ оплаты вы планируете поддерживать?</li>
+</ul>
+<p>🗣️ <strong>предоплата по банковской картой в приложении.</strong></p>
+<ul>
+<li>❓ Будет ли возможность сделать заказ без регистрации?</li>
+</ul>
+<p>🗣️ <strong>нет.</strong></p>
+<ul>
+<li>❓ Какие данные вы хотите собирать о пользователях?   </li>
+</ul>
+<p>🗣️ <strong>телефон, адрес, история заказов.</strong></p>
+<ul>
+<li>❓ Кто будет администрировать заказы и следить за их выполнением?  </li>
+</ul>
+<p>🗣️ <strong>менеджер, кассир, повар.</strong></p>
+<ul>
+<li>❓ Как вы хотите получать уведомления о новых заказах?   </li>
+</ul>
+<p>🗣️ <strong>звук, пуши, смс, почта, внутри системы.</strong></p>
+<ul>
+<li>❓ Какие у вас требования к дизайну и стилю приложения?   </li>
+</ul>
+<p>🗣️ <strong>минимализм, фирменные цвета.</strong></p>
+<ul>
+<li>❓ Есть ли уже технические решения, которые нужно интегрировать?   </li>
+</ul>
+<p>🗣️ <strong>CRM, склад, учет, база клиентов.</strong></p>
+<ul>
+<li>❓ Как будет происходить процесс регистрации пользователя?   </li>
+</ul>
+<p>🗣️ <strong>через номер телефона и почту, госуслуги.</strong></p>
+<ul>
+<li>❓ Какие методы доставки должны быть доступны?   </li>
+</ul>
+<p>🗣️ <strong>самовывоз, курьерская доставка.</strong></p>
+<ul>
+<li>❓ Какие предпочтения по скорости доставки и времени?   </li>
+</ul>
+<p>🗣️ <strong>доставка в течение 30-60 минут, возможность выбора времени.</strong></p>
+<ul>
+<li>❓ Какие ограничения по месту проживания пользователей?   </li>
+</ul>
+<p>🗣️ <strong>Москва. Ховрино. Проживание в пределац ТЦ.</strong></p>
+<ul>
+<li>❓ Что должно быть на главной странице приложения?   </li>
+</ul>
+<p>🗣️ <strong>меню, специальные предложения, информация о доставке, история заказов.</strong></p>
+<ul>
+<li>❓ Нужно ли добавлять возможность для клиента отслеживать статус своего заказа в реальном времени?   </li>
+</ul>
+<p>🗣️ <strong>да, статус заказа.</strong></p>
+<ul>
+<li>❓ Какую аналитику хотите собирать?   </li>
+</ul>
+<p>🗣️ <strong>данные о покупках, время заказов, средний чек, популярные блюда.</strong></p>
+<ul>
+<li>❓ Под какие мобильные платформы будет приложение?   </li>
+</ul>
+<p>🗣️ <strong>IOS.</strong></p>
+<ul>
+<li>❓ Какие статусы должен иметь заказ?   </li>
+</ul>
+<p>🗣️ <strong>создан, принят, готовится, в пути, доставлен, отменён.</strong></p>
+<ul>
+<li>❓ Можно ли отменить заказ?  Если да — до какого этапа?   </li>
+</ul>
+<p>🗣️ <strong>до начала приготовления.</strong></p>
+<ul>
+<li>❓ Требуется ли подтверждение от ресторана перед началом выполнения заказа?   </li>
+</ul>
+<p>🗣️ <strong>да.</strong></p>
+<ul>
+<li>❓ Что делать, если блюдо недоступно?   </li>
+</ul>
+<p>🗣️ <strong>уведомление пользователю, предложение замены.</strong></p>
+<ul>
+<li>❓ Можно ли оставить чаевые курьеру?   </li>
+</ul>
+<p>🗣️ <strong>нет.</strong></p>
+<ul>
+<li>❓ Какой платежный провайдер будет использоваться?   </li>
+</ul>
+<p>🗣️ <strong>Т Касса</strong></p>
+<ul>
+<li>❓ Требуется ли фискализация и выдача чеков?   </li>
+</ul>
+<p>🗣️ <strong>да, чек по email и в приложении.</strong></p>
+<ul>
+<li>❓ Нужно ли сохранять банковскую карту для повторных оплат?   </li>
+</ul>
+<p>🗣️ <strong>да.</strong></p>
+<ul>
+<li>❓ Какие функции должны быть в личном кабинете?   </li>
+</ul>
+<p>🗣️ <strong>редактирование профиля, история заказов, настройки уведомлений, смена пароля.</strong></p>
+<ul>
+<li>❓ Нужно ли хранить несколько адресов доставки?   </li>
+</ul>
+<p>🗣️ <strong>да.</strong></p>
+<ul>
+<li>❓ Планируется ли программа лояльности или бонусов?   </li>
+</ul>
+<p>🗣️ <strong>да, кэшбэк и персональные предложения.</strong></p>
+<ul>
+<li>❓ Какие события должны вызывать уведомления?   </li>
+</ul>
+<p>🗣️ <strong>новый заказ, изменение статуса, проблемы с доставкой, акции.</strong></p>
+<ul>
+<li>❓ Какой канал уведомлений приоритетный?   </li>
+</ul>
+<p>🗣️ <strong>пуш, затем смс.</strong></p>
+<ul>
+<li>❓ Какие конкретно CRM, складские и учетные системы нужно интегрировать? </li>
+</ul>
+<p>🗣️ <strong>(Мой Склад)</strong></p>
+<ul>
+<li>❓ Какие действия должны синхронизироваться с CRM?   </li>
+</ul>
+<p>🗣️ <strong>новые заказы, статусы, данные клиента.</strong></p>
+<ul>
+<li>❓ Планируется ли Android-версия в будущем?   </li>
+</ul>
+<p>🗣️ <strong>да.</strong></p>
+<ul>
+<li>❓ Будет ли веб-версия приложения?   </li>
+</ul>
+<p>🗣️ <strong>нет</strong></p>
+<ul>
+<li>❓ Требуется ли офлайн-режим?   </li>
+</ul>
+<p>🗣️ <strong>нет.</strong></p>
+<ul>
+<li>❓ Нужна ли поддержка нескольких языков?   </li>
+</ul>
+<p>🗣️ <strong>нет.</strong></p>
+<ul>
+<li>❓ Нужна ли авторизация для сотрудников (менеджер, кассир, повар)?   </li>
+</ul>
+<p>🗣️ <strong>да, с разными правами доступа.</strong></p>
+</details>
+<hr />
+<h2 id="2_1">2. <strong>Формализация данных</strong></h2>
+<h3 id="21-user-storie-us">2.1. <strong>User Storie/Пользовательские требования</strong> (<em>US/Пользовательская история</em>)</h3>
+<p>Это описание потребностей пользователей, сделанное с точки зрения конечного результата в формате <strong>как...</strong> <strong>я хочу</strong>... чтобы...<strong> Пример:<br />
+   - </strong>Как пользователь<strong>, </strong>я хочу<strong> иметь возможность заказать еду через приложение, </strong>чтобы<strong> получить свою еду быстро и удобно.<br />
+   - </strong>Как пользователь<strong>, </strong>я хочу<strong> иметь возможность отслеживать статус доставки, </strong>чтобы** быть в курсе, где моя еда.</p>
+<p>Для <strong>User Story</strong> есть несколько методов, которые помогут эффективно формулировать и организовывать требования. Вот 2 основных метода, которые можно применить при написании User Story:</p>
+<p><strong>INVEST</strong>  </p>
+<p>Метод <strong>INVEST</strong> помогает создавать качественные User Stories, которые легко реализовывать, тестировать и интегрировать в проект. Это акроним, где каждый элемент представляет ключевые характеристики хорошей User Story:</p>
+<ul>
+<li><strong>I</strong> — <strong>Independent (Независимая)</strong>: User Story должна быть независимой от других историй, функций. </li>
+<li><strong>N</strong> — <strong>Negotiable (Обсуждаемая)</strong>: Требования могут быть изменены в ходе разработки, с учетом приоритетов и потребностей.</li>
+<li><strong>V</strong> — <strong>Valuable (Ценная)</strong>: User Story должна приносить ценность пользователю или бизнесу.</li>
+<li><strong>E</strong> — <strong>Estimable (Оцениваемая)</strong>: User Story должна быть достаточно понятной для оценки её сложности.</li>
+<li><strong>S</strong> — <strong>Small (Краткая)</strong>: User Story должна быть достаточно маленькой и конкретной для реализации в рамках одного спринта.</li>
+<li><strong>T</strong> — <strong>Testable (Тестируемая)</strong>: У User Story должны быть критерии приемки, которые можно проверить.  </li>
+</ul>
+<p><strong>SMART</strong>  </p>
+<p>Метод <strong>SMART</strong> помогает формулировать требования, которые можно четко измерить и выполнить в рамках проекта:</p>
+<ul>
+<li><strong>S</strong> — <strong>Specific (Конкретный)</strong>: Требование должно быть чётким и однозначным (<em>Улучшить скорость загрузки мобильного приложения</em>).</li>
+<li><strong>M</strong> — <strong>Measurable (Измеримый)</strong>: Требование можно оценить, когда оно будет выполнено (<em>Уменьшить время загрузки с 5 секунд до 2 секунд</em>).</li>
+<li><strong>A</strong> — <strong>Achievable (Достижимый)</strong>: Требование должно быть реалистичным с точки зрения ресурсов и времени (<em>Оптимизировать код, сжать изображения</em>).</li>
+<li><strong>R</strong> — <strong>Relevant (Актуальный)</strong>: Требование должно быть значимым и важным для конечного пользователя (<em>Быстрое приложение повысит удержание пользователей</em>).</li>
+<li><strong>T</strong> — <strong>Time-bound (Ограниченный по времени)</strong>: Требование должно быть выполнено в определенные сроки (<em>Реализовать в течение 2 недель</em>).  </li>
+</ul>
+<h3 id="22">2.2 <strong>Функциональные и нефункциональные требования</strong></h3>
+<ul>
+<li><strong>Функциональные требования (ФТ/FR)</strong></li>
+</ul>
+<p>Это что система должна делать. Это поведение, функции, задачи, которые система выполняет.<br />
+Примеры: оформление заказа, регистрация, оплата, уведомления.  </p>
+<ul>
+<li><strong>Нефункциональные Требования (НФТ/NFR)</strong></li>
+</ul>
+<p>Это как система должна работать. Это ограничения, характеристики качества, условия работы.<br />
+Примеры: безопасность, скорость, масштабируемость, поддержка только iOS.</p>
+<h3 id="23-use-cases">2.3 <strong>Use Cases (Сценарии использования)</strong></h3>
+<p>Это подробные сценарии, которые показывают, как пользователи будут взаимодействовать с приложением. Например:
+- <strong>Сценарий 1:</strong> Пользователь заходит в приложение, регистрируется через телефон, выбирает блюдо, добавляет в корзину, оплачивает и оформляет доставку.
+- <strong>Сценарий 2:</strong> Пользователь отслеживает статус своего заказа на главной странице приложения.</p>
+<h3 id="24-acceptance-criteria">2.4 <strong>Acceptance Criteria (Критерии приемки)</strong></h3>
+<p>Четкие критерии, которые должны быть выполнены для того, чтобы считать задачу выполненной:<br />
+- Приложение должно корректно отображать меню с актуальными блюдами.<br />
+- Пользователь должен иметь возможность выполнить оплату и получить подтверждение о заказе.<br />
+- Должна быть возможность получения уведомлений о статусе заказа.  </p>
+<h3 id="25-c4-model">2.5 <strong>C4 Model для Мобильного приложения доставки еды</strong></h3>
+<p><strong>1. Контекстная диаграмма (Level 1)</strong></p>
+<p>Эта диаграмма показывает высокоуровневое представление системы и её взаимодействие с внешними системами и пользователями. Включает основные компоненты и их связи.</p>
+<p><strong>Участники:</strong>  </p>
+<ul>
+<li><strong>Пользователь (клиент):</strong><br />
+     использует мобильное приложение для оформления заказов, отслеживания доставки, редактирования профиля.  </li>
+<li><strong>Мобильное приложение:</strong><br />
+     клиентская часть, где пользователь взаимодействует с системой.  </li>
+<li><strong>Серверное приложение:</strong><br />
+     отвечает за логику обработки заказов, управления пользователями и взаимодействия с базой данных.  </li>
+<li><strong>База данных:</strong><br />
+     хранит информацию о заказах, пользователях, меню и транзакциях.  </li>
+<li><strong>Внешние API (платежные системы, уведомления):</strong><br />
+     интеграция с внешними сервисами для обработки платежей, отправки уведомлений и т.д.</li>
+</ul>
+<p><img alt="alt text" src="%D1%811%20-%20visual%20selectioneqweq.svg" />
+<br>
+<br>
+<strong>2. Диаграмма контейнеров (Level 2)</strong></p>
+<p>Эта диаграмма более детализированно отображает, как система разбивается на основные компоненты.</p>
+<p><strong>Контейнеры:</strong>  </p>
+<ul>
+<li><strong>Мобильное приложение (клиент):</strong><br />
+     нативное мобильное приложение для пользователей, которое позволяет:  <ul>
+<li>Регистрация / Авторизация пользователей  </li>
+<li>Просмотр меню  </li>
+<li>Оформление заказа  </li>
+<li>Получение уведомления<br />
+<br></li>
+</ul>
+</li>
+</ul>
+<p><img alt="alt text" src="c121visual%20selection%202ewrr.svg" />
+<br>
+<br>
+<br></p>
+<ul>
+<li><strong>Серверное приложение:</strong><br />
+     бэкенд для обработки логики:  <ul>
+<li>Получение запросов от клиентов  </li>
+<li>Обработка заказов  </li>
+<li>Взаимодействие с базой данных и внешними сервисами  </li>
+</ul>
+</li>
+</ul>
+<p><img alt="alt text" src="c122-%20visual%20selectiondfw.svg" />  </p>
+<ul>
+<li><strong>База данных:</strong><br />
+     система хранения данных:  <ul>
+<li>Пользователи  </li>
+<li>Меню  </li>
+<li>Заказы  </li>
+<li>Транзакции  </li>
+</ul>
+</li>
+</ul>
+<p><img alt="alt text" src="dfsfsf.svg" /></p>
+<ul>
+<li><strong>Внешние API:</strong><br />
+     интеграции с внешними сервисами для:  <ul>
+<li>Платежей (например, через платёжный шлюз)  </li>
+<li>Уведомлений (push-сообщения, email-уведомления)</li>
+<li>Синхронизации (CRM Мой Склад)</li>
+</ul>
+</li>
+</ul>
+<p><img alt="alt text" src="c42112visual%20selection.svg" />
+<br>
+<br>
+<br>
+<br>
+<br>
+<strong>3. Диаграмма компонентов (Level 3)</strong></p>
+<p>Здесь показаны основные компоненты внутри каждого контейнера, с более детализированным описанием взаимодействий.</p>
+<ul>
+<li><strong>Мобильное приложение:</strong>  <ul>
+<li>Компоненты для управления сессиями пользователей (регистрация, авторизация)  </li>
+<li>Компоненты для отображения меню и добавления товаров в корзину  </li>
+<li>Компоненты для оформления и отслеживания заказов  </li>
+<li>Компоненты для редактирования профиля и уведомлений  </li>
+</ul>
+</li>
+<li><strong>Серверное приложение:</strong>  <ul>
+<li>Компонент для обработки заказов  </li>
+<li>Компонент для взаимодействия с базой данных  </li>
+<li>Компонент для взаимодействия с внешними API (например, платёжные системы и уведомления)  </li>
+</ul>
+</li>
+<li><strong>База данных:</strong> несколько таблиц:  <ul>
+<li>Пользователи  </li>
+<li>Меню  </li>
+<li>Заказы  </li>
+<li>Транзакции  </li>
+</ul>
+</li>
+<li><strong>Внешние API:</strong><br />
+     взаимодействие с платёжными системами и системой уведомлений.  </li>
+</ul>
+<p><img alt="alt text" src="%D1%8143%20-%20visual%20selection.svg" /></p>
+<p><strong>4. Диаграмма взаимодействий (Level 4)</strong></p>
+<p>Эта диаграмма детализирует взаимодействия между компонентами при выполнении конкретных операций, например, при оформлении заказа.</p>
+<p><strong>Пример сценария:</strong>  </p>
+<ol>
+<li>Пользователь регистрируется в мобильном приложении.  </li>
+<li>Пользователь выбирает товар из меню и добавляет его в корзину.  </li>
+<li>Пользователь оформляет заказ и выбирает способ доставки.  </li>
+<li>Серверное приложение обрабатывает запрос, взаимодействует с базой данных для создания нового заказа.  </li>
+<li>Внешняя система уведомлений отправляет уведомление пользователю о статусе заказа.  </li>
+<li>Платежная система обрабатывает оплату.  </li>
+<li>База данных обновляет транзакцию и статус заказа.</li>
+</ol>
+<p><img alt="alt text" src="%D1%81422%20-%20visual%20selection.svg" /></p>
+<h3 id="usucfrnfrac">⚙️ US+UC+FR+NFR+AC:</h3>
+<details class="info">
+<summary>📘 User Stories — Мобильное приложение доставки еды</summary>
+<p><strong>🟢 User Story 1 — Регистрация и вход</strong><br />
+<strong>Как</strong> новый пользователь,<br />
+<strong>я хочу</strong> зарегистрироваться через телефон, email или Госуслуги,<br />
+<strong>чтобы</strong> сохранять историю заказов и данные о доставке  </p>
+<p>📘 <strong>Use Case</strong><br />
+<strong>Название:</strong> Создание аккаунта<br />
+<strong>Актор:</strong> Пользователь<br />
+<strong>Основной сценарий:</strong><br />
+ 1. Пользователь нажимает «Зарегистрироваться».<br />
+ 2. Выбирает способ: телефон, email, Госуслуги.<br />
+ 3. Вводит данные и подтверждает их через SMS/email/OAuth.<br />
+ 4. Система создаёт аккаунт и авторизует пользователя.  </p>
+<p>✅ <strong>Функциональные требования</strong><br />
+ - Поддержка трёх методов регистрации.<br />
+ - Валидация формата данных (телефон, email).<br />
+ - Автоматический вход после подтверждения.  </p>
+<p>⚙️ <strong>Нефункциональные требования</strong><br />
+ - Время обработки запроса ≤ 2 сек.<br />
+ - Соответствие ФЗ-152 (персональные данные).<br />
+ - Доступность 99.9%.  </p>
+<p>✔ <strong>Acceptance Criteria</strong><br />
+ - Регистрация доступна через телефон, email, Госуслуги.<br />
+ - При дублировании данных выводится ошибка.<br />
+ - После регистрации пользователь попадает в меню.  </p>
+<p><strong>🟢 User Story 2 — Просмотр меню</strong><br />
+<strong>Как</strong> пользователь,<br />
+<strong>я хочу</strong> видеть меню с фото и ценами,<br />
+<strong>чтобы</strong> выбрать блюда.  </p>
+<p>📘 Use Case<br />
+<strong>Название:</strong> Выбор блюд<br />
+<strong>Актор:</strong> Пользователь<br />
+<strong>Основной сценарий:</strong><br />
+ 1. Пользователь открывает раздел «Меню».<br />
+ 2. Система загружает список блюд.<br />
+ 3. Пользователь применяет фильтры (вегетарианское, острое).<br />
+ 4. Система показывает отфильтрованные результаты.  </p>
+<p>✅ Функциональные требования<br />
+ - Отображение фото, названия, цены, состава.<br />
+ - Фильтры по категориям и аллергенам.<br />
+ - Поиск по названию блюда.  </p>
+<p>⚙️ Нефункциональные требования<br />
+ - Загрузка меню ≤ 1.5 сек.<br />
+ - Поддержка 500+ позиций.<br />
+ - Кэширование данных на 1 час.  </p>
+<p>✔ Acceptance Criteria<br />
+ - Все блюда отображаются без ошибок.<br />
+ - Фильтры работают корректно.<br />
+ - Поиск находит блюда по части названия.  </p>
+<p><strong>🟢 User Story 3 — Оформление заказа</strong><br />
+<strong>Как</strong> пользователь,<br />
+<strong>я хочу</strong> добавить блюда в корзину и оформить заказ,<br />
+<strong>чтобы</strong> получить еду.  </p>
+<p>📘 Use Case<br />
+<strong>Название:</strong> Создание заказа<br />
+<strong>Актор:</strong> Пользователь<br />
+<strong>Основной сценарий:</strong><br />
+ 1. Пользователь добавляет блюда в корзину.<br />
+ 2. Переходит к оформлению заказа.<br />
+ 3. Выбирает способ доставки (курьер/самовывоз).<br />
+ 4. Подтверждает заказ.  </p>
+<p>✅ Функциональные требования<br />
+ - Добавление/удаление позиций из корзины.<br />
+ - Расчет итоговой суммы.<br />
+ - Выбор адреса доставки.  </p>
+<p>⚙️ Нефункциональные требования<br />
+ - Сохранение корзины при перезагрузке.<br />
+ - Время обработки заказа ≤ 3 сек.  </p>
+<p>✔ Acceptance Criteria<br />
+ - Цена пересчитывается при изменении корзины.<br />
+ - Можно выбрать курьера или самовывоз.<br />
+ - Заказ отображается в истории.  </p>
+<p><strong>🟢 User Story 4 — Оплата картой</strong><br />
+<strong>Как</strong> пользователь,<br />
+<strong>я хочу</strong> оплатить заказ картой,<br />
+<strong>чтобы</strong> не вводить данные повторно.  </p>
+<p>📘 Use Case<br />
+<strong>Название:</strong> Онлайн-оплата<br />
+<strong>Актор:</strong> Пользователь<br />
+<strong>Основной сценарий:</strong><br />
+ 1. Пользователь переходит к оплате.<br />
+ 2. Вводит данные карты или выбирает сохранённую.<br />
+ 3. Подтверждает оплату.<br />
+ 4. Получает чек на email.  </p>
+<p>✅ Функциональные требования<br />
+ - Интеграция с платёжным шлюзом (ЮKassa/Stripe).<br />
+ - Сохранение карты (с согласия пользователя).  </p>
+<p>⚙️ Нефункциональные требования<br />
+ - Соответствие PCI DSS.<br />
+ - Шифрование данных карты.  </p>
+<p>✔ Acceptance Criteria<br />
+ - Оплата проходит без ошибок.<br />
+ - Чек приходит на email в течение 1 минуты.<br />
+ - Данные карты не сохраняются без согласия.  </p>
+<p><strong>🟢 User Story 5 — Отслеживание заказа</strong><br />
+<strong>Как</strong> пользователь,<br />
+<strong>я хочу</strong> видеть статус заказа на карте,<br />
+<strong>чтобы</strong> знать время доставки.  </p>
+<p>📘 Use Case<br />
+<strong>Название:</strong> Мониторинг доставки<br />
+<strong>Актор:</strong> Пользователь<br />
+<strong>Основной сценарий:</strong><br />
+ 1. Пользователь открывает «Мои заказы».<br />
+ 2. Выбирает активный заказ.<br />
+ 3. Видит статус и местоположение курьера.  </p>
+<p>✅ Функциональные требования<br />
+ - Отображение статусов: «Принят», «В пути», «Доставлен».<br />
+ - Интеграция с картографическим сервисом (Яндекс.Карты).  </p>
+<p>⚙️ Нефункциональные требования<br />
+ - Обновление статуса каждые 15 сек.<br />
+ - Точность геолокации ±50 метров.  </p>
+<p>✔ Acceptance Criteria<br />
+ - Статус заказа обновляется в реальном времени.<br />
+ - Курьер отображается на карте.  </p>
+<p><strong>🟢 User Story 6 — Отмена заказа</strong><br />
+<strong>Как</strong> пользователь,<br />
+<strong>я хочу</strong> отменить заказ до начала готовки,<br />
+<strong>чтобы</strong> вернуть деньги.  </p>
+<p>📘 Use Case<br />
+<strong>Название:</strong> Отмена заказа<br />
+<strong>Актор:</strong> Пользователь<br />
+<strong>Основной сценарий:</strong><br />
+ 1. Пользователь открывает «Мои заказы».<br />
+ 2. Нажимает «Отменить» для заказа в статусе «Принят».<br />
+ 3. Получает подтверждение отмены.  </p>
+<p>✅ Функциональные требования<br />
+ - Кнопка «Отменить» в статусе «Принят».<br />
+ - Автоматический возврат средств.  </p>
+<p>⚙️ Нефункциональные требования<br />
+ - Возврат денег в течение 1-3 рабочих дней.  </p>
+<p>✔ Acceptance Criteria<br />
+ - Отмена доступна только в статусе «Принят».<br />
+ - Уведомление об отмене приходит в течение 1 минуты.  </p>
+<p><strong>🟢 User Story 7 — История заказов</strong><br />
+<strong>Как</strong> пользователь,<br />
+<strong>я хочу</strong> видеть историю заказов,<br />
+<strong>чтобы</strong> повторять их.  </p>
+<p>📘 Use Case<br />
+<strong>Название:</strong> Просмотр истории<br />
+<strong>Актор:</strong> Пользователь<br />
+<strong>Основной сценарий:</strong><br />
+ 1. Пользователь открывает «История заказов».<br />
+ 2. Видит список за последние 12 месяцев.<br />
+ 3. Нажимает «Повторить» для выбранного заказа.  </p>
+<p>✅ Функциональные требования<br />
+ - Фильтрация по дате и статусу.<br />
+ - Кнопка «Повторить заказ».  </p>
+<p>⚙️ Нефункциональные требования<br />
+ - Хранение истории ≥ 12 месяцев.  </p>
+<p>✔ Acceptance Criteria<br />
+ - История содержит все завершённые заказы.<br />
+ - Повторный заказ создаётся за 2 клика.  </p>
+<p><strong>🟢 User Story 8 — Оставление отзыва</strong><br />
+<strong>Как</strong> пользователь,<br />
+<strong>я хочу</strong> оценить заказ,<br />
+<strong>чтобы</strong> помочь другим.  </p>
+<p>📘 Use Case<br />
+<strong>Название:</strong> Написание отзыва<br />
+<strong>Актор:</strong> Пользователь<br />
+<strong>Основной сценарий:</strong><br />
+ 1. После доставки пользователь получает уведомление.<br />
+ 2. Переходит в раздел «Отзывы».<br />
+ 3. Ставит оценку и пишет комментарий.  </p>
+<p>✅ Функциональные требования<br />
+ - Оценка от 1 до 5 звёзд.<br />
+ - Текстовый отзыв (до 500 символов).  </p>
+<p>⚙️ Нефункциональные требования<br />
+ - Модерация отзывов перед публикацией.  </p>
+<p>✔ Acceptance Criteria<br />
+ - Отзыв сохраняется после отправки.<br />
+ - Пользователи видят только одобренные отзывы.  </p>
+<p><strong>🟢 User Story 9 — Поддержка клиентов</strong><br />
+<strong>Как</strong> пользователь,<br />
+<strong>я хочу</strong> связаться с поддержкой,<br />
+<strong>чтобы</strong> решить проблему.  </p>
+<p>📘 Use Case<br />
+<strong>Название:</strong> Обращение в поддержку<br />
+<strong>Актор:</strong> Пользователь<br />
+<strong>Основной сценарий:</strong><br />
+ 1. Пользователь открывает «Помощь».<br />
+ 2. Выбирает «Написать в поддержку».<br />
+ 3. Описывает проблему и отправляет сообщение.  </p>
+<p>✅ Функциональные требования<br />
+ - Чат с поддержкой в реальном времени.<br />
+ - Прикрепление файлов (фото, скриншоты).  </p>
+<p>⚙️ Нефункциональные требования<br />
+ - Среднее время ответа ≤ 15 минут.  </p>
+<p>✔ Acceptance Criteria<br />
+ - Сообщения доставляются без задержек.<br />
+ - История чата сохраняется.  </p>
+<p><strong>🟢 User Story 10 — Редактирование профиля</strong><br />
+<strong>Как</strong> пользователь,<br />
+<strong>я хочу</strong> менять личные данные,<br />
+<strong>чтобы</strong> актуализировать информацию.  </p>
+<p>📘 Use Case<br />
+<strong>Название:</strong> Обновление профиля<br />
+<strong>Актор:</strong> Пользователь<br />
+<strong>Основной сценарий:</strong><br />
+ 1. Пользователь открывает «Профиль».<br />
+ 2. Нажимает «Редактировать».<br />
+ 3. Вносит изменения и сохраняет.  </p>
+<p>✅ Функциональные требования<br />
+ - Изменение имени, телефона, email, адреса.<br />
+ - Подтверждение через SMS/email.  </p>
+<p>⚙️ Нефункциональные требования<br />
+ - Защита от XSS/CSRF-атак.  </p>
+<p>✔ Acceptance Criteria<br />
+ - Данные обновляются без ошибок.<br />
+ - Подтверждение при смене телефона/email.  </p>
+<p><strong>🟢 User Story 11 — Управление заказами (админ)</strong><br />
+<strong>Как</strong> менеджер,<br />
+<strong>я хочу</strong> видеть все заказы,<br />
+<strong>чтобы</strong> контролировать процесс.  </p>
+<p>📘 Use Case<br />
+<strong>Название:</strong> Администрирование заказов<br />
+<strong>Актор:</strong> Менеджер<br />
+<strong>Основной сценарий:</strong><br />
+ 1. Менеджер открывает панель управления.<br />
+ 2. Видит список заказов.<br />
+ 3. Меняет статусы (например, «В работе» → «Готов»).  </p>
+<p>✅ Функциональные требования<br />
+ - Фильтрация по статусам и датам.<br />
+ - Ручное изменение статусов.  </p>
+<p>⚙️ Нефункциональные требования<br />
+ - Обновление данных каждые 10 сек.  </p>
+<p>✔ Acceptance Criteria<br />
+ - Изменения статусов сохраняются мгновенно.<br />
+ - Нет доступа к чужим заказам.  </p>
+<p><strong>🟢 User Story 12 — Уведомления для персонала</strong><br />
+<strong>Как</strong> повар,<br />
+<strong>я хочу</strong> получать уведомления о новых заказах,<br />
+<strong>чтобы</strong> начать готовить.  </p>
+<p>📘 Use Case<br />
+<strong>Название:</strong> Оповещение о заказе<br />
+<strong>Актор:</strong> Повар<br />
+<strong>Основной сценарий:</strong><br />
+ 1. Пользователь оформляет заказ.<br />
+ 2. Система отправляет уведомление повару.<br />
+ 3. Повар подтверждает получение.  </p>
+<p>✅ Функциональные требования<br />
+ - Push-уведомления и звуковой сигнал.  </p>
+<p>⚙️ Нефункциональные требования<br />
+ - Доставка уведомлений ≤ 5 сек.  </p>
+<p>✔ Acceptance Criteria<br />
+ - Уведомления приходят мгновенно.<br />
+ - Повар видит список новых заказов.  </p>
+<p><strong>🟢 User Story 13 — Минималистичный дизайн</strong><br />
+<strong>Как</strong> пользователь,<br />
+<strong>я хочу</strong> простой интерфейс,<br />
+<strong>чтобы</strong> легко ориентироваться.  </p>
+<p>📘 Use Case<br />
+<strong>Название:</strong> Использование интерфейса<br />
+<strong>Актор:</strong> Пользователь<br />
+<strong>Основной сценарий:</strong><br />
+ 1. Пользователь открывает приложение.<br />
+ 2. Видит главный экран с ключевыми разделами.<br />
+ 3. Переходит в нужный раздел за 2 клика.  </p>
+<p>✅ Функциональные требования<br />
+ - Навигация без лишних элементов.<br />
+ - Фирменные цвета и шрифты.  </p>
+<p>⚙️ Нефункциональные требования<br />
+ - Поддержка тёмной/светлой темы.<br />
+ - Адаптация под экраны от 4.7 дюймов.  </p>
+<p>✔ Acceptance Criteria<br />
+ - Все элементы интерфейса соответствуют гайдлайнам.<br />
+ - Нет визуального «шума».  </p>
+<p><strong>🟢 User Story 14 — Проверка зоны доставки</strong><br />
+<strong>Как</strong> пользователь,<br />
+<strong>я хочу</strong> знать, доступна ли доставка,<br />
+<strong>чтобы</strong> не тратить время.  </p>
+<p>📘 Use Case<br />
+<strong>Название:</strong> Проверка адреса<br />
+<strong>Актор:</strong> Пользователь<br />
+<strong>Основной сценарий:</strong><br />
+ 1. Пользователь вводит адрес.<br />
+ 2. Система проверяет зону доставки.<br />
+ 3. Если недоступно — показывает ошибку.  </p>
+<p>✅ Функциональные требования<br />
+ - Интеграция с картографическим API.  </p>
+<p>⚙️ Нефункциональные требования<br />
+ - Точность проверки до здания.  </p>
+<p>✔ Acceptance Criteria<br />
+ - Ошибка «Доставка недоступна» при неверном адресе.  </p>
+<p><strong>🟢 User Story 15 — Главная страница</strong><br />
+<strong>Как</strong> пользователь,<br />
+<strong>я хочу</strong> видеть акции и рекомендации,<br />
+<strong>чтобы</strong> быстрее выбрать.  </p>
+<p>📘 Use Case<br />
+<strong>Название:</strong> Просмотр главной страницы<br />
+<strong>Актор:</strong> Пользователь<br />
+<strong>Основной сценарий:</strong><br />
+ 1. Пользователь открывает приложение.<br />
+ 2. Видит баннеры акций и топовые блюда.<br />
+ 3. Нажимает на заинтересовавшее предложение.  </p>
+<p>✅ Функциональные требования<br />
+ - Ротация баннеров каждые 24 часа.<br />
+ - Рекомендации на основе истории заказов.  </p>
+<p>⚙️ Нефункциональные требования<br />
+ - Загрузка главной страницы ≤ 1 сек.  </p>
+<p>✔ Acceptance Criteria<br />
+ - Баннеры отображаются без ошибок.<br />
+ - Рекомендации соответствуют предпочтениям.  </p>
+<p><strong>🟢 User Story 16 — Интеграция с CRM</strong><br />
+<strong>Как</strong> владелец бизнеса,<br />
+<strong>я хочу</strong> синхронизировать данные с CRM,<br />
+<strong>чтобы</strong> автоматизировать процессы.  </p>
+<p>📘 Use Case<br />
+<strong>Название:</strong> Синхронизация данных<br />
+<strong>Актор:</strong> Система<br />
+<strong>Основной сценарий:</strong><br />
+ 1. Пользователь оформляет заказ.<br />
+ 2. Система создаёт запись в CRM.<br />
+ 3. Данные обновляются в реальном времени.  </p>
+<p>✅ Функциональные требования<br />
+ - API для интеграции с Мой Склад CRM.  </p>
+<p>⚙️ Нефункциональные требования<br />
+ - Время синхронизации ≤ 2 сек.  </p>
+<p>✔ Acceptance Criteria<br />
+ - Заказы автоматически попадают в CRM.<br />
+ - Нет дублирования данных.  </p>
+<p><strong>🟢 User Story 17 — Сбор аналитики</strong><br />
+<strong>Как</strong> владелец,<br />
+<strong>я хочу</strong> анализировать данные о заказах,<br />
+<strong>чтобы</strong> улучшать сервис.  </p>
+<p>📘 Use Case<br />
+<strong>Название:</strong> Формирование отчётов<br />
+<strong>Актор:</strong> Администратор<br />
+<strong>Основной сценарий:</strong><br />
+ 1. Администратор открывает раздел «Аналитика».<br />
+ 2. Выбирает параметры отчёта (дата, категория).<br />
+ 3. Экспортирует данные в CSV.  </p>
+<p>✅ Функциональные требования<br />
+ - Отчёты по среднему чеку, топу блюд.<br />
+ - Фильтрация по периодам.  </p>
+<p>⚙️ Нефункциональные требования<br />
+ - Обновление данных каждые 60 минут.  </p>
+<p>✔ Acceptance Criteria<br />
+ - Отчёты формируются за ≤ 10 сек.<br />
+ - Данные в CSV корректны.  </p>
+<p><strong>🟢 User Story 18 — Поддержка iOS</strong></p>
+<p><strong>Как</strong> владелец iPhone,<br />
+<strong>я хочу</strong>, чтобы приложение корректно работало на моем устройстве,<br />
+<strong>чтобы</strong> удобно заказывать еду без сбоев.</p>
+<p>📘 Use Case</p>
+<p><strong>Название:</strong> Использование приложения на iOS<br />
+<strong>Актор:</strong> Пользователь iPhone<br />
+<strong>Основной сценарий:</strong><br />
+ 1. Пользователь устанавливает приложение из App Store<br />
+ 2. Запускает его на iPhone под управлением iOS 15+<br />
+ 3. Использует все функции без ошибок<br />
+ 4. Получает одинаковый опыт на разных моделях iPhone</p>
+<p><strong>Альтернативный сценарий:</strong><br />
+ - Если устройство не поддерживается, показывается сообщение "Требуется iOS 15 или новее"</p>
+<p>✅ Функциональные требования</p>
+<ul>
+<li>Поддержка авторизации через Face ID/Touch ID  </li>
+<li>Адаптация интерфейса под все разрешения экранов iPhone  </li>
+<li>Рабочая интеграция с Apple Pay  </li>
+<li>Корректное отображение в светлом/темном режиме</li>
+</ul>
+<p>⚙️ Нефункциональные требования</p>
+<ul>
+<li><strong>Совместимость:</strong> iOS 15+ (iPhone 8 и новее)  </li>
+<li><strong>Производительность:</strong> 60 FPS на A11 Bionic и новее  </li>
+<li><strong>Безопасность:</strong> Соответствие App Store Review Guidelines  </li>
+<li><strong>Доступность:</strong> Поддержка Dynamic Type и VoiceOver</li>
+</ul>
+<p>✔ Acceptance Criteria</p>
+<ol>
+<li>Приложение успешно проходит проверку App Store Connect  </li>
+<li>На iPhone 17 Pro Max интерфейс масштабируется без артефактов  </li>
+<li>Все кнопки и тексты остаются читаемыми при увеличении шрифта до 150%  </li>
+<li>Apple Pay корректно обрабатывает платежи  </li>
+<li>В системных логах нет критических ошибок iOS SDK</li>
+</ol>
+</details>
+<h3 id="_3">📄 Документы, в которых оформляют требования:</h3>
+<p><strong>BRD (<em>Business Requirements Document</em>)</strong> — объясняет бизнес-цели (зачем это нужно компании).<br />
+<strong>PRD (<em>Product Requirements Document</em>)</strong>  — фокусируется на пользовательских ценностях и продукте (что и для кого делаем).<br />
+<strong>SRS (<em>Software Requirements Specification</em>)</strong> — технический документ с детальными требованиями к системе (как должна работать).</p>
+<h3 id="_4"></h3>
+<details class="info">
+<summary>SRS (Software Requirements Specification)</summary>
+<p><h2>1.1. Введение</h2></p>
+<ul>
+<li><strong>Цель:</strong> Определить функциональные и нефункциональные требования для мобильного приложения, обеспечивающего заказ еды (вок-специализация) для сети ресторанов.  </li>
+<li><strong>Область применения:</strong> Система поддерживает регистрацию, просмотр меню, оформление заказа, онлайн-оплату, отслеживание и управление заказами, оставление отзывов, взаимодействие с CRM и сбор аналитики.  </li>
+<li><strong>Определения и сокращения:</strong>  </li>
+<li><strong>ФТ:</strong> функциональные требования  </li>
+<li><strong>НФТ:</strong> нефункциональные требования  </li>
+<li><strong>Acceptance Criteria:</strong> критерий приемки  </li>
+</ul>
+<p><h2>1.2. Обзор системы</h2></p>
+<ul>
+<li><strong>Бизнес-контекст:</strong>  </li>
+<li>Тип заведения: фастфуд  </li>
+<li>География: 1 заведение, Москва (САО)  </li>
+<li>
+<p>Уникальность: доставка своими силами, только для жителей в пределах ТЦ  </p>
+</li>
+<li>
+<p><strong>Целевая аудитория и стимулы:</strong>  </p>
+</li>
+<li>Пользователи, которым нужна быстрая и надёжная доставка с акцентом на простоту заказа  </li>
+<li>Владельцы, желающие автоматизировать интеграцию с CRM и получать аналитику для улучшения сервиса</li>
+</ul>
+<p><h2>1.3. Участники системы (Actors)</h2></p>
+<table>
+<thead>
+<tr>
+<th>Роль</th>
+<th>Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Пользователь</td>
+<td>Заказывает еду, платит, отслеживает, оставляет отзывы</td>
+</tr>
+<tr>
+<td>Администратор</td>
+<td>Управляет заказами, проверяет отчёты, работает с CRM</td>
+</tr>
+<tr>
+<td>Повар</td>
+<td>Получает заказы, подтверждает получение</td>
+</tr>
+<tr>
+<td>Курьер</td>
+<td>Доставляет заказы, передаёт статусы</td>
+</tr>
+<tr>
+<td>Служба поддержки</td>
+<td>Отвечает на вопросы и проблемы пользователей</td>
+</tr>
+<tr>
+<td>CRM-система</td>
+<td>Получает информацию о заказах</td>
+</tr>
+<tr>
+<td>Платёжный шлюз</td>
+<td>Обрабатывает онлайн-оплаты (Т касса)</td>
+</tr>
+</tbody>
+</table>
+<p><h2>1.4. Ограничения и допущения</h2></p>
+<ul>
+<li>Доставка доступна только в пределах конкретного ТЦ</li>
+<li>Поддерживаются устройства от iPhone 8 с iOS 15+</li>
+<li>Сбор и хранение персональных данных в рамках законодательства РФ (ФЗ-152)</li>
+<li>Заказы обрабатываются только в рабочее время ресторана</li>
+</ul>
+<p><h2>1.5. Архитектурный контекст (высокоуровнево)</h2></p>
+<ul>
+<li>Клиент: Мобильное приложение iOS</li>
+<li>Сервер: REST API (авторизация, заказ, оплата, уведомления)</li>
+<li>Интеграции:  </li>
+<li>CRM (Мой Склад)  </li>
+<li>Яндекс.Карты (зона доставки, курьер)  </li>
+<li>Платёжные шлюзы (Т Kaсса)  </li>
+<li>Уведомления (Apple Push)</li>
+</ul>
+<p><h2>1.6. Роли и права (RBAC)</h2></p>
+<table>
+<thead>
+<tr>
+<th>Функция</th>
+<th>Пользователь</th>
+<th>Администратор</th>
+<th>Повар</th>
+<th>Курьер</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Регистрация / вход</td>
+<td>✅</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+</tr>
+<tr>
+<td>Оформление заказа</td>
+<td>✅</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+</tr>
+<tr>
+<td>Отмена заказа</td>
+<td>✅</td>
+<td>✅</td>
+<td>❌</td>
+<td>❌</td>
+</tr>
+<tr>
+<td>Изменение статуса заказа</td>
+<td>❌</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Доступ к истории заказов</td>
+<td>✅</td>
+<td>✅</td>
+<td>❌</td>
+<td>❌</td>
+</tr>
+<tr>
+<td>Просмотр отзывов</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>❌</td>
+</tr>
+<tr>
+<td>Работа с CRM</td>
+<td>❌</td>
+<td>✅</td>
+<td>❌</td>
+<td>❌</td>
+</tr>
+<tr>
+<td>Чат с клиентом</td>
+<td>✅</td>
+<td>✅</td>
+<td>❌</td>
+<td>❌</td>
+</tr>
+</tbody>
+</table>
+<p><h2>2 Требования</h2><br />
+Каждая функциональность описана в рамках User Story и Use Case:</p>
+<p><h4>1. Регистрация и вход</h4><br />
+- <strong>Сценарий:</strong> Пользователь выбирает способ регистрации (телефон, email, Госуслуги); ввод данных, подтверждение через SMS/email или OAuth.<br />
+- <strong>ФТ:</strong><br />
+    - Поддержка всех трёх методов регистрации<br />
+    - Валидация формата ввода<br />
+    - Автоматический вход после подтверждения<br />
+- <strong>НФТ:</strong><br />
+    - Время обработки ≤ 2 сек<br />
+    - Соответствие ФЗ-152<br />
+    - Доступность 99.9%<br />
+- <strong>Acceptance Criteria:</strong><br />
+    - Ошибка при дублировании данных<br />
+    - Перенаправление в главное меню после регистрации</p>
+<p><h4>2. Просмотр меню</h4><br />
+- <strong>Сценарий:</strong> Пользователь открывает раздел «Меню», использует фильтры и поиск<br />
+- <strong>ФТ:</strong><br />
+    - Отображение фото, названия, цены, состава блюда<br />
+    - Фильтры по категориям, аллергенам<br />
+    - Поиск по названию<br />
+- <strong>НФТ:</strong><br />
+    - Загрузка меню ≤ 1.5 сек<br />
+    - Поддержка более 500 позиций с кэшированием на 1 час<br />
+- <strong>Acceptance Criteria:</strong><br />
+    - Корректная работа фильтров и поиск</p>
+<p><h4>3. Оформление заказа</h4><br />
+- <strong>Сценарий:</strong> Добавление блюд в корзину, выбор способа доставки и подтверждение заказа<br />
+- <strong>ФТ:</strong><br />
+    - Возможность добавления/удаления позиций<br />
+    - Автоматический пересчёт итоговой суммы<br />
+    - Выбор адреса доставки<br />
+- <strong>НФТ:</strong><br />
+    - Сохранение корзины при перезагрузке<br />
+    - Обработка заказа ≤ 3 сек<br />
+- <strong>Acceptance Criteria:</strong><br />
+    - Пересчёт цены при изменениях<br />
+    - Возможность выбора между курьером и самовывозом</p>
+<p><h4>4. Оплата картой</h4><br />
+- <strong>Сценарий:</strong> Платёж через интегрированный платёжный шлюз (ЮKassa/Stripe), с опцией сохранения карты (по согласованию)<br />
+- <strong>ФТ:</strong><br />
+    - Интеграция с платёжными системами<br />
+    - Опция сохранить данные карты<br />
+- <strong>НФТ:</strong><br />
+    - Соответствие стандартам PCI DSS<br />
+    - Шифрование данных<br />
+- <strong>Acceptance Criteria:</strong><br />
+    - Оплата проходит без ошибок, чек получен на email за 1 минуту</p>
+<p><h4>5. Отслеживание заказа</h4><br />
+- <strong>Сценарий:</strong> Пользователь открывает «Мои заказы» и видит статус и позицию курьера на карте (Яндекс.Карты)<br />
+- <strong>ФТ:</strong><br />
+    - Отображение статусов заказа («Принят», «В пути», «Доставлен»)<br />
+- <strong>НФТ:</strong><br />
+    - Обновление каждые 15 сек<br />
+    - Точность геолокации ±50 м<br />
+- <strong>Acceptance Criteria:</strong><br />
+    - Реальное обновление статуса и видимость курьера на карте</p>
+<p><h4>6. Отмена заказа</h4><br />
+- <strong>Сценарий:</strong> Пользователь может отменить заказ до начала готовки<br />
+- <strong>ФТ:</strong><br />
+    - Возможность отмены заказа со статусом «Принят»<br />
+    - Автоматический возврат средств<br />
+- <strong>НФТ:</strong><br />
+    - Время возврата от 1 до 3 рабочих дней<br />
+- <strong>Acceptance Criteria:</strong><br />
+    - Уведомление об отмене в течение 1 минуты, доступ к отмене только в статусе «Принят»</p>
+<p><h4>7. История заказов</h4><br />
+- <strong>Сценарий:</strong> Просмотр заказов за последние 12 месяцев с возможностью повторного заказа<br />
+- <strong>ФТ:</strong><br />
+    - Фильтрация по дате и статусу<br />
+    - Кнопка «Повторить заказ»<br />
+- <strong>НФТ:</strong><br />
+    - Хранение истории не менее 12 месяцев<br />
+- <strong>Acceptance Criteria:</strong><br />
+    - Повторный заказ создаётся за 2 клика</p>
+<p><h4>8. Оставление отзыва</h4><br />
+- <strong>Сценарий:</strong> После доставки пользователь может оставить оценку и текстовый комментарий<br />
+- <strong>ФТ:</strong><br />
+    - Возможность выставить оценку от 1 до 5 звёзд<br />
+    - Отзыв до 500 символов<br />
+- <strong>НФТ:</strong><br />
+    - Модерация отзывов перед публикацией<br />
+- <strong>Acceptance Criteria:</strong><br />
+    - Отзыв сохраняется и отображаются только одобренные</p>
+<p><h4>9. Поддержка клиентов</h4><br />
+- <strong>Сценарий:</strong> Пользователь обращается в службу поддержки через чат с возможностью прикрепления файлов<br />
+- <strong>ФТ:</strong><br />
+    - Реализация чата в реальном времени, поддержка вложений<br />
+- <strong>НФТ:</strong><br />
+    - Среднее время ответа ≤ 15 минут<br />
+- <strong>Acceptance Criteria:</strong><br />
+    - Сообщения поступают без задержек, история чата сохраняется</p>
+<p><h4>10. Редактирование профиля</h4><br />
+- <strong>Сценарий:</strong> Пользователь обновляет личные данные с подтверждением изменений через SMS/email<br />
+- <strong>ФТ:</strong><br />
+    - Изменение имени, телефона, email, адреса<br />
+    - Подтверждение изменённых данных<br />
+- <strong>НФТ:</strong><br />
+    - Защита от XSS/CSRF атак<br />
+- <strong>Acceptance Criteria:</strong><br />
+    - Обновление данных без ошибок</p>
+<p><h4>11. Управление заказами (админ)</h4><br />
+- <strong>Сценарий:</strong> Менеджер контролирует и меняет статусы заказов через административную панель<br />
+- <strong>ФТ:</strong><br />
+    - Фильтрация заказов по статусам и датам<br />
+    - Ручное изменение статусов<br />
+- <strong>НФТ:</strong><br />
+    - Обновление данных каждые 10 сек<br />
+- <strong>Acceptance Criteria:</strong><br />
+    - Изменения статусов сохраняются мгновенно, отсутствует доступ к чужим заказам</p>
+<p><h4>12. Уведомления для персонала</h4><br />
+- <strong>Сценарий:</strong> Повар получает push-уведомление о новом заказе и подтверждает его получение<br />
+- <strong>ФТ:</strong><br />
+    - Реализация push-уведомлений и звукового сигнала<br />
+- <strong>НФТ:</strong><br />
+    - Доставка уведомлений ≤ 5 сек<br />
+- <strong>Acceptance Criteria:</strong><br />
+    - Уведомления приходят мгновенно, список новых заказов доступен</p>
+<p><h4>13. Минималистичный дизайн</h4><br />
+- <strong>Сценарий:</strong> Пользователь оценивает простой и удобный интерфейс, где все разделы доступны за 2 клика<br />
+- <strong>ФТ:</strong><br />
+    - Чистая навигация, фирменные цвета и шрифты<br />
+- <strong>НФТ:</strong><br />
+    - Поддержка темной/светлой темы<br />
+    - Адаптация под экраны от 4.7 дюймов<br />
+- <strong>Acceptance Criteria:</strong><br />
+    - Элементы интерфейса соответствуют гайдлайнам, отсутствует визуальный «шум»</p>
+<p><h4>14. Проверка зоны доставки</h4><br />
+- <strong>Сценарий:</strong> Проверка доступности доставки для введённого адреса посредством интеграции с картографическим API<br />
+- <strong>ФТ:</strong><br />
+    - Интеграция с API (например, Яндекс.Карты)<br />
+- <strong>НФТ:</strong><br />
+    - Точность проверки до уровня здания<br />
+- <strong>Acceptance Criteria:</strong><br />
+    - При недоступной доставке выводится сообщение «Доставка недоступна»</p>
+<p><h4>15. Главная страница</h4><br />
+- <strong>Сценарий:</strong> При открытии приложения пользователь видит акции, баннеры и рекомендации, способствующие быстрому выбору<br />
+- <strong>ФТ:</strong><br />
+    - Ротация баннеров (каждые 24 часа)<br />
+    - Рекомендации на основе истории заказов<br />
+- <strong>НФТ:</strong><br />
+    - Загрузка главной страницы ≤ 1 сек<br />
+- <strong>Acceptance Criteria:</strong><br />
+    - Баннеры и рекомендации отображаются корректно</p>
+<p><h4>16. Интеграция с CRM</h4><br />
+- <strong>Сценарий:</strong> При оформлении заказа данные автоматически синхронизируются с CRM (Мой Склад)<br />
+- <strong>ФТ:</strong><br />
+    - API интеграция с CRM<br />
+- <strong>НФТ:</strong><br />
+    - Время синхронизации ≤ 2 сек<br />
+- <strong>Acceptance Criteria:</strong><br />
+    - Заказы без дублирования попадают в CRM в реальном времени</p>
+<p><h4>17. Сбор аналитики</h4><br />
+- <strong>Сценарий:</strong> Администратор формирует отчёты по заказам для анализа среднего чека, топа блюд и т.п.<br />
+- <strong>ФТ:</strong><br />
+    - Отчёты с фильтрацией по периоду и категории<br />
+    - Экспорт данных в CSV<br />
+- <strong>НФТ:</strong><br />
+    - Обновление аналитических данных каждые 60 минут<br />
+    - Формирование отчёта ≤ 10 сек<br />
+- <strong>Acceptance Criteria:</strong><br />
+    - Корректное формирование и экспорт отчётов</p>
+<p><h4>18. Поддержка iOS</h4><br />
+- <strong>Сценарий:</strong> Пользователь с iPhone устанавливает и использует приложение, используя Face ID/Touch ID, Apple Pay и адаптивный интерфейс для светлого/тёмного режима<br />
+- <strong>ФТ:</strong><br />
+    - Адаптация интерфейса под разрешения iPhone<br />
+    - Интеграция с Apple Pay<br />
+    - Поддержка биометрической аутентификации<br />
+- <strong>НФТ:</strong><br />
+    - Совместимость с iOS 15+ (iPhone 8 и новее)<br />
+    - Производительность 60 FPS<br />
+    - Соответствие App Store Review Guidelines<br />
+    - Поддержка Dynamic Type и VoiceOver<br />
+- <strong>Acceptance Criteria:</strong><br />
+    - Прохождение проверки App Store Connect<br />
+    - Корректное масштабирование и стабильная работа на различных моделях<br />
+    - Обработка платежей через Apple Pay без ошибок  </p>
+<p><h2>3. Ошибочные сценарии (Edge Cases)</h2></p>
+<ul>
+<li><strong>Оплата не проходит</strong><br />
+→ Пользователю показывается сообщение, заказ не подтверждается  </li>
+<li><strong>Нет сети при подтверждении заказа</strong><br />
+→ Предлагается повторить позже, корзина сохраняется  </li>
+<li><strong>Доставка недоступна по адресу</strong><br />
+→ Сообщение: «К сожалению, по этому адресу доставка невозможна»  </li>
+<li><strong>Карта не загрузилась</strong><br />
+→ Показываем fallback-текст + ручное обновление  </li>
+<li><strong>Курьер сильно задерживается</strong><br />
+→ Push-уведомление и предложение связаться с поддержкой  </li>
+<li><strong>Критичная ошибка в API / сервере</strong><br />
+→ Показывается заглушка «Сервер недоступен, попробуйте позже»</li>
+</ul>
+<p><h2>4. Требования к безопасности</h2></p>
+<ul>
+<li><strong>Передача данных по HTTPS</strong></li>
+<li><strong>Хранение паролей в хэшированном виде (bcrypt)</strong></li>
+<li><strong>OAuth2 / JWT для авторизации</strong></li>
+<li><strong>Шифрование платёжных данных (PCI DSS)</strong></li>
+<li><strong>Ограничение доступа по ролям (RBAC)</strong></li>
+<li><strong>Защита от XSS, CSRF и SQL-инъекций</strong></li>
+<li><strong>Логирование всех действий в админке</strong></li>
+</ul>
+<p><h2>5. Критерии приёмки в целом</h2></p>
+<ul>
+<li>Все пользовательские сценарии работают без багов на iPhone 8+</li>
+<li>Приложение проходит проверку App Store</li>
+<li>Доставка работает по геозоне</li>
+<li>Заказ попадает в CRM без ошибок</li>
+<li>Минимум 99.9% аптайм backend-части</li>
+<li>Весь функционал тестируется через unit + UI тесты  </li>
+</ul>
+<p><h2>6. API Overview</h2></p>
+<p>Примеры REST API эндпоинтов:</p>
+<p><h4>Аутентификация</h4>
+- <code>POST /auth/register</code> — регистрация пользователя
+- <code>POST /auth/login</code> — авторизация
+- <code>POST /auth/verify</code> — подтверждение (SMS/email)
+- <code>POST /auth/logout</code> — выход</p>
+<p><h4>Пользователь</h4>
+- <code>GET /user/profile</code> — получить профиль
+- <code>PUT /user/profile</code> — редактировать профиль</p>
+<p><h4>Меню</h4>
+- <code>GET /menu</code> — список блюд
+- <code>GET /menu/{id}</code> — подробности по блюду</p>
+<p><h4>Заказы</h4>
+- <code>POST /orders</code> — оформить заказ
+- <code>GET /orders</code> — история заказов
+- <code>GET /orders/{id}</code> — детали заказа
+- <code>PUT /orders/{id}/cancel</code> — отмена заказа</p>
+<p><h4>Оплата</h4>
+- <code>POST /payments/initiate</code> — начать оплату
+- <code>POST /payments/webhook</code> — приём колбека от платёжки</p>
+<p><h4>Доставка</h4>
+- <code>GET /delivery/check?address=...</code> — проверка зоны доставки
+- <code>GET /delivery/status/{orderId}</code> — статус доставки</p>
+<p><h4>Отзывы</h4>
+- <code>POST /reviews</code> — оставить отзыв
+- <code>GET /reviews</code> — список отзывов</p>
+<p><h4>CRM-интеграция (в фоне, async)</h4>
+- <code>POST /crm/sync</code> — отправка заказа в CRM</p>
+<p><h4>Поддержка</h4>
+- <code>POST /support/messages</code> — отправка сообщения в поддержку
+- <code>GET /support/history</code> — история обращений</p>
+</details>
+<p><br>
+<br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br>
+<br>
+<br>
+<br>
+<br></p>
+<p><br>
+<br></p>
+<h1 id="2-prd-product-requirements-document">2. PRD (Product Requirements Document)</h1>
+<h3 id="21">2.1. Обзор продукта</h3>
+<ul>
+<li><strong>Цель продукта:</strong> Создание удобного, функционального и быстрого приложения для заказа еды с упором на минималистичный дизайн и высокую производительность.  </li>
+<li><strong>Видение:</strong> Обеспечить легкость оформления заказа, интеграцию с CRM и аналитику, а также обеспечить стабильную работу на iOS.  </li>
+<li><strong>Целевая аудитория:</strong> Пользователи, ищущие оперативное и качественное решение для заказа еды в рамках торгового центра.</li>
+</ul>
+<h3 id="22_1">2.2. Описание функционала</h3>
+<ul>
+<li><strong>Регистрация и вход:</strong> три способа регистрации, автоматический вход.  </li>
+<li><strong>Просмотр меню:</strong> фильтрация, поиск, отображение фото и состава блюд.  </li>
+<li><strong>Оформление заказа:</strong> добавление товаров в корзину, выбор доставки и оплата картой.  </li>
+<li><strong>Отслеживание и отмена заказа:</strong> реальные обновления статуса, возможность отмены до начала готовки.  </li>
+<li><strong>Поддержка клиентов и отзывы:</strong> чат поддержки, система отзывов с модерацией.  </li>
+<li><strong>Личный кабинет:</strong> история заказов, редактирование профиля.  </li>
+<li><strong>Администрирование:</strong> панель для менеджеров, уведомления для персонала, интеграция с CRM и сбор аналитики.  </li>
+<li><strong>Мобильная поддержка:</strong> оптимизированный опыт на iOS, интеграция с Apple Pay, адаптивный дизайн.</li>
+</ul>
+<h3 id="23">2.3. Ключевые метрики успеха</h3>
+<ul>
+<li><strong>Удовлетворённость пользователей:</strong> скорость загрузки, интуитивно понятный интерфейс.  </li>
+<li><strong>Эффективность обработки заказов:</strong> время от оформления до подтверждения заказа.  </li>
+<li><strong>Конверсия через мобильное приложение:</strong> число установок и активных пользователей iOS.  </li>
+<li><strong>Вовлечённость и удержание:</strong> повторные заказы, использование функции «Повторить заказ».</li>
+</ul>
+<h3 id="24">2.4. Пользовательский опыт и дизайн</h3>
+<ul>
+<li>Минималистичный, интуитивный интерфейс без «шума».   </li>
+<li>Чёткая иерархия информации: быстрый доступ к основным функциям (меню, корзина, профиль, история заказов).  </li>
+<li>Поддержка темного и светлого режимов, адаптация под разные размеры экранов.</li>
+</ul>
+<hr />
+<h2 id="3-brd-business-requirements-document">3. BRD (Business Requirements Document)</h2>
+<h3 id="31-">3.1. Бизнес-цели и задачи</h3>
+<ul>
+<li><strong>Цель проекта:</strong> Улучшение качества сервиса, повышение лояльности клиентов, увеличение объёма заказов через эффективное цифровое решение.  </li>
+<li><strong>Задачи:</strong>  </li>
+<li>Автоматизация процессов заказа и доставки.  </li>
+<li>Интеграция с CRM для оптимизации работы с клиентами.  </li>
+<li>Сбор и анализ данных для постоянного улучшения сервиса.</li>
+</ul>
+<h3 id="32-">3.2. Бизнес-контекст</h3>
+<ul>
+<li><strong>Формат сети:</strong> Фастфуд, специализация – вок (сдержанный ассортимент, но с уникальным предложением для посетителей ТЦ).  </li>
+<li><strong>География:</strong> Москва, САО; текущее присутствие – одно заведение, без планов расширения.  </li>
+<li><strong>Уникальное торговое предложение (УТП):</strong> Доставка, осуществляемая силами ресторана, с ограничением зоны только внутри ТЦ, что обеспечивает оперативность и контроль качества.</li>
+</ul>
+<h3 id="33">3.3. Заинтересованные стороны</h3>
+<ul>
+<li><strong>Владельцы бизнеса:</strong> Ожидают устойчивый рост и контроль за качеством сервиса.  </li>
+<li><strong>Управляющие/менеджеры:</strong> Требуют инструментов для управления заказами и мониторинга процессов.  </li>
+<li><strong>Клиенты:</strong> Ожидают удобства, быстроты и прозрачности при заказе.  </li>
+<li><strong>IT-команда:</strong> Отвечает за разработку, интеграцию с CRM, безопасность и соответствие нормативным требованиям.</li>
+</ul>
+<h3 id="34">3.4. Экономическая обоснованность</h3>
+<ul>
+<li><strong>ROI:</strong> Ожидается, что улучшение цифрового сервиса приведёт к росту заказов и повышению прибыли за счёт повышения удовлетворённости клиентов.  </li>
+<li><strong>Инвестиции:</strong> Затраты на разработку и интеграцию платёжных решений, CRM, аналитики и мобильного приложения.  </li>
+<li><strong>Ожидаемые выгоды:</strong> Сокращение времени обработки заказов, уменьшение ошибок, улучшение качества обслуживания, повышение рейтинга бренда.</li>
+</ul>
+<h3 id="35">3.5. Регуляторные и правовые требования</h3>
+<ul>
+<li>Соответствие ФЗ-152 при обработке персональных данных.  </li>
+<li>Требования PCI DSS для обработки платёжной информации.  </li>
+<li>Соответствие App Store Review Guidelines для мобильных приложений на iOS.</li>
+</ul>
+<h3 id="36">3.6. Оценка рисков</h3>
+<ul>
+<li><strong>Технические риски:</strong> Задержки в синхронизации данных с CRM, проблемы интеграции с платёжными шлюзами.  </li>
+<li><strong>Бизнес-риски:</strong> Низкая конверсия пользователей, негативная обратная связь при сбоях в работе системы.  </li>
+<li><strong>Юридические риски:</strong> Невыполнение регуляторных требований, что может привести к штрафным санкциям.</li>
+</ul>
+<hr />
+<p>Эти документы представляют базовую структуру, на основе которой можно детально проработать каждый модуль, добавить схемы, диаграммы и спецификации в зависимости от необходимости. Если нужны корректировки или углублённое описание какого-либо раздела, дай знать – всегда готов перейти к делу!</p>
+<hr />
+<h1 id="3_1">3 Приоритезация требований.</h1>
+<h4 id="3-moscow">3. <strong>MoSCoW</strong></h4>
+<p>Метод <strong>MoSCoW</strong> помогает приоритизировать требования. Хотя он не используется напрямую для написания User Stories, он может помочь в распределении по категориям, что важно при формировании бэклога:</p>
+<ul>
+<li><strong>M</strong> — <strong>Must have</strong>: Обязательные требования.</li>
+<li><strong>S</strong> — <strong>Should have</strong>: Важные, но не критичные требования.</li>
+<li><strong>C</strong> — <strong>Could have</strong>: Желательные, но не критичные требования.</li>
+<li><strong>W</strong> — <strong>Won’t have</strong>: Требования, которые не будут реализованы в текущем спринте или релизе.</li>
+</ul>
+<p>Пример:<br />
+- <strong>Must have</strong>: Возможность оформить заказ и оплатить его через приложение.<br />
+- <strong>Should have</strong>: Возможность отслеживать статус заказа в реальном времени.<br />
+- <strong>Could have</strong>: Возможность создавать персонализированные меню на основе истории заказов.<br />
+- <strong>Won’t have</strong>: Интеграция с социальными сетями для авторизации.</p>
+<h4 id="4-swot">4. <strong>SWOT</strong></h4>
+<p>Метод <strong>SWOT</strong> в первую очередь используется для анализа текущей ситуации и внешней среды, но его можно применить для оценки потребностей и проблем, которые должны быть решены через User Stories:</p>
+<ul>
+<li><strong>Strengths (Сильные стороны)</strong>: В чем приложение будет сильным.</li>
+<li><strong>Weaknesses (Слабые стороны)</strong>: Какие слабости нужно учитывать.</li>
+<li><strong>Opportunities (Возможности)</strong>: Возможности для улучшения или дополнительных функций.</li>
+<li><strong>Threats (Угрозы)</strong>: Потенциальные угрозы и проблемы.</li>
+</ul>
+<p>Пример использования <strong>SWOT</strong> для формирования User Story:
+- <strong>Strengths</strong>: Приложение будет иметь быстрый интерфейс для оформления заказа.
+- <strong>Weaknesses</strong>: Возможно, сложность в реализации интеграции с несколькими платежными системами.
+- <strong>Opportunities</strong>: Возможность добавления рекомендаций по продуктам на основе предпочтений пользователя.
+- <strong>Threats</strong>: Проблемы с серверной нагрузкой при пиковых нагрузках.</p>
+<p>ПРОВЕРКА 2вав</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": ".", "features": [], "search": "assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  </body>
+</html>
