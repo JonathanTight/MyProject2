@@ -383,7 +383,7 @@
 <p>For the purposes of this kata, some tests may have multiple answers; any valid solutions will be accepted.</p>
 <p>The input will always be valid (numbers will be an array of length 2 or greater, and all of the items will be numbers; target will always be the sum of two different items from that array).</p>
 <p><small><strong>Примечание: Хотя в задаче просят "tuple", в C++ для пары значений лучше всего подходит <code>std::pair</code>.</strong></small></p>
-<details open="open">
+<details>
 <summary>На русском:</summary>
 <p>Напишите функцию, которая принимает массив чисел (целых чисел для тестов) и целевое число (<code>target</code>). Она должна найти в массиве два разных элемента, которые при сложении дают целевое значение. Индексы этих элементов должны быть возвращены в виде пары (tuple/list) вот так: <code>(index1, index2)</code>.</p>
 <p>В рамках этого ката некоторые тесты могут иметь несколько вариантов ответа; любой правильный ответ будет принят.</p>
@@ -394,7 +394,7 @@
 <span class="n">two_sum</span><span class="p">({</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">},</span><span class="w"> </span><span class="mi">4</span><span class="p">);</span><span class="w"> </span><span class="c1">// returns {0, 2} or {2, 0}</span>
 <span class="n">two_sum</span><span class="p">({</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">},</span><span class="w"> </span><span class="mi">6</span><span class="p">);</span><span class="w"> </span><span class="c1">// returns {1, 2} or {2, 1}</span>
 </code></pre></div>
-<details open="open">
+<details>
 <summary>Решение:</summary>
 <div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;vector&gt;</span>
 
