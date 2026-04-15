@@ -293,6 +293,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#vs-off-by-one-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Инсайт дня: Индексы vs Размер (Off-by-one error)
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -338,6 +349,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#vs-off-by-one-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Инсайт дня: Индексы vs Размер (Off-by-one error)
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -360,6 +382,7 @@
 <p>Write a function that takes an array of numbers (integers for the tests) and a target number. It should find two different items in the array that, when added together, give the target value. The indexes of these items should then be returned in a tuple / list (depending on your language) like so: (index1, index2).</p>
 <p>For the purposes of this kata, some tests may have multiple answers; any valid solutions will be accepted.</p>
 <p>The input will always be valid (numbers will be an array of length 2 or greater, and all of the items will be numbers; target will always be the sum of two different items from that array).</p>
+<p><small><strong>Примечание: Хотя в задаче просят "tuple", в C++ для пары значений лучше всего подходит <code>std::pair</code>.</strong></small></p>
 <details>
 <summary>На русском:</summary>
 <p>Напишите функцию, которая принимает массив чисел (целых чисел для тестов) и целевое число (<code>target</code>). Она должна найти в массиве два разных элемента, которые при сложении дают целевое значение. Индексы этих элементов должны быть возвращены в виде пары (tuple/list) вот так: <code>(index1, index2)</code>.</p>
@@ -387,6 +410,25 @@
 <span class="p">}</span>
 </code></pre></div>
 </details>
+<p><small><code>#include &lt;vector&gt;</code> — это подключение стандартной библиотеки для работы с динамическими массивами (векторами).<br />
+Зачем: Без этой строки компилятор не поймет, что такое std::vector, и выдаст ошибку.<br />
+Почему на Codewars его нет: На Codewars этот заголовок (и другие базовые) часто уже скрыто подключен за кулисами в тестовой среде для удобства, чтобы ты писал только саму функцию.
+В реальном проекте в VS Code его обязательно нужно писать самому в начале файла.
+</small></p>
+<blockquote>
+<h2 id="vs-off-by-one-error">Инсайт дня: Индексы vs Размер (Off-by-one error)</h2>
+</blockquote>
+<p><strong>Индекс (Index)</strong> — это смещение (дистанция) от начала. От первого элемента до него самого — 0 шагов. Поэтому первый элемент имеет индекс <code>0</code>.<br />
+<strong>Размер (Size)</strong> — это общее количество штук. Если в массиве есть хотя бы один предмет, его размер — <code>1</code>.<br />
+<small>В векторе размером <code>N</code> последний доступный индекс всегда равен <code>N - 1</code>. </small>  </p>
+<p><strong>Пример из кода:</strong><br />
+    Если <code>numbers.size() == 5</code>, то:<br />
+Элементы: <code>1-й</code>, <code>2-й</code>, <code>3-й</code>, <code>4-й</code>, <code>5-й</code>.<br />
+Индексы: <code>0</code>, <code>1</code>, <code>2</code>, <code>3</code>, <code>4</code>.<br />
+Попытка обратиться к <code>numbers[5]</code> приведет к ошибке, так как индекса <code>5</code> не существует.</p>
+<blockquote>
+<p><strong>Вывод:</strong> Всегда помнить, что цикл должен идти до <code>i &lt; size</code>, а не <code>i &lt;= size</code>.</p>
+</blockquote>
 
 
 
