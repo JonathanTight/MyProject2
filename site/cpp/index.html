@@ -293,17 +293,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#2-codewars-even-or-odd" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Задача 2: Codewars: "Even or Odd"
-      
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -343,17 +332,6 @@
     <span class="md-ellipsis">
       
         Задача 1: Codewars: "Two Sum" (Based on Leetcode)
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2-codewars-even-or-odd" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Задача 2: Codewars: "Even or Odd"
       
     </span>
   </a>
@@ -424,56 +402,14 @@
 <p><strong>Индекс (Index)</strong> — это смещение (дистанция) от начала. От первого элемента до него самого — 0 шагов. Поэтому первый элемент имеет индекс <code>0</code>.<br />
 <strong>Размер (Size)</strong> — это общее количество штук. Если в массиве есть хотя бы один предмет, его размер — <code>1</code>.<br />
 <small>В векторе размером <code>N</code> последний доступный индекс всегда равен <code>N - 1</code>. </small>  </p>
-<p><strong>Пример:</strong><br />
+<p><strong>Пример из кода:</strong><br />
     Если <code>numbers.size() == 5</code>, то:<br />
 Элементы: <code>1-й</code>, <code>2-й</code>, <code>3-й</code>, <code>4-й</code>, <code>5-й</code>.<br />
 Индексы: <code>0</code>, <code>1</code>, <code>2</code>, <code>3</code>, <code>4</code>.<br />
 Попытка обратиться к <code>numbers[5]</code> приведет к ошибке, так как индекса <code>5</code> не существует.</p>
 <blockquote>
-<p><strong>Вывод:</strong> Всегда помнить, что цикл должен идти до <code>i &lt; size</code>, а не <code>i &lt;= size</code>.</p>
-</blockquote>
-<h2 id="2-codewars-even-or-odd">Задача 2: <a href="https://codewars.com">Codewars: "Even or Odd"</a></h2>
-<p>Create a function that takes an integer as an argument and returns "Even" for even numbers or "Odd" for odd numbers.</p>
-<details open="open">
-<summary>На русском:</summary>
-<p>Создайте функцию, которая принимает целое число в качестве аргумента и возвращает "Even" (Четное) для четных чисел или "Odd" (Нечетное) для нечетных.</p>
-</details>
-<div class="highlight"><pre><span></span><code><span class="n">Примеры</span><span class="w"> </span><span class="n">данных</span><span class="o">:</span>
-
-<span class="n">even_or_odd</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span><span class="w">    </span><span class="c1">// returns &quot;Even&quot;</span>
-<span class="n">even_or_odd</span><span class="p">(</span><span class="mi">7</span><span class="p">);</span><span class="w">    </span><span class="c1">// returns &quot;Odd&quot;</span>
-<span class="n">even_or_odd</span><span class="p">(</span><span class="mi">-42</span><span class="p">);</span><span class="w">  </span><span class="c1">// returns &quot;Even&quot;</span>
-</code></pre></div>
-<details open="open">
-<summary>Решение:</summary>
-<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string&gt;</span>
-
-<span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="nf">even_or_odd</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">number</span><span class="p">)</span><span class="w"> </span>
-<span class="p">{</span>
-<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">number</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="s">&quot;Even&quot;</span><span class="p">;</span>
-<span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="s">&quot;Odd&quot;</span><span class="p">;</span>
-<span class="w">  </span><span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div>
-</details>
-<details open="open">
-<summary>На заметку:</summary>
-<p><small><code>std::string</code> — это тип возвращаемого значения функции, так как мы возвращаем слова, а не числа.<br />
-Синтаксис <code>if/else</code>: условие всегда пишется в круглых скобках <code>()</code>, а блоки кода — в фигурных <code>{}</code>. Каждая команда внутри заканчивается точкой с запятой <code>;</code>.</small></p>
-</details>
-<p><br></p>
-<blockquote>
-<p><big>Инсайт дня: Оператор остатка от деления (%)</big></p>
-</blockquote>
-<p><strong>Оператор <code>%</code> (modulo)</strong> возвращает то, что осталось после деления одного целого числа на другое.<br />
-Если <code>число % 2 == 0</code>, значит оно делится на два нацело — это главный способ определить <strong>четность</strong> в программировании.</p>
-<p><strong>Пример:</strong><br />
-    Если <code>number == 7</code>, то <code>7 % 2</code> даст <code>1</code>. Результат не 0, значит число <strong>нечетное</strong>.<br />
-    Если <code>number == 8</code>, то <code>8 % 2</code> даст <code>0</code>. Результат 0, значит число <strong>четное</strong>.</p>
-<blockquote>
-<p><strong>Вывод:</strong> Любая задача, где нужно проверить кратность одного числа другому, решается через оператор <code>%</code>.</p>
+<p><strong>Вывод:</strong> Всегда помнить, что цикл должен идти до <code>i &lt; size</code>, а не <code>i &lt;= size</code>.
+СПАТЬ</p>
 </blockquote>
 
 
