@@ -304,17 +304,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#3-codewars-convert-a-number-to-a-string" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Задача 3: Codewars: "Convert a Number to a String!"
-      
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -365,17 +354,6 @@
     <span class="md-ellipsis">
       
         Задача 2: Codewars: "Even or Odd"
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3-codewars-convert-a-number-to-a-string" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Задача 3: Codewars: "Convert a Number to a String!"
       
     </span>
   </a>
@@ -454,11 +432,6 @@
 <blockquote>
 <p><strong>Вывод:</strong> Всегда помнить, что цикл должен идти до <code>i &lt; size</code>, а не <code>i &lt;= size</code>.</p>
 </blockquote>
-<hr />
-<hr />
-<hr />
-<hr />
-<hr />
 <h2 id="2-codewars-even-or-odd">Задача 2: <a href="https://codewars.com">Codewars: "Even or Odd"</a></h2>
 <p>Create a function that takes an integer as an argument and returns "Even" for even numbers or "Odd" for odd numbers.</p>
 <details open="open">
@@ -501,49 +474,6 @@
     Если <code>number == 8</code>, то <code>8 % 2</code> даст <code>0</code>. Результат 0, значит число <strong>четное</strong>.</p>
 <blockquote>
 <p><strong>Вывод:</strong> Любая задача, где нужно проверить кратность одного числа другому, решается через оператор <code>%</code>.</p>
-</blockquote>
-<hr />
-<hr />
-<hr />
-<hr />
-<hr />
-<h2 id="3-codewars-convert-a-number-to-a-string">Задача 3: <a href="https://codewars.com">Codewars: "Convert a Number to a String!"</a></h2>
-<p>We need a function that can transform a number (integer) into a string. What ways of achieving this do you know?</p>
-<details open="open">
-<summary>На русском:</summary>
-<p>Нам нужна функция, которая может преобразовать число (целое число) в строку. Какие способы решения этой задачи вы знаете?</p>
-<div class="highlight"><pre><span></span><code><span class="n">Примеры</span><span class="w"> </span><span class="n">данных</span><span class="o">:</span>
-
-<span class="mi">123</span><span class="w">  </span><span class="o">--&gt;</span><span class="w"> </span><span class="s">&quot;123&quot;</span>
-<span class="mi">999</span><span class="w">  </span><span class="o">--&gt;</span><span class="w"> </span><span class="s">&quot;999&quot;</span>
-<span class="mi">-100</span><span class="w"> </span><span class="o">--&gt;</span><span class="w"> </span><span class="s">&quot;-100&quot;</span>
-</code></pre></div>
-</details>
-<details open="open">
-<summary>Решение:</summary>
-<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string&gt;</span>
-
-<span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="nf">number_to_string</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">num</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">to_string</span><span class="p">(</span><span class="n">num</span><span class="p">);</span>
-<span class="p">}</span>
-</code></pre></div>
-</details>
-<details open="open">
-<summary>На заметку:</summary>
-<p><small><code>#include &lt;string&gt;</code> — необходимо подключить, чтобы использовать функцию <code>std::to_string()</code>.<br />
-<code>std::to_string()</code> — принимает числовые типы (int, float, double) и возвращает их строковое представление (<code>std::string</code>). Это самый простой и современный способ конвертации в C++.</small></p>
-</details>
-<p><br></p>
-<blockquote>
-<p><big>Инсайт дня: Строка vs Число (Типизация)</big></p>
-</blockquote>
-<p><strong>Число (<code>int</code>)</strong> — это значение, с которым можно проводить математические операции (сложение, умножение).<br />
-<strong>Строка (<code>string</code>)</strong> — это набор символов (текст). Даже если в строке написано <code>"123"</code>, компьютер воспринимает это как последовательность символов, а не как число.</p>
-<p><strong>Пример:</strong><br />
-    Если <code>num = 123</code>, то <code>123 + 1</code> даст результат <code>124</code>.<br />
-    Если мы работаем со строкой <code>"123"</code>, то попытка прибавить к ней <code>"1"</code> приведет к склейке текста — <code>"1231"</code>.</p>
-<blockquote>
-<p><strong>Вывод:</strong> Всегда следи за типами данных: для расчетов используй <code>int</code>, для вывода текста или хранения строковых ID — <code>string</code>.</p>
 </blockquote>
 
 
