@@ -315,6 +315,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#4-codewars-guess-the-number-game" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 4: Codewars: "Guess the Number Game"
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -376,6 +387,17 @@
     <span class="md-ellipsis">
       
         Задача 3: Codewars: "Convert a Number to a String!"
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-codewars-guess-the-number-game" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 4: Codewars: "Guess the Number Game"
       
     </span>
   </a>
@@ -512,13 +534,14 @@
 <details open="open">
 <summary>На русском:</summary>
 <p>Нам нужна функция, которая может преобразовать число (целое число) в строку. Какие способы решения этой задачи вы знаете?</p>
-<div class="highlight"><pre><span></span><code><span class="n">Примеры</span><span class="w"> </span><span class="n">данных</span><span class="o">:</span>
-
-<span class="mi">123</span><span class="w">  </span><span class="o">--&gt;</span><span class="w"> </span><span class="s">&quot;123&quot;</span>
-<span class="mi">999</span><span class="w">  </span><span class="o">--&gt;</span><span class="w"> </span><span class="s">&quot;999&quot;</span>
-<span class="mi">-100</span><span class="w"> </span><span class="o">--&gt;</span><span class="w"> </span><span class="s">&quot;-100&quot;</span>
-</code></pre></div>
+<p>```cpp</p>
 </details>
+<p>Примеры данных:</p>
+<pre><code>123  --&gt; "123"
+999  --&gt; "999"
+-100 --&gt; "-100"
+```
+</code></pre>
 <details open="open">
 <summary>Решение:</summary>
 <div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string&gt;</span>
@@ -544,6 +567,86 @@
     Если мы работаем со строкой <code>"123"</code>, то попытка прибавить к ней <code>"1"</code> приведет к склейке текста — <code>"1231"</code>.</p>
 <blockquote>
 <p><strong>Вывод:</strong> Всегда следи за типами данных: для расчетов используй <code>int</code>, для вывода текста или хранения строковых ID — <code>string</code>.</p>
+</blockquote>
+<hr />
+<hr />
+<hr />
+<hr />
+<hr />
+<h2 id="4-codewars-guess-the-number-game">Задача 4: <a href="https://codewars.com">Codewars: "Guess the Number Game"</a></h2>
+<p>Imagine you are creating a game where the user has to guess the correct number. But there is a limit of how many guesses the user can do.</p>
+<p>If the user tries to guess more than the limit, the function should throw an error.
+If the user guess is right it should return true.
+If the user guess is wrong it should return false and lose a life.
+Can you finish the game so all the rules are met?</p>
+<details open="open">
+<summary>На русском:</summary>
+<p>Представьте, что вы создаете игру, в которой пользователь должен угадать правильное число. Но количество попыток (догадок), которые может сделать пользователь, ограничено.
+Если пользователь пытается угадать больше раз, чем позволяет лимит, функция должна выбросить ошибку.
+Если догадка пользователя верна, функция должна вернуть true.
+Если догадка неверна, функция должна вернуть false и пользователь теряет одну жизнь.
+Можете ли вы дописать игру так, чтобы соблюдались все эти правила?</p>
+</details>
+<div class="highlight"><pre><span></span><code><span class="c1">// Пример использования:</span>
+<span class="n">Guesser</span><span class="w"> </span><span class="nf">game</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span><span class="w"> </span>
+<span class="n">game</span><span class="p">.</span><span class="n">guess</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span><span class="w"> </span><span class="c1">// возвращает true</span>
+<span class="n">game</span><span class="p">.</span><span class="n">guess</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span><span class="w">  </span><span class="c1">// возвращает false, осталась 1 жизнь</span>
+<span class="n">game</span><span class="p">.</span><span class="n">guess</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span><span class="w">  </span><span class="c1">// возвращает false, жизней 0</span>
+<span class="n">game</span><span class="p">.</span><span class="n">guess</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span><span class="w">  </span><span class="c1">// выбрасывает std::runtime_error</span>
+</code></pre></div>
+<details open="open">
+<summary>Решение:</summary>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdexcept&gt;</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">Guesser</span>
+<span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+<span class="w">    </span><span class="c1">// Конструктор инициализирует начальные значения через список инициализации</span>
+<span class="w">    </span><span class="n">Guesser</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">number</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">lives</span><span class="p">)</span>
+<span class="w">      </span><span class="o">:</span><span class="w"> </span><span class="n">number</span><span class="p">(</span><span class="n">number</span><span class="p">),</span><span class="w"> </span><span class="n">lives</span><span class="p">(</span><span class="n">lives</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">guess</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// 1. Проверяем наличие жизней ПЕРЕД ходом. </span>
+<span class="w">        </span><span class="c1">// Если их 0 или меньше — бросаем ошибку.</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">lives</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">throw</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">runtime_error</span><span class="p">(</span><span class="s">&quot;Expect error: already dead&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="c1">// 2. Проверяем, угадано ли число (сравниваем n и number)</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">number</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="c1">// 3. Если не угадал — уменьшаем жизни и возвращаем false</span>
+<span class="w">        </span><span class="c1">// Сюда код дойдет, только если условия выше не сработали.</span>
+<span class="w">        </span><span class="n">lives</span><span class="o">--</span><span class="p">;</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="k">private</span><span class="o">:</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">number</span><span class="p">,</span><span class="w"> </span><span class="n">lives</span><span class="p">;</span><span class="w"> </span><span class="c1">// Память объекта (приватные переменные)</span>
+<span class="p">};</span>
+</code></pre></div>
+</details>
+<details open="open">
+<summary>На заметку:</summary>
+<p><small><code>#include &lt;stdexcept&gt;</code> — библиотека для работы со стандартными исключениями (ошибками).<br />
+<code>throw std::runtime_error("текст")</code> — команда, которая мгновенно прерывает работу функции и сообщает о критической ошибке.<br />
+<code>lives--</code> — декремент. Короткий способ написать <code>lives = lives - 1</code>.</small></p>
+</details>
+<p><br></p>
+<blockquote>
+<p><big>Инсайт дня: Списки инициализации vs Присваивание</big></p>
+</blockquote>
+<p>В C++ запись <code>: number(number), lives(lives)</code> называется <strong>списком инициализации</strong>.<br />
+Она записывает данные в переменные <strong>до</strong> того, как выполнение зайдет в фигурные скобки <code>{}</code> конструктора. </p>
+<p><strong>Почему это важно:</strong><br />
+1. <strong>Скорость:</strong> Переменные "рождаются" сразу с нужными значениями. Это быстрее, чем сначала создавать их пустыми, а потом заполнять внутри скобок.
+2. <strong>Пустые скобки:</strong> Так как данные уже сохранены через двоеточие, в самих скобках <code>{}</code> делать ничего не нужно. Но по правилам языка они обязаны быть (как точка в конце предложения).</p>
+<blockquote>
+<p><strong>Вывод:</strong> Используй двоеточие для настройки «памяти» класса (инициализации), а тело конструктора оставляй пустым.</p>
 </blockquote>
 
 
