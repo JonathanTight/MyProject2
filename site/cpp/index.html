@@ -326,6 +326,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#5-codewars-reversed-strings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 5: Codewars: "Reversed Strings"
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -398,6 +409,17 @@
     <span class="md-ellipsis">
       
         Задача 4: Codewars: "Guess the Number Game"
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-codewars-reversed-strings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 5: Codewars: "Reversed Strings"
       
     </span>
   </a>
@@ -647,6 +669,61 @@ Can you finish the game so all the rules are met?</p>
 2. <strong>Пустые скобки:</strong> Так как данные уже сохранены через двоеточие, в самих скобках <code>{}</code> делать ничего не нужно. Но по правилам языка они обязаны быть (как точка в конце предложения).</p>
 <blockquote>
 <p><strong>Вывод:</strong> Используй двоеточие для настройки «памяти» класса (инициализации), а тело конструктора оставляй пустым.</p>
+</blockquote>
+<hr />
+<hr />
+<hr />
+<hr />
+<hr />
+<h2 id="5-codewars-reversed-strings">Задача 5: <a href="https://codewars.com">Codewars: "Reversed Strings"</a></h2>
+<p>Complete the solution so that it reverses the string passed into it.</p>
+<details open="open">
+<summary>На русском:</summary>
+<p>Допишите решение так, чтобы оно переворачивало строку, переданную в него.</p>
+</details>
+<div class="highlight"><pre><span></span><code><span class="c1">// Пример использования:</span>
+<span class="n">reverseString</span><span class="p">(</span><span class="s">&quot;world&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// возвращает &quot;dlrow&quot;</span>
+<span class="n">reverseString</span><span class="p">(</span><span class="s">&quot;word&quot;</span><span class="p">);</span><span class="w">  </span><span class="c1">// возвращает &quot;drow&quot;</span>
+</code></pre></div>
+<details open="open">
+<summary>Решение:</summary>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string&gt;</span>
+
+<span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="nf">reverseString</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="o">&amp;</span><span class="n">str</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="c1">// 1. Создаем новую пустую строку для хранения результата</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// 2. Запускаем цикл от последнего индекса к первому.</span>
+<span class="w">    </span><span class="c1">// str.size() - 1 — это номер последней буквы.</span>
+<span class="w">    </span><span class="c1">// i-- — на каждом шаге уменьшаем индекс на 1.</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">str</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">--</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// 3. Берем букву под индексом i и «приклеиваем» её в конец result</span>
+<span class="w">        </span><span class="n">result</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">str</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// 4. Возвращаем готовую перевернутую строку</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">result</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+</details>
+<details open="open">
+<summary>На заметку:</summary>
+<p><small><code>std::string</code> — тип данных (класс) из стандартной библиотеки для работы с текстом.<br />
+<code>str.size() - 1</code> — получение индекса последнего символа (так как отсчет идет от 0).<br />
+<code>result += str[i]</code> — оператор, который добавляет символ в конец строки.<br />
+<code>const std::string &amp;str</code> — передача строки в функцию по ссылке (без копирования) и запрет на её изменение.</small></p>
+</details>
+<p><br></p>
+<blockquote>
+<p><big>Инсайт дня: Тип данных vs Имя объекта</big></p>
+</blockquote>
+<p>В программировании важно различать <strong>тип</strong> и <strong>конкретную переменную</strong>. </p>
+<p><strong>Почему это важно:</strong><br />
+<code>std::string</code> — это название типа (как слово «Машина»), а <code>str</code> — это имя конкретной строки, которую нам дали (как «Твоя машина»). Мы не можем спросить размер у самого понятия «Машина», но можем спросить его у конкретного экземпляра.</p>
+<blockquote>
+<p><strong>Вывод:</strong> Всегда вызывай методы (через точку) у имени переменной (<code>str.size()</code>), а не у названия типа (<code>std::string</code>).</p>
 </blockquote>
 
 
