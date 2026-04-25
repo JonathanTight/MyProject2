@@ -337,6 +337,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#6-codewars-return-negative" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 6: Codewars: "Return Negative"
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -420,6 +431,17 @@
     <span class="md-ellipsis">
       
         Задача 5: Codewars: "Reversed Strings"
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-codewars-return-negative" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 6: Codewars: "Return Negative"
       
     </span>
   </a>
@@ -699,8 +721,8 @@ Can you finish the game so all the rules are met?</p>
 <span class="w">    </span><span class="c1">// i-- — на каждом шаге уменьшаем индекс на 1.</span>
 <span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">str</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">--</span><span class="p">)</span>
 <span class="w">    </span><span class="p">{</span>
-<span class="w">        </span><span class="c1">// 3. Берем букву под индексом i и «приклеиваем» её в конец result</span>
-<span class="w">        </span><span class="n">result</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">str</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+<span class="w">    </span><span class="c1">// 3. Берем букву под индексом i и «приклеиваем» её в конец result</span>
+<span class="w">        </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">str</span><span class="p">[</span><span class="n">i</span><span class="p">];</span><span class="w"> </span><span class="c1">// или result += str[i];</span>
 <span class="w">    </span><span class="p">}</span>
 
 <span class="w">    </span><span class="c1">// 4. Возвращаем готовую перевернутую строку</span>
@@ -711,9 +733,10 @@ Can you finish the game so all the rules are met?</p>
 <details open="open">
 <summary>На заметку:</summary>
 <p><small><code>std::string</code> — тип данных (класс) из стандартной библиотеки для работы с текстом.<br />
-<code>str.size() - 1</code> — получение индекса последнего символа (так как отсчет идет от 0).<br />
+<code>[str.size() - 1]</code> — получение индекса последнего символа (так как отсчет идет от 0).<br />
 <code>result += str[i]</code> — оператор, который добавляет символ в конец строки.<br />
-<code>const std::string &amp;str</code> — передача строки в функцию по ссылке (без копирования) и запрет на её изменение.</small></p>
+<code>const std::string &amp;str</code> — передача строки в функцию по ссылке (без копирования) и запрет на её изменение.<br />
+<code>int i = str.size() - 1</code> — сделанно не для удобства счета, а для присвоения определнного индекса к переменной <code>i</code>.</small></p>
 </details>
 <p><br></p>
 <blockquote>
@@ -724,6 +747,57 @@ Can you finish the game so all the rules are met?</p>
 <code>std::string</code> — это название типа (как слово «Машина»), а <code>str</code> — это имя конкретной строки, которую нам дали (как «Твоя машина»). Мы не можем спросить размер у самого понятия «Машина», но можем спросить его у конкретного экземпляра.</p>
 <blockquote>
 <p><strong>Вывод:</strong> Всегда вызывай методы (через точку) у имени переменной (<code>str.size()</code>), а не у названия типа (<code>std::string</code>).</p>
+</blockquote>
+<hr />
+<hr />
+<hr />
+<hr />
+<hr />
+<h2 id="6-codewars-return-negative">Задача 6: <a href="https://codewars.com">Codewars: "Return Negative"</a></h2>
+<p>In this simple assignment you are given a number and have to make it negative. But maybe the number is already negative?</p>
+<details open="open">
+<summary>На русском:</summary>
+<p>В этом задании вам дается число, и его нужно сделать отрицательным. Но что, если число уже отрицательное?
+Если число положительное — сделайте его отрицательным. Если оно уже меньше или равно нулю — оставьте как есть.</p>
+</details>
+<div class="highlight"><pre><span></span><code><span class="c1">// Пример использования:</span>
+<span class="n">makeNegative</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span><span class="w">  </span><span class="c1">// возвращает -1</span>
+<span class="n">makeNegative</span><span class="p">(</span><span class="mi">-5</span><span class="p">);</span><span class="w"> </span><span class="c1">// возвращает -5</span>
+<span class="n">makeNegative</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span><span class="w">  </span><span class="c1">// возвращает 0</span>
+</code></pre></div>
+<details open="open">
+<summary>Решение:</summary>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="nf">makeNegative</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">num</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="c1">// 1. Проверяем, является ли число положительным или нулем.</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">num</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">      </span><span class="c1">// 2. Если да, возвращаем его с унарным минусом.</span>
+<span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="o">-</span><span class="n">num</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="c1">// 3. Если число уже отрицательное, просто возвращаем его без изменений.</span>
+<span class="w">  </span><span class="c1">// Благодаря return выше, блок else нам не требуется.</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">num</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+</details>
+<details open="open">
+<summary>На заметку:</summary>
+<p><small><code>if</code> — оператор ветвления. Позволяет выполнять код только при соблюдении условия.<br />
+<code>return</code> — оператор выхода из функции. Как только компьютер встречает его, функция завершается.<br />
+<code>Унарный минус (-num)</code> — математический оператор, который меняет знак числа на противоположный.<br />
+<code>Фигурные скобки {}</code> — обязательны, если в <code>if</code> несколько команд. Если команда одна (как в нашем <code>return</code>), скобки можно опустить для краткости.</small></p>
+</details>
+<p><br></p>
+<blockquote>
+<p><big>Инсайт дня: Early Return (Ранний выход)</big></p>
+</blockquote>
+<p>В коде выше мы не использовали <code>else</code>. Если условие <code>if</code> сработало, выполнится первый <code>return</code>, и функция сразу «умрет». До второй строки с <code>return</code> программа просто не доберется.</p>
+<p><strong>Почему это важно:</strong><br />
+Это делает код чище и избавляет от лишних вложенных скобок. Такой подход часто называют «стилем охранника» (Guard Clause): мы сначала проверяем частный случай, а потом спокойно пишем основной код.</p>
+<blockquote>
+<p><strong>Вывод:</strong> Если в блоке <code>if</code> есть <code>return</code>, писать <code>else</code> после него не обязательно.</p>
 </blockquote>
 
 
