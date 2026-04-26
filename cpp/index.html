@@ -370,6 +370,39 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#9-codewars-vowel-count" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 9: Codewars: "Vowel Count"
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-codewars-sum-of-positive" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 10: Codewars: "Sum of positive"
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-codewars-string-repeat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 11: Codewars: "String repeat"
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -486,6 +519,39 @@
     <span class="md-ellipsis">
       
         Задача 8: Codewars: "Opposite number"
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-codewars-vowel-count" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 9: Codewars: "Vowel Count"
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-codewars-sum-of-positive" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 10: Codewars: "Sum of positive"
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-codewars-string-repeat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 11: Codewars: "String repeat"
       
     </span>
   </a>
@@ -937,6 +1003,162 @@ Can you finish the game so all the rules are met?</p>
 Это самый лаконичный способ изменить знак. Тебе не нужны сложные функции — просто один символ перед именем переменной.</p>
 <blockquote>
 <p><strong>Вывод:</strong> Для поиска противоположного числа всегда используй <code>-number</code>. И всегда проверяй наличие <code>;</code> в конце строки <code>return</code>.</p>
+</blockquote>
+<hr />
+<hr />
+<hr />
+<hr />
+<hr />
+<h2 id="9-codewars-vowel-count">Задача 9: <a href="https://codewars.com">Codewars: "Vowel Count"</a></h2>
+<p>Return the number (count) of vowels in the given string. We will consider a, e, i, o, u as vowels for this Kata (but not y).</p>
+<details open="open">
+<summary>На русском:</summary>
+<p>Верните количество гласных в заданной строке. Мы будем считать a, e, i, o, u гласными для этого ката (но не y). Входная строка будет состоять только из строчных букв и/или пробелов.</p>
+</details>
+<div class="highlight"><pre><span></span><code><span class="c1">// Пример использования:</span>
+<span class="n">getCount</span><span class="p">(</span><span class="s">&quot;abracadabra&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// возвращает 5</span>
+<span class="n">getCount</span><span class="p">(</span><span class="s">&quot;celebration&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// возвращает 5</span>
+</code></pre></div>
+<details open="open">
+<summary>Решение:</summary>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string&gt;</span>
+
+<span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="p">;</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">getCount</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">string</span><span class="o">&amp;</span><span class="w"> </span><span class="n">inputStr</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">num_vowels</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+
+<span class="w">  </span><span class="c1">// Используем цикл for для перебора индексов строки</span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">inputStr</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Проверяем символ по индексу i на совпадение с гласными</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">inputStr</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="sc">&#39;a&#39;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">inputStr</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="sc">&#39;e&#39;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">inputStr</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="sc">&#39;i&#39;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">inputStr</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="sc">&#39;o&#39;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">inputStr</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="sc">&#39;u&#39;</span><span class="p">)</span><span class="w"> </span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="n">num_vowels</span><span class="o">++</span><span class="p">;</span><span class="w"> </span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">num_vowels</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+</details>
+<details open="open">
+<summary>На заметку:</summary>
+<p><small><strong>Индекс <code>[i]</code></strong> — это адрес конкретной буквы. Переменная <code>i</code> — это просто число, а <code>inputStr[i]</code> позволяет достать букву, которая хранится под этим номером.<br />
+<strong>Логическое ИЛИ <code>||</code></strong> — позволяет объединить несколько проверок. Если буква совпала хотя бы с одной гласной, условие сработает.<br />
+<strong>Точка с запятой <code>;</code></strong> — обязательна в конце каждой инструкции (например, после <code>num_vowels++</code>), чтобы компьютер понял, где заканчивается действие.</small></p>
+</details>
+<p><br></p>
+<blockquote>
+<p><big>Инсайт дня: Индекс — это порядковый номер ящика</big></p>
+</blockquote>
+<p>Строка — это ряд ячеек. Чтобы узнать, что внутри, тебе нужен индекс <code>i</code>. Цикл просто перебирает все числа по порядку, а ты открываешь каждый ящик <code>inputStr[i]</code> и проверяешь, лежит ли там гласная.</p>
+<p><strong>Почему это важно:</strong><br />
+Это фундаментальный способ обработки данных в C++. Так ты можешь найти, посчитать или изменить любой символ. Уточнение про <code>(but not y)</code> просто избавляет тебя от необходимости проверять лишнюю букву.</p>
+<blockquote>
+<p><strong>Вывод:</strong> Для решения подобных задач всегда используй связку <code>for</code> и <code>inputStr[i]</code>. Это самый понятный и надежный способ перебора.  </p>
+</blockquote>
+<hr />
+<hr />
+<hr />
+<hr />
+<hr />
+<h2 id="10-codewars-sum-of-positive">Задача 10: <a href="https://codewars.com">Codewars: "Sum of positive"</a></h2>
+<p>You get an array of numbers, return the sum of all of the positives ones.</p>
+<details open="open">
+<summary>На русском:</summary>
+<p>Вы получаете массив чисел, верните сумму всех положительных из них. Если суммировать нечего (массив пуст), сумма по умолчанию равна 0.</p>
+</details>
+<div class="highlight"><pre><span></span><code><span class="c1">// Пример использования:</span>
+<span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">-4</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mi">12</span><span class="p">]</span><span class="w">  </span><span class="c1">// 1 + 7 + 12 = 20</span>
+<span class="p">[</span><span class="mi">-1</span><span class="p">,</span><span class="w"> </span><span class="mi">-2</span><span class="p">,</span><span class="w"> </span><span class="mi">-3</span><span class="p">]</span><span class="w">    </span><span class="c1">// возвращает 0</span>
+</code></pre></div>
+<details open="open">
+<summary>Решение:</summary>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;vector&gt;</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">positive_sum</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">vec</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">sum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="c1">// Наша копилка</span>
+
+<span class="w">  </span><span class="c1">// Идем по всему вектору</span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">vec</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Проверяем: число больше нуля?</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">vec</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="c1">// Прибавляем само число к сумме</span>
+<span class="w">      </span><span class="n">sum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sum</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">vec</span><span class="p">[</span><span class="n">i</span><span class="p">];</span><span class="w"> </span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="c1">// Возвращаем итоговый результат</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">sum</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+</details>
+<details open="open">
+<summary>На заметку:</summary>
+<p><small><strong><code>std::vector</code></strong> — это динамический массив. Мы работаем с ним так же, как со строкой: через <code>.size()</code> и индекс <code>[i]</code>.<br />
+<strong><code>sum = sum + vec[i]</code></strong> — мы не просто считаем количество (1, 2, 3), а берем реальное значение из ячейки и добавляем его в общую кучу.<br />
+<strong>Инициализация <code>int sum = 0</code></strong> — крайне важна. Если не задать ноль в начале, в переменной может оказаться случайный "мусор" из памяти.</small></p>
+</details>
+<p><br></p>
+<blockquote>
+<p><big>Инсайт дня: Фильтруй и властвуй</big></p>
+</blockquote>
+<p>Цикл с условием внутри — это твой персональный фильтр. Ты прогоняешь через него поток данных, но забираешь только то, что подходит под твои правила.</p>
+<p><strong>Почему это важно:</strong><br />
+Это стандартная схема для любой аналитики: найти продажи только за сегодня, посчитать зарплаты только выше нормы и т.д. Логика всегда одна: создаем счетчик -&gt; бежим циклом -&gt; проверяем <code>if</code> -&gt; накапливаем результат.</p>
+<blockquote>
+<p><strong>Вывод:</strong> Для суммирования конкретных элементов всегда используй переменную-накопитель и прибавляй к ней значение через <code>+=</code> или <code>sum = sum + значение</code>.</p>
+</blockquote>
+<hr />
+<hr />
+<hr />
+<hr />
+<hr />
+<h2 id="11-codewars-string-repeat">Задача 11: <a href="https://codewars.com">Codewars: "String repeat"</a></h2>
+<p>Write a function that accepts a non-negative integer n and a string s as parameters, and returns a string of s repeated exactly n times.</p>
+<details open="open">
+<summary>На русском:</summary>
+<p>Напишите функцию, которая принимает целое неотрицательное число n и строку s в качестве параметров и возвращает строку s, повторенную ровно n раз.</p>
+</details>
+<div class="highlight"><pre><span></span><code><span class="c1">// Пример использования:</span>
+<span class="n">repeat_str</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Abc&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// возвращает &quot;AbcAbcAbc&quot;</span>
+<span class="n">repeat_str</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Hello&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// возвращает &quot;HelloHelloHelloHelloHello&quot;</span>
+</code></pre></div>
+<details open="open">
+<summary>Решение:</summary>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string&gt;</span>
+
+<span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="nf">repeat_str</span><span class="p">(</span><span class="kt">size_t</span><span class="w"> </span><span class="n">repeat</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span><span class="w"> </span><span class="n">str</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">;</span><span class="w"> </span><span class="c1">// Создаем пустую строку-копилку</span>
+
+<span class="w">  </span><span class="c1">// Цикл сработает ровно столько раз, сколько указано в repeat</span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">size_t</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">repeat</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="n">s</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">str</span><span class="p">;</span><span class="w"> </span><span class="c1">// Приклеиваем строку str к нашему результату s</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">s</span><span class="p">;</span><span class="w"> </span><span class="c1">// Возвращаем итоговую склеенную строку</span>
+<span class="p">}</span>
+</code></pre></div>
+</details>
+<details open="open">
+<summary>На заметку:</summary>
+<p><small><strong>Оператор <code>+=</code> со строками</strong> — в C++ это работает как клей. Команда <code>s += str</code> берет текущее содержимое <code>s</code> и дописывает в конец то, что лежит в <code>str</code>.<br />
+<strong>Пустая строка <code>""</code></strong> — мы обязательно инициализируем <code>s</code> пустыми кавычками, чтобы нам было куда "приклеивать" первые символы.<br />
+<strong>Цикл по числу</strong> — в отличие от прошлых задач, здесь мы не лезем внутрь строки по индексам <code>[i]</code>. Мы используем цикл просто как счетчик повторений (будильник), который заставляет команду склейки сработать нужное количество раз.</small></p>
+</details>
+<p><br></p>
+<blockquote>
+<p><big>Инсайт дня: Сложение строк — это не математика, а конкатенация</big></p>
+</blockquote>
+<p>В C++ знак <code>+</code> умеет не только складывать числа, но и "сшивать" куски текста. Когда ты используешь его внутри цикла, ты по сути занимаешься ручной сборкой длинного слова из одинаковых деталей.</p>
+<p><strong>Почему это важно:</strong><br />
+Это самый простой способ генерировать повторяющиеся данные. Хочешь нарисовать забор из 100 палок? Просто запусти цикл на 100 повторов и делай <code>fence += "|"</code>.</p>
+<blockquote>
+<p><strong>Вывод:</strong> Для повторения текста всегда используй пустую строку и цикл <code>for</code>, который будет "наращивать" её длину с каждым кругом.</p>
 </blockquote>
 
 
