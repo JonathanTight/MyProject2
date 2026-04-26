@@ -348,28 +348,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#7-codewars-convert-boolean-values-to-strings-yes-or-no" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Задача 7: Codewars: "Convert boolean values to strings 'Yes' or 'No'"
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#8-codewars-opposite-number" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Задача 8: Codewars: "Opposite number"
-      
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -464,28 +442,6 @@
     <span class="md-ellipsis">
       
         Задача 6: Codewars: "Return Negative"
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#7-codewars-convert-boolean-values-to-strings-yes-or-no" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Задача 7: Codewars: "Convert boolean values to strings 'Yes' or 'No'"
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#8-codewars-opposite-number" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Задача 8: Codewars: "Opposite number"
       
     </span>
   </a>
@@ -841,102 +797,7 @@ Can you finish the game so all the rules are met?</p>
 <p><strong>Почему это важно:</strong><br />
 Это делает код чище и избавляет от лишних вложенных скобок. Такой подход часто называют «стилем охранника» (Guard Clause): мы сначала проверяем частный случай, а потом спокойно пишем основной код.</p>
 <blockquote>
-<p><strong>Вывод:</strong> Если в блоке <code>if</code> есть <code>return</code>, писать <code>else</code> после него не обязательно.  </p>
-</blockquote>
-<p><br>
-<br>
-<br></p>
-<hr />
-<h1><b><strong><big><p style="color: black;">You have ranked up!</p></big></strong></b></h1>
-<h1><b><strong><p style="color: black;">Respect. You have ranked up to 7 kyu in C++.</p></strong></b></h1>
-<hr />
-<p><br>
-<br>
-<br></p>
-<h2 id="7-codewars-convert-boolean-values-to-strings-yes-or-no">Задача 7: <a href="https://codewars.com">Codewars: "Convert boolean values to strings 'Yes' or 'No'"</a></h2>
-<p>Complete the method that takes a boolean value and return a "Yes" string for true, or a "No" string for false.</p>
-<details open="open">
-<summary>На русском:</summary>
-<p>Напишите функцию, которая принимает логическое значение (bool) и возвращает строку "Yes", если значение — true, или "No", если значение — false.</p>
-</details>
-<div class="highlight"><pre><span></span><code><span class="c1">// Пример использования:</span>
-<span class="n">bool_to_word</span><span class="p">(</span><span class="nb">true</span><span class="p">);</span><span class="w">  </span><span class="c1">// возвращает &quot;Yes&quot;</span>
-<span class="n">bool_to_word</span><span class="p">(</span><span class="nb">false</span><span class="p">);</span><span class="w"> </span><span class="c1">// возвращает &quot;No&quot;</span>
-</code></pre></div>
-<details open="open">
-<summary>Решение:</summary>
-<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string&gt;</span>
-
-<span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="nf">bool_to_word</span><span class="p">(</span><span class="kt">bool</span><span class="w"> </span><span class="n">value</span><span class="p">)</span>
-<span class="p">{</span>
-<span class="w">  </span><span class="c1">// 1. Проверяем логическое значение value.</span>
-<span class="w">  </span><span class="c1">// Короткая запись if (value) заменяет if (value == true).</span>
-<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">value</span><span class="p">)</span><span class="w"> </span>
-<span class="w">  </span><span class="p">{</span>
-<span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="s">&quot;Yes&quot;</span><span class="p">;</span>
-<span class="w">  </span><span class="p">}</span>
-
-<span class="w">  </span><span class="c1">// 2. Если значение false — возвращаем &quot;No&quot;.</span>
-<span class="w">  </span><span class="c1">// Текст обязательно оборачиваем в двойные кавычки.</span>
-<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="s">&quot;No&quot;</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div>
-</details>
-<details open="open">
-<summary>На заметку:</summary>
-<p><small><code>bool</code> — логический тип данных (<code>true</code> или <code>false</code>).<br />
-<code>"Строка"</code> — в C++ текстовые строки всегда пишутся в двойных кавычках. Одинарные кавычки <code>'a'</code> используются только для одного символа (<code>char</code>).<br />
-<code>if (value)</code> — автоматическая проверка на истинность. Если в скобках <code>true</code>, код внутри сработает.</small></p>
-</details>
-<p><br></p>
-<blockquote>
-<p><big>Инсайт дня: Краткость логических проверок</big></p>
-</blockquote>
-<p>В C++ конструкцию <code>if (value == true)</code> принято сокращать до <strong><code>if (value)</code></strong>. </p>
-<p><strong>Почему это важно:</strong><br />
-Оператор <code>if</code> по определению ждет логическое значение. Проверка «равно ли истина истине» — лишнее действие. Это делает код чище и профессиональнее.</p>
-<blockquote>
-<p><strong>Вывод:</strong> Пиши <code>if (value)</code>, если проверяешь на правду, и <code>if (!value)</code>, если проверяешь на ложь.</p>
-</blockquote>
-<hr />
-<hr />
-<hr />
-<hr />
-<hr />
-<h2 id="8-codewars-opposite-number">Задача 8: <a href="https://codewars.com">Codewars: "Opposite number"</a></h2>
-<p>Very simple, given a number, find its opposite (additive inverse).</p>
-<details open="open">
-<summary>На русском:</summary>
-<p>Очень простая задача: дано число, найдите противоположное ему (аддитивную инверсию).</p>
-</details>
-<div class="highlight"><pre><span></span><code><span class="c1">// Пример использования:</span>
-<span class="n">opposite</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span><span class="w">    </span><span class="c1">// возвращает -1</span>
-<span class="n">opposite</span><span class="p">(</span><span class="mi">-14</span><span class="p">);</span><span class="w">  </span><span class="c1">// возвращает 14</span>
-</code></pre></div>
-<details open="open">
-<summary>Решение:</summary>
-<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="nf">opposite</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">number</span><span class="p">)</span><span class="w"> </span>
-<span class="p">{</span>
-<span class="w">  </span><span class="c1">// Используем унарный минус, чтобы инвертировать знак.</span>
-<span class="w">  </span><span class="c1">// Не забудь поставить точку с запятой в конце!</span>
-<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="o">-</span><span class="n">number</span><span class="p">;</span><span class="w"> </span>
-<span class="p">}</span>
-</code></pre></div>
-</details>
-<details open="open">
-<summary>На заметку:</summary>
-<p><small><strong>Унарный минус</strong> — это оператор <code>-</code>, который применяется к одному операнду. Он меняет знак числа на противоположный (плюс на минус, минус на плюс).<br />
-<strong>Точка с запятой <code>;</code></strong> — в C++ это обязательный символ в конце каждого выражения (инструкции). Без неё код не скомпилируется.</small></p>
-</details>
-<p><br></p>
-<blockquote>
-<p><big>Инсайт дня: Минус на минус дает плюс</big></p>
-</blockquote>
-<p>В программировании работают те же правила математики. Тебе не нужно писать <code>if</code>, чтобы проверять, положительное число или отрицательное. Унарный минус сам превратит <code>-34</code> в <code>34</code>.</p>
-<p><strong>Почему это важно:</strong><br />
-Это самый лаконичный способ изменить знак. Тебе не нужны сложные функции — просто один символ перед именем переменной.</p>
-<blockquote>
-<p><strong>Вывод:</strong> Для поиска противоположного числа всегда используй <code>-number</code>. И всегда проверяй наличие <code>;</code> в конце строки <code>return</code>.</p>
+<p><strong>Вывод:</strong> Если в блоке <code>if</code> есть <code>return</code>, писать <code>else</code> после него не обязательно.</p>
 </blockquote>
 
 
