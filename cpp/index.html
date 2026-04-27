@@ -414,6 +414,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#13-codewars-squaren-sum" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 13: Codewars: "Square(n) Sum"
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -574,6 +585,17 @@
     <span class="md-ellipsis">
       
         Задача 12: Codewars: "Remove First and Last Character"
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-codewars-squaren-sum" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 13: Codewars: "Square(n) Sum"
       
     </span>
   </a>
@@ -1182,6 +1204,11 @@ Can you finish the game so all the rules are met?</p>
 <blockquote>
 <p><strong>Вывод:</strong> Для повторения текста всегда используй пустую строку и цикл <code>for</code>, который будет "наращивать" её длину с каждым кругом.</p>
 </blockquote>
+<hr />
+<hr />
+<hr />
+<hr />
+<hr />
 <h2 id="12-codewars-remove-first-and-last-character">Задача 12: <a href="https://codewars.com">Codewars: "Remove First and Last Character"</a></h2>
 <p>It's pretty straightforward. Your goal is to create a function that removes the first and last characters of a string. </p>
 <details open="open">
@@ -1228,6 +1255,57 @@ Can you finish the game so all the rules are met?</p>
 Умение выставлять правильные границы (<code>i = 1</code> и <code>size - 1</code>) — это то, что отличает профи от новичка. Это база для работы с любыми подстроками, когда нужно отсечь лишний шум.</p>
 <blockquote>
 <p><strong>Вывод:</strong> Если нужно что-то обрезать, просто подкрути настройки в <code>for (старт; финиш; шаг)</code>. Тело цикла останется тем же, а результат изменится.</p>
+</blockquote>
+<hr />
+<hr />
+<hr />
+<hr />
+<hr />
+<h2 id="13-codewars-squaren-sum">Задача 13: <a href="https://codewars.com">Codewars: "Square(n) Sum"</a></h2>
+<p>Complete the square sum function so that it squares each number passed into it and then sums the results together.</p>
+<details open="open">
+<summary>На русском:</summary>
+<p>Напишите функцию, которая возводит в квадрат каждое число, переданное в неё, а затем суммирует полученные результаты.</p>
+</details>
+<div class="highlight"><pre><span></span><code><span class="c1">// Пример использования:</span>
+<span class="n">square_sum</span><span class="p">({</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">});</span><span class="w"> </span><span class="c1">// возвращает 9 (1^2 + 2^2 + 2^2 = 9)</span>
+<span class="n">square_sum</span><span class="p">({</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">});</span><span class="w">    </span><span class="c1">// возвращает 40 (2^2 + 6^2 = 40)</span>
+</code></pre></div>
+<details open="open">
+<summary>Решение:</summary>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;vector&gt;</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">square_sum</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">numbers</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="c1">// Создаем хранилище-копилку</span>
+
+<span class="w">  </span><span class="c1">// Цикл проходит по каждому числу в списке по его индексу i</span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">numbers</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Берем число из ячейки [i], возводим в квадрат и плюсуем к сумме</span>
+<span class="w">    </span><span class="n">result</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">numbers</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">numbers</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">result</span><span class="p">;</span><span class="w"> </span><span class="c1">// Возвращаем накопленную сумму всех квадратов</span>
+<span class="p">}</span>
+</code></pre></div>
+</details>
+<details open="open">
+<summary>На заметку:</summary>
+<p><small><strong>Переменная <code>result</code></strong> — это наше хранилище. Она стоит ПЕРЕД циклом, чтобы не обнуляться на каждом шаге и «помнить» всю сумму.<br />
+<strong>Оператор <code>+=</code></strong> — работает как магнит. Он приклеивает новое значение к тому, что уже лежит в переменной <code>result</code>.<br />
+<strong>Индексация <code>[i]</code></strong> — позволяет на каждом круге цикла доставать следующее по счету число из списка <code>numbers</code>.<br />
+<strong>Квадрат числа</strong> — самый простой способ в C++ — это умножить число на само себя (<code>x * x</code>). Главное — делать это снаружи квадратных скобок.</small></p>
+</details>
+<p><br></p>
+<blockquote>
+<p><big>Инсайт дня: Цикл — это конвейер, а переменная снаружи — это склад</big></p>
+</blockquote>
+<p>В этой задаче важно понимать разделение обязанностей: цикл отвечает за то, чтобы не пропустить ни одно число, а переменная <code>result</code> отвечает за то, чтобы сохранить общую сумму. Если ты используешь просто <code>=</code>, твой "склад" будет постоянно выбрасывать старое содержимое.</p>
+<p><strong>Почему это важно:</strong><br />
+Это классический паттерн "Аккумулятор", который встречается в 90% задач на подсчет данных. Сначала создаем место для хранения, потом наполняем его через итерации.</p>
+<blockquote>
+<p><strong>Вывод:</strong> Всегда инициализируй переменную суммы нулем перед циклом, если планируешь использовать ее для накопления результата.</p>
 </blockquote>
 
 
