@@ -403,17 +403,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#12-codewars-remove-first-and-last-character" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Задача 12: Codewars: "Remove First and Last Character"
-      
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -563,17 +552,6 @@
     <span class="md-ellipsis">
       
         Задача 11: Codewars: "String repeat"
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#12-codewars-remove-first-and-last-character" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Задача 12: Codewars: "Remove First and Last Character"
       
     </span>
   </a>
@@ -1159,7 +1137,7 @@ Can you finish the game so all the rules are met?</p>
 <span class="w">  </span><span class="c1">// Цикл сработает ровно столько раз, сколько указано в repeat</span>
 <span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">size_t</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">repeat</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span>
 <span class="w">  </span><span class="p">{</span>
-<span class="w">    </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">str</span><span class="p">;</span><span class="w"> </span><span class="c1">// Приклеиваем строку str к нашему результату s</span>
+<span class="w">    </span><span class="n">s</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">str</span><span class="p">;</span><span class="w"> </span><span class="c1">// Приклеиваем строку str к нашему результату s</span>
 <span class="w">  </span><span class="p">}</span>
 
 <span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">s</span><span class="p">;</span><span class="w"> </span><span class="c1">// Возвращаем итоговую склеенную строку</span>
@@ -1181,53 +1159,6 @@ Can you finish the game so all the rules are met?</p>
 Это самый простой способ генерировать повторяющиеся данные. Хочешь нарисовать забор из 100 палок? Просто запусти цикл на 100 повторов и делай <code>fence += "|"</code>.</p>
 <blockquote>
 <p><strong>Вывод:</strong> Для повторения текста всегда используй пустую строку и цикл <code>for</code>, который будет "наращивать" её длину с каждым кругом.</p>
-</blockquote>
-<h2 id="12-codewars-remove-first-and-last-character">Задача 12: <a href="https://codewars.com">Codewars: "Remove First and Last Character"</a></h2>
-<p>It's pretty straightforward. Your goal is to create a function that removes the first and last characters of a string. </p>
-<details open="open">
-<summary>На русском:</summary>
-<p>Все довольно просто. Ваша цель — создать функцию, которая удаляет первый и последний символы строки. Вам дана одна строка.</p>
-</details>
-<div class="highlight"><pre><span></span><code><span class="c1">// Пример использования:</span>
-<span class="n">sliceString</span><span class="p">(</span><span class="s">&quot;eloquent&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// возвращает &quot;loquen&quot;</span>
-<span class="n">sliceString</span><span class="p">(</span><span class="s">&quot;country&quot;</span><span class="p">);</span><span class="w">  </span><span class="c1">// возвращает &quot;ountr&quot;</span>
-</code></pre></div>
-<details open="open">
-<summary>Решение:</summary>
-<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string&gt;</span>
-
-<span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="p">;</span><span class="w"> </span>
-
-<span class="n">string</span><span class="w"> </span><span class="nf">sliceString</span><span class="p">(</span><span class="n">string</span><span class="w"> </span><span class="n">str</span><span class="p">)</span>
-<span class="p">{</span>
-<span class="w">  </span><span class="n">string</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">;</span><span class="w"> </span><span class="c1">// Наша пустая &quot;копилка&quot;</span>
-
-<span class="w">  </span><span class="c1">// Начинаем с i = 1 (пропускаем первый символ)</span>
-<span class="w">  </span><span class="c1">// Идем до size() - 1 (не доходя до последнего символа)</span>
-<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">str</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
-<span class="w">  </span><span class="p">{</span>
-<span class="w">    </span><span class="n">result</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">str</span><span class="p">[</span><span class="n">i</span><span class="p">];</span><span class="w"> </span><span class="c1">// Поэтапно склеиваем буквы в result</span>
-<span class="w">  </span><span class="p">}</span>
-
-<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">result</span><span class="p">;</span><span class="w"> </span><span class="c1">// Отдаем готовую обрезанную строку</span>
-<span class="p">}</span>
-</code></pre></div>
-</details>
-<details open="open">
-<summary>На заметку:</summary>
-<p><small><strong><code>i = 1</code></strong> — в программировании отсчет идет с нуля. Чтобы пропустить первую букву, мы просто начинаем цикл со второй ячейки (индекс 1).<br />
-<strong><code>str.size() - 1</code></strong> — это граница. Условие <code>i &lt; str.size() - 1</code> заставляет цикл остановиться прямо перед последним символом, не включая его.<br />
-<strong>Порядок команд</strong> — сначала цикл полностью собирает строку в переменную <code>result</code>, и только потом (вне цикла) срабатывает <code>return</code>, который выдает итог.</small></p>
-</details>
-<p><br></p>
-<blockquote>
-<p><big>Инсайт дня: Границы — это всё</big></p>
-</blockquote>
-<p>В этой задаче ты научился управлять "окном" цикла. Ты не просто пробежал по всей строке, а вырезал нужный кусок, просто изменив точку старта и точку финиша в <code>for</code>.</p>
-<p><strong>Почему это важно:</strong><br />
-Умение выставлять правильные границы (<code>i = 1</code> и <code>size - 1</code>) — это то, что отличает профи от новичка. Это база для работы с любыми подстроками, когда нужно отсечь лишний шум.</p>
-<blockquote>
-<p><strong>Вывод:</strong> Если нужно что-то обрезать, просто подкрути настройки в <code>for (старт; финиш; шаг)</code>. Тело цикла останется тем же, а результат изменится.</p>
 </blockquote>
 
 
