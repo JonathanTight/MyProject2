@@ -425,6 +425,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#14-codewars-find-the-smallest-integer-in-the-array" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 14: Codewars: "Find the smallest integer in the array"
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -596,6 +607,17 @@
     <span class="md-ellipsis">
       
         Задача 13: Codewars: "Square(n) Sum"
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14-codewars-find-the-smallest-integer-in-the-array" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 14: Codewars: "Find the smallest integer in the array"
       
     </span>
   </a>
@@ -1306,6 +1328,61 @@ Can you finish the game so all the rules are met?</p>
 Это классический паттерн "Аккумулятор", который встречается в 90% задач на подсчет данных. Сначала создаем место для хранения, потом наполняем его через итерации.</p>
 <blockquote>
 <p><strong>Вывод:</strong> Всегда инициализируй переменную суммы нулем перед циклом, если планируешь использовать ее для накопления результата.</p>
+</blockquote>
+<hr />
+<hr />
+<hr />
+<hr />
+<hr />
+<h2 id="14-codewars-find-the-smallest-integer-in-the-array">Задача 14: <a href="https://codewars.com">Codewars: "Find the smallest integer in the array"</a></h2>
+<p>Your goal is to create a function that finds the smallest integer in the given array.</p>
+<details open="open">
+<summary>На русском:</summary>
+<p>Ваша цель — создать функцию, которая находит наименьшее целое число в заданном массиве. Вам дан массив чисел, например <code>{2, 5, 1, 7}</code>.</p>
+</details>
+<div class="highlight"><pre><span></span><code><span class="c1">// Пример использования:</span>
+<span class="n">findSmallest</span><span class="p">({</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">});</span><span class="w"> </span><span class="c1">// возвращает 1</span>
+<span class="n">findSmallest</span><span class="p">({</span><span class="mi">34</span><span class="p">,</span><span class="w"> </span><span class="mi">15</span><span class="p">,</span><span class="w"> </span><span class="mi">88</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">});</span><span class="w"> </span><span class="c1">// возвращает 2</span>
+</code></pre></div>
+<details open="open">
+<summary>Решение:</summary>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;vector&gt;</span>
+
+<span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="p">;</span><span class="w"> </span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">findSmallest</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">list</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">list</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span><span class="w"> </span><span class="c1">// Берем первое число за эталон (наш &quot;минимум&quot;)</span>
+
+<span class="w">  </span><span class="c1">// Пробегаем по всему массиву через индекс i</span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">list</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Если нашли число меньше того, что лежит в &quot;кармане&quot; result</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">result</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">list</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">list</span><span class="p">[</span><span class="n">i</span><span class="p">];</span><span class="w"> </span><span class="c1">// Перезаписываем наш минимум новым числом</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">result</span><span class="p">;</span><span class="w"> </span><span class="c1">// Отдаем самый маленький элемент, когда цикл закончился</span>
+<span class="p">}</span>
+</code></pre></div>
+</details>
+<details open="open">
+<summary>На заметку:</summary>
+<p><small><strong><code>int result = list[0]</code></strong> — важно брать именно первый элемент массива. Если начать с <code>result = 0</code>, а в массиве будут числа <code>{2, 5, 1, 7}</code>, программа выдаст 0, которого нет в списке.<br />
+<strong><code>list[i]</code></strong> — здесь переменная <code>i</code> выступает как индекс. Мы не просто считаем шаги, а используем <code>i</code> как ключ, чтобы достать конкретное число из ячейки массива.<br />
+<strong><code>if (result &gt; list[i])</code></strong> — это ядро алгоритма. Мы обновляем <code>result</code> только в том случае, если текущий кандидат реально "побил" предыдущий рекорд минимальности.</small></p>
+</details>
+<p><br></p>
+<blockquote>
+<p><big>Инсайт дня: Сравнение — ключ к поиску</big></p>
+</blockquote>
+<p>В этой задаче ты научился не просто перебирать цикл, а заставил программу принимать решения на каждом шагу. Ты создал алгоритм "сита", через которое проходят все числа, но в итоге остается только одно — самое мелкое.</p>
+<p><strong>Почему это важно:</strong><br />
+Поиск минимума или максимума — это фундамент. По такому же принципу работают фильтры цен в интернет-магазинах, поиск самого дешевого билета или самого короткого пути в навигаторе. </p>
+<blockquote>
+<p><strong>Вывод:</strong> Чтобы найти лучшее (или наименьшее), нужно иметь эталон для сравнения и проверить каждого кандидата до самого конца списка.</p>
 </blockquote>
 
 
