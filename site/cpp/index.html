@@ -447,28 +447,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#16-codewars-grasshopper-summation" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Задача 16: Codewars: "Grasshopper - Summation"
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#17-codewars-counting-sheep" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Задача 17: Codewars: "Counting sheep..."
-      
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -662,28 +640,6 @@
     <span class="md-ellipsis">
       
         Задача 15: Codewars: "Returning Strings"
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#16-codewars-grasshopper-summation" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Задача 16: Codewars: "Grasshopper - Summation"
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#17-codewars-counting-sheep" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Задача 17: Codewars: "Counting sheep..."
       
     </span>
   </a>
@@ -1489,104 +1445,7 @@ Can you finish the game so all the rules are met?</p>
 <p><strong>Почему это важно:</strong><br />
 В реальной разработке функции постоянно общаются друг с другом. Одна функция находит имя игрока, делает <code>return</code>, а вторая подхватывает этот результат и рисует его в интерфейсе. Это основа модульного кода.</p>
 <blockquote>
-<p><strong>Вывод:</strong> Если функция что-то "обещала" (например, <code>string</code> или <code>int</code>), она обязана это вернуть через <code>return</code> в конце.  </p>
-</blockquote>
-<hr />
-<hr />
-<hr />
-<hr />
-<hr />
-<h2 id="16-codewars-grasshopper-summation">Задача 16: <a href="https://codewars.com">Codewars: "Grasshopper - Summation"</a></h2>
-<p>Write a program that finds the summation of every number from 1 to num. The number will always be a positive integer greater than 0.</p>
-<details open="open">
-<summary>На русском:</summary>
-<p>Ваша цель — создать функцию, которая суммирует все числа от 1 до <code>num</code>. Например, если на входе <code>5</code>, программа должна вернуть <code>15</code>, так как <code>1 + 2 + 3 + 4 + 5 = 15</code>.</p>
-</details>
-<div class="highlight"><pre><span></span><code><span class="c1">// Пример использования:</span>
-<span class="n">summation</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span><span class="w"> </span><span class="c1">// возвращает 6 (1+2+3)</span>
-</code></pre></div>
-<details open="open">
-<summary>Решение:</summary>
-<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="nf">summation</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">num</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span>
-
-<span class="w">  </span><span class="c1">// i растет от 0 до num включительно</span>
-<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">num</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="c1">// Накапливаем сумму, прибавляя i к результату</span>
-<span class="w">    </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">i</span><span class="p">;</span><span class="w"> </span>
-<span class="w">  </span><span class="p">}</span>
-
-<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">result</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div>
-</details>
-<details open="open">
-<summary>На заметку:</summary>
-<p><small><strong><code>int i = 0</code></strong> — инициализация. Выполняется <strong>один раз</strong> при старте. Это не индекс, а обычное число-счетчик, которое не сбрасывается в ноль на новых кругах цикла.<br />
-<strong><code>i &lt;= num</code></strong> — условие работы. Знак <code>&lt;=</code> важен: он заставляет цикл выполнить последний шаг, когда <code>i</code> станет равно самому числу <code>num</code>.<br />
-<strong><code>result = result + i</code></strong> — логика «копилки». Мы берем уже накопленное значение и добавляем к нему текущее <code>i</code>. Если написать просто <code>result = i</code>, то старые данные будут стираться.</small></p>
-</details>
-<p><br></p>
-<blockquote>
-<p><big>Инсайт дня: Цикл — это последовательная работа</big></p>
-</blockquote>
-<p>В этой задаче ты разобрался, как работает механизм <code>for</code>. Важно понимать, что переменная <code>i</code> — это живой процесс: она рождается в начале цикла, меняется на каждом шаге и «умирает», когда условие перестает выполняться.</p>
-<p><strong>Почему это важно:</strong><br />
-Понимание того, что <code>i</code> не сбрасывается в ноль на каждом круге, позволяет тебе управлять ходом выполнения программы. Цикл — это не повторение одной и той же строки, а развитие событий, где каждое следующее состояние зависит от предыдущего.</p>
-<blockquote>
-<p><strong>Вывод:</strong> Код <code>result = result + i</code> превращает обычный перебор чисел в осмысленный процесс накопления данных.</p>
-</blockquote>
-<hr />
-<hr />
-<hr />
-<hr />
-<hr />
-<h2 id="17-codewars-counting-sheep">Задача 17: <a href="https://codewars.com">Codewars: "Counting sheep..."</a></h2>
-<p>Consider an array/list of sheep where some sheep may be missing from their place. We need a function that counts the number of sheep present in the array (true means present).</p>
-<details open="open">
-<summary>На русском:</summary>
-<p>Ваша цель — создать функцию, которая подсчитывает количество овечек в массиве. Каждое значение <code>true</code> означает, что овечка на месте. Например, в массиве из примера 17 овечек, поэтому программа должна вернуть <code>17</code>.</p>
-</details>
-<div class="highlight"><pre><span></span><code><span class="c1">// Пример использования:</span>
-<span class="n">count_sheep</span><span class="p">({</span><span class="nb">true</span><span class="p">,</span><span class="w">  </span><span class="nb">true</span><span class="p">,</span><span class="w">  </span><span class="nb">false</span><span class="p">,</span><span class="w"> </span><span class="nb">true</span><span class="p">});</span><span class="w"> </span><span class="c1">// возвращает 3</span>
-</code></pre></div>
-<details open="open">
-<summary>Решение:</summary>
-<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;vector&gt;</span>
-
-<span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="p">;</span><span class="w"> </span>
-
-<span class="kt">int</span><span class="w"> </span><span class="nf">count_sheep</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">bool</span><span class="o">&gt;</span><span class="w"> </span><span class="n">arr</span><span class="p">)</span><span class="w"> </span>
-<span class="p">{</span>
-<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-
-<span class="w">  </span><span class="c1">// Проходим по каждому элементу массива</span>
-<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">arr</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="c1">// Если элемент больше 0 (то есть true), считаем его</span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="w">  </span><span class="p">}</span>
-
-<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">result</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div>
-</details>
-<details open="open">
-<summary>На заметку:</summary>
-<p><small><strong><code>vector&lt;bool&gt; arr</code></strong> — это входной параметр. Слово <code>arr</code> служит «именем» для массива внутри функции, связывая внешние данные с вашим кодом.<br />
-<strong><code>arr[i] &gt; 0</code></strong> — условие фильтрации. Так как <code>true</code> в памяти компьютера представлено как <code>1</code>, а <code>false</code> как <code>0</code>, это условие находит только «присутствующих» овечек.<br />
-<strong><code>result = result + 1</code></strong> — инкремент. Мы не складываем значения из массива, а просто прибавляем единицу к счетчику каждый раз, когда находим <code>true</code>.</small></p>
-</details>
-<p><br></p>
-<blockquote>
-<p><big>Инсайт дня: Параметр функции — это её «вход»</big></p>
-</blockquote>
-<p>В этой задаче связь между <code>count_sheep(vector&lt;bool&gt; arr)</code> и <code>arr[i]</code> является ключевой. Переменная <code>arr</code> — это мост, по которому данные попадают внутрь вашего алгоритма. Вы не просто пишете код «в пустоте», вы описываете действия над конкретным объектом, который придет в функцию в момент запуска.</p>
-<p><strong>Почему это важно:</strong><br />
-Понимание того, что <code>arr</code> — это имя для входных данных, позволяет вам писать универсальные функции. Один и тот же код сможет обработать и 15 овечек, и 1000, если они будут переданы в этот «входной приемник».</p>
-<blockquote>
-<p><strong>Вывод:</strong> Код <code>if (arr[i] &gt; 0) result = result + 1</code> превращает массив данных в конкретное итоговое число.</p>
+<p><strong>Вывод:</strong> Если функция что-то "обещала" (например, <code>string</code> или <code>int</code>), она обязана это вернуть через <code>return</code> в конце.</p>
 </blockquote>
 
 
