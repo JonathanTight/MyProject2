@@ -436,17 +436,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#15-codewars-returning-strings" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Задача 15: Codewars: "Returning Strings"
-      
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -629,17 +618,6 @@
     <span class="md-ellipsis">
       
         Задача 14: Codewars: "Find the smallest integer in the array"
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#15-codewars-returning-strings" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Задача 15: Codewars: "Returning Strings"
       
     </span>
   </a>
@@ -1405,47 +1383,6 @@ Can you finish the game so all the rules are met?</p>
 Поиск минимума или максимума — это фундамент. По такому же принципу работают фильтры цен в интернет-магазинах, поиск самого дешевого билета или самого короткого пути в навигаторе. </p>
 <blockquote>
 <p><strong>Вывод:</strong> Чтобы найти лучшее (или наименьшее), нужно иметь эталон для сравнения и проверить каждого кандидата до самого конца списка.</p>
-</blockquote>
-<hr />
-<hr />
-<hr />
-<hr />
-<hr />
-<h2 id="15-codewars-returning-strings">Задача 15: <a href="https://codewars.com">Codewars: "Returning Strings"</a></h2>
-<p>Make a simple function called greet that returns the most-famous "hello world!".</p>
-<details open="open">
-<summary>На русском:</summary>
-<p>Ваша цель — создать функцию, которая возвращает приветствие. Программа должна выдать классическую фразу <code>"hello world"</code>.</p>
-</details>
-<div class="highlight"><pre><span></span><code><span class="c1">// Пример использования:</span>
-<span class="n">greet</span><span class="p">();</span><span class="w"> </span><span class="c1">// возвращает &quot;hello world&quot;</span>
-</code></pre></div>
-<details open="open">
-<summary>Решение:</summary>
-<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string&gt;</span>
-
-<span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="nf">greet</span><span class="p">()</span><span class="w"> </span>
-<span class="p">{</span>
-<span class="w">  </span><span class="c1">// Просто отдаем текст сайту</span>
-<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="s">&quot;hello world&quot;</span><span class="p">;</span><span class="w"> </span>
-<span class="p">}</span>
-</code></pre></div>
-</details>
-<details open="open">
-<summary>На заметку:</summary>
-<p><small><strong><code>std::string</code></strong> — тип данных перед именем функции. Он обязывает нас вернуть именно текст.<br />
-<strong><code>{ }</code></strong> — фигурные скобки обязательны всегда, даже если внутри всего одна строчка кода. Они задают границы функции.<br />
-<strong><code>return</code></strong> — главная команда. Она не просто печатает текст на экран, а "выстреливает" результатом из функции наружу, чтобы сайт мог его проверить.</small></p>
-</details>
-<p><br></p>
-<blockquote>
-<p><big>Инсайт дня: Результат важнее процесса</big></p>
-</blockquote>
-<p>В этой задаче ты четко разделил вывод на экран (<code>printf</code>) и возврат значения (<code>return</code>). Для решения задач на Codewars важен именно возврат — это то, что компьютер передает другой программе.</p>
-<p><strong>Почему это важно:</strong><br />
-В реальной разработке функции постоянно общаются друг с другом. Одна функция находит имя игрока, делает <code>return</code>, а вторая подхватывает этот результат и рисует его в интерфейсе. Это основа модульного кода.</p>
-<blockquote>
-<p><strong>Вывод:</strong> Если функция что-то "обещала" (например, <code>string</code> или <code>int</code>), она обязана это вернуть через <code>return</code> в конце.</p>
 </blockquote>
 
 
