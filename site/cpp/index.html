@@ -469,17 +469,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#18-codewars-remove-string-spaces" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Задача 18: Codewars: "Remove String Spaces"
-      
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -695,17 +684,6 @@
     <span class="md-ellipsis">
       
         Задача 17: Codewars: "Counting sheep..."
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#18-codewars-remove-string-spaces" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Задача 18: Codewars: "Remove String Spaces"
       
     </span>
   </a>
@@ -1608,58 +1586,7 @@ Can you finish the game so all the rules are met?</p>
 <p><strong>Почему это важно:</strong><br />
 Понимание того, что <code>arr</code> — это имя для входных данных, позволяет вам писать универсальные функции. Один и тот же код сможет обработать и 15 овечек, и 1000, если они будут переданы в этот «входной приемник».</p>
 <blockquote>
-<p><strong>Вывод:</strong> Код <code>if (arr[i] &gt; 0) result = result + 1</code> превращает массив данных в конкретное итоговое число.  </p>
-</blockquote>
-<hr />
-<hr />
-<hr />
-<hr />
-<hr />
-<h2 id="18-codewars-remove-string-spaces">Задача 18: <a href="https://codewars.com">Codewars: "Remove String Spaces"</a></h2>
-<p>Write a function that removes the spaces from the string, then return the resultant string.</p>
-<details open="open">
-<summary>На русском:</summary>
-<p>Ваша цель — создать функцию, которая удаляет все пробелы из переданной строки. Например, если на входе строка <code>"8 j 8   mBliB8"</code>, программа должна вернуть <code>"8j8mBliB8"</code>.</p>
-</details>
-<div class="highlight"><pre><span></span><code><span class="c1">// Пример использования:</span>
-<span class="n">no_space</span><span class="p">(</span><span class="s">&quot;Hello World&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// возвращает &quot;HelloWorld&quot;</span>
-</code></pre></div>
-<details open="open">
-<summary>Решение:</summary>
-<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string&gt;</span>
-
-<span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="nf">no_space</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span><span class="w"> </span><span class="n">x</span><span class="p">)</span>
-<span class="p">{</span>
-<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">;</span>
-
-<span class="w">  </span><span class="c1">// Проходим циклом по каждому символу строки x</span>
-<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">x</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="c1">// Если символ на позиции i — это НЕ пробел</span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="sc">&#39; &#39;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="c1">// Добавляем этот символ в нашу строку-результат</span>
-<span class="w">      </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="w">  </span><span class="p">}</span>
-
-<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">result</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div>
-</details>
-<details open="open">
-<summary>На заметку:</summary>
-<p><small><strong><code>std::string result = ""</code></strong> — мы создаем пустую строку, в которую будем «собирать» только нужные нам символы.<br />
-<strong><code>x.size()</code></strong> — метод, который говорит циклу точное количество знаков в строке, чтобы мы не вышли за её пределы.<br />
-<strong><code>x[i]</code></strong> — это обращение к конкретному символу по его индексу. Это и есть та самая «буква», которую мы проверяем на равенство пробелу.</small></p>
-</details>
-<p><br></p>
-<blockquote>
-<p><big>Инсайт дня: Строка — это массив символов</big></p>
-</blockquote>
-<p>В этой задаче ты увидел, что работа со строкой почти не отличается от работы с массивом чисел или овечек. <code>x[i]</code> позволяет достать отдельный символ, проверить его и решить, что с ним делать дальше.</p>
-<p><strong>Почему это важно:</strong><br />
-Когда ты понимаешь, что любая строка — это просто последовательность «ячеек», ты можешь легко менять текст: удалять символы, заменять их на другие или переворачивать слова задом наперед.</p>
-<blockquote>
-<p><strong>Вывод:</strong> Код <code>result = result + x[i]</code> работает как фильтр, который пропускает только важные данные, отсеивая лишний «шум» в виде пробелов.</p>
+<p><strong>Вывод:</strong> Код <code>if (arr[i] &gt; 0) result = result + 1</code> превращает массив данных в конкретное итоговое число.</p>
 </blockquote>
 
 
