@@ -579,6 +579,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#28-codewars-beginner-lost-without-a-map" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 28: Codewars: "Beginner - Lost Without a Map"
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -904,6 +915,17 @@
     <span class="md-ellipsis">
       
         Задача 27: Codewars: "Convert number to reversed array of digits"
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#28-codewars-beginner-lost-without-a-map" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 28: Codewars: "Beginner - Lost Without a Map"
       
     </span>
   </a>
@@ -2248,6 +2270,64 @@ Can you finish the game so all the rules are met?</p>
 <span class="p">}</span><span class="w"> </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
 </code></pre></div>
 <code>do...while</code>: Это правильный выбор, так как цикл выполнится хотя бы один раз. Если <code>n</code> = <code>0</code>, программа корректно запишет цифру <code>0</code> в список. Обычный <code>while</code> в таком случае просто бы не запустился.</p>
+</details>
+<hr />
+<hr />
+<hr />
+<hr />
+<hr />
+<h2 id="28-codewars-beginner-lost-without-a-map">Задача 28: <a href="https://codewars.com">Codewars: "Beginner - Lost Without a Map"</a></h2>
+<p>Given an array of integers, return a new array with each value doubled.</p>
+<details open="open">
+<summary>На русском:</summary>
+<p>Дан массив целых чисел. Вам нужно вернуть новый массив, в котором каждое значение из исходного будет удвоено. Например, из <code>должно получиться</code>.</p>
+</details>
+<div class="highlight"><pre><span></span><code><span class="c1">// Пример использования:</span>
+<span class="n">maps</span><span class="p">({</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">});</span><span class="w"> </span><span class="c1">// возвращает</span>
+<span class="n">maps</span><span class="p">({</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">});</span><span class="w"> </span><span class="c1">// возвращает</span>
+</code></pre></div>
+<details open="open">
+<summary>Решение:</summary>
+<div class="highlight"><pre><span></span><code><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">maps</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">values</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">result</span><span class="p">(</span><span class="n">values</span><span class="p">.</span><span class="n">size</span><span class="p">());</span>
+
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">values</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">result</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">values</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">result</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+</details>
+<details open="open">
+<summary>На заметку:</summary>
+<p><small><strong><code>std::vector&lt;int&gt; result(values.size())</code></strong> — создание вектора с заранее заданным размером. Это самый эффективный способ, так как память выделяется один раз под все элементы сразу.<br />
+<strong><code>result[i] = values[i] * 2</code></strong> — прямая запись в ячейку по индексу. Мы берем значение из одной "коробки", удваиваем его и кладем в соответствующую "коробку" в новом векторе.<br />
+<strong><code>for (int i = 0; i &lt; values.size(); i++)</code></strong> — классический цикл со счетчиком. Идеально подходит, когда нужно работать с индексами двух разных массивов одновременно.<br />
+<strong><code>const std::vector&lt;int&gt; &amp; values</code></strong> — использование ссылки на константу позволяет избежать дорогостоящего копирования данных при передаче в функцию.</small></p>
+</details>
+<p><br></p>
+<blockquote>
+<p><big>Инсайт дня: Прямой доступ к памяти — это скорость</big></p>
+</blockquote>
+<p>В этой задаче ты применил один из самых производительных подходов. Вместо того чтобы заставлять вектор постоянно "расти", ты сразу подготовил место нужного размера.</p>
+<p><strong>Почему это важно:</strong><br />
+Для C++ крайне важно понимать разницу между динамическим расширением и прямой работой по индексам. Твой вариант минимизирует нагрузку на процессор и память, что критично в реальных высоконагруженных системах.</p>
+<blockquote>
+<p><strong>Вывод:</strong> Предварительное выделение памяти через конструктор <code>result(values.size())</code> и заполнение через <code>[i]</code> — это база производительного программирования.</p>
+</blockquote>
+<details open="open">
+<summary>Best Practices:</summary>
+<p><div class="highlight"><pre><span></span><code><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">maps</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">values</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">result</span><span class="p">;</span>
+<span class="w">  </span><span class="k">for</span><span class="p">(</span><span class="k">auto</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">values</span><span class="p">)</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="n">result</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">result</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+Использование <code>range-based for</code> — это современный стандарт читаемости. Код становится лаконичным, избавляя от лишних переменных-счетчиков и делая намерение программиста максимально ясным.</p>
 </details>
 
 
