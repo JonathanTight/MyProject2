@@ -568,6 +568,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#27-codewars-convert-number-to-reversed-array-of-digits" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 27: Codewars: "Convert number to reversed array of digits"
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -882,6 +893,17 @@
     <span class="md-ellipsis">
       
         Задача 26: Codewars: "Opposites Attract"
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#27-codewars-convert-number-to-reversed-array-of-digits" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 27: Codewars: "Convert number to reversed array of digits"
       
     </span>
   </a>
@@ -2167,6 +2189,66 @@ Can you finish the game so all the rules are met?</p>
 <blockquote>
 <p><strong>Вывод:</strong> Код <code>if (f1 % 2 == 0 &amp;&amp; ...)</code> — это наглядный пример того, как программа принимает решение, основываясь на сочетании нескольких факторов.</p>
 </blockquote>
+<hr />
+<hr />
+<hr />
+<hr />
+<hr />
+<h2 id="27-codewars-convert-number-to-reversed-array-of-digits">Задача 27: <a href="https://codewars.com">Codewars: "Convert number to reversed array of digits"</a></h2>
+<p>Given a random non-negative number, you have to return the digits of this number within an array in reverse order.</p>
+<details open="open">
+<summary>На русском:</summary>
+<p>Дано целое положительное число. Вам нужно вернуть массив, состоящий из цифр этого числа в обратном порядке. Например, из 35231 должно получиться [1, 3, 2, 5, 3].</p>
+</details>
+<div class="highlight"><pre><span></span><code><span class="c1">// Пример использования:</span>
+<span class="n">digitize</span><span class="p">(</span><span class="mi">35231</span><span class="p">);</span><span class="w"> </span><span class="c1">// возвращает [1, 3, 2, 5, 3]</span>
+<span class="n">digitize</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span><span class="w">     </span><span class="c1">// возвращает [0]</span>
+</code></pre></div>
+<details open="open">
+<summary>Решение:</summary>
+<div class="highlight"><pre><span></span><code><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">digitize</span><span class="p">(</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span>
+<span class="p">{</span><span class="w">  </span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">result</span><span class="p">;</span>
+<span class="w">  </span><span class="c1">// Если на вход пришел ноль, сразу отдаем массив с нулем</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="p">{</span><span class="mi">0</span><span class="p">};</span><span class="w"> </span>
+
+<span class="w">  </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">){</span>
+<span class="w">    </span><span class="c1">// Отщипываем последнюю цифру и кладем в вектор</span>
+<span class="w">    </span><span class="n">result</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">10</span><span class="p">);</span>
+<span class="w">    </span><span class="c1">// Убираем эту цифру из самого числа</span>
+<span class="w">    </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">result</span><span class="p">;</span><span class="w">  </span>
+<span class="p">}</span>
+</code></pre></div>
+</details>
+<details open="open">
+<summary>На заметку:</summary>
+<p><small><strong><code>std::vector&lt;int&gt;</code></strong> — динамический массив, который сам расширяется, когда мы добавляем в него элементы.<br />
+<strong><code>while (n &gt; 0)</code></strong> — идеальный цикл, когда мы не знаем, сколько цифр в числе. Он работает, пока от числа что-то остается.<br />
+<strong><code>result.push_back(n % 10)</code></strong> — «толкает» последнюю цифру (остаток от деления на 10) в конец нашего списка.<br />
+<strong><code>n = n / 10</code></strong> — отрезает последнюю цифру от числа, чтобы на следующем круге достать новую.<br />
+<strong>Фигурные скобки <code>{0}</code></strong> — используются для мгновенного создания (инициализации) вектора с готовыми данными. Мы не используем здесь квадратные скобки <code>[]</code>, так как они нужны для обращения к уже существующим элементам по индексу, а <code>{}</code> — для создания новых.</small></p>
+</details>
+<p><br></p>
+<blockquote>
+<p><big>Инсайт дня: Число — это набор разрядов</big></p>
+</blockquote>
+<p>В этой задаче ты научился «разбирать» число на части, используя только математику. Вместо того чтобы превращать всё в текст (строки), ты работаешь напрямую с разрядами числа через <code>%</code> и <code>/</code>.</p>
+<p><strong>Почему это важно:</strong><br />
+Это самый быстрый и эффективный способ работы с числами в C++. Для будущего миддла понимание того, как «откусывать» куски данных через остаток от деления — это база, которая пригодится и в алгоритмах, и в работе с памятью.</p>
+<blockquote>
+<p><strong>Вывод:</strong> Комбинация <code>while</code>, <code>%</code> и <code>push_back</code> — это классический прием для трансформации данных, который работает безотказно.</p>
+</blockquote>
+<details open="open">
+<summary>Best Practices:</summary>
+<p><div class="highlight"><pre><span></span><code><span class="w"> </span><span class="k">do</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">digits</span><span class="p">.</span><span class="n">push_back</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">10</span><span class="p">);</span>
+<span class="w">    </span><span class="n">n</span><span class="w"> </span><span class="o">/=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+<span class="p">}</span><span class="w"> </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+</code></pre></div>
+<code>do...while</code>: Это правильный выбор, так как цикл выполнится хотя бы один раз. Если <code>n</code> = <code>0</code>, программа корректно запишет цифру <code>0</code> в список. Обычный <code>while</code> в таком случае просто бы не запустился.</p>
+</details>
 
 
 
