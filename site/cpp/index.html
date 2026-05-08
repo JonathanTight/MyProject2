@@ -590,17 +590,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#29-codewars-makeuppercase" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Задача 29: Codewars: "MakeUpperCase"
-      
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -937,17 +926,6 @@
     <span class="md-ellipsis">
       
         Задача 28: Codewars: "Beginner - Lost Without a Map"
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#29-codewars-makeuppercase" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Задача 29: Codewars: "MakeUpperCase"
       
     </span>
   </a>
@@ -2350,70 +2328,6 @@ Can you finish the game so all the rules are met?</p>
 <span class="p">}</span>
 </code></pre></div>
 Использование <code>range-based for</code> — это современный стандарт читаемости. Код становится лаконичным, избавляя от лишних переменных-счетчиков и делая намерение программиста максимально ясным.</p>
-</details>
-<hr />
-<hr />
-<hr />
-<hr />
-<hr />
-<h2 id="29-codewars-makeuppercase">Задача 29: <a href="https://codewars.com">Codewars: "MakeUpperCase"</a></h2>
-<p>Write a function which converts the input string to uppercase.</p>
-<details open="open">
-<summary>На русском:</summary>
-<p>Напишите функцию, которая преобразует входную строку в верхний регистр (делает все буквы заглавными).</p>
-</details>
-<div class="highlight"><pre><span></span><code><span class="c1">// Пример использования:</span>
-<span class="n">makeUpperCase</span><span class="p">(</span><span class="s">&quot;hello&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// возвращает &quot;HELLO&quot;</span>
-<span class="n">makeUpperCase</span><span class="p">(</span><span class="s">&quot;C++ is cool&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// возвращает &quot;C++ IS COOL&quot;</span>
-</code></pre></div>
-<details open="open">
-<summary>Решение:</summary>
-<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string&gt;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;cctype&gt;</span>
-
-<span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="nf">makeUpperCase</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span><span class="w"> </span><span class="n">str</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">str</span><span class="p">;</span><span class="w"> </span><span class="c1">// Создаем копию для работы</span>
-
-<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">char</span><span class="w"> </span><span class="o">&amp;</span><span class="n">c</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">result</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="c1">// Берем букву по ссылке (&amp;) и перезаписываем её заглавной</span>
-<span class="w">    </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">toupper</span><span class="p">(</span><span class="n">c</span><span class="p">);</span>
-<span class="w">  </span><span class="p">}</span>
-
-<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">result</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div>
-</details>
-<details open="open">
-<summary>На заметку:</summary>
-<p><small><strong><code>std::string result = str</code></strong> — создание копии. Мы не можем менять оригинал напрямую, так как он защищен словом <code>const</code>, поэтому работаем с копией.<br />
-<strong><code>for (char &amp;c : result)</code></strong> — цикл по диапазону. Символ <code>&amp;</code> (ссылка) критически важен: он дает доступ к букве прямо в памяти строки. Без него мы бы меняли копию буквы, а строка осталась бы прежней.<br />
-<strong><code>c = std::toupper(c)</code></strong> — здесь происходит магия. Мы передаем букву в функцию, она возвращает заглавную версию, и через <code>=</code> мы кладем её обратно на то же место.<br />
-<strong><code>c</code></strong> — это просто традиционное имя переменной (сокращение от character). Можно заменить на любое слово, лишь бы оно совпадало в обеих частях строки.</small></p>
-</details>
-<p><br></p>
-<blockquote>
-<p><big>Инсайт дня: Порядок действий имеет значение</big></p>
-</blockquote>
-<p>В строке <code>c = std::toupper(c)</code> компьютер сначала вычисляет то, что справа (делает букву большой), а только потом записывает результат в то, что слева.</p>
-<p><strong>Почему это важно:</strong><br />
-Знак <code>=</code> в программировании — это не равенство, а команда «присвоить». Сначала мы готовим «товар» (справа), а потом кладем его в «коробку» (слева). Понимание этого порядка — ключ к чтению любого кода.</p>
-<blockquote>
-<p><strong>Вывод:</strong> Ссылка <code>&amp;</code> позволяет редактировать данные внутри контейнера, а функция <code>toupper</code> — самый простой способ смены регистра для базовых символов.</p>
-</blockquote>
-<details open="open">
-<summary>Best Practices:</summary>
-<p><div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string&gt;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;algorithm&gt;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;cctype&gt;</span>
-
-<span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="nf">makeUpperCase</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">str</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="c1">// Используем стандартный алгоритм для прохода по всей строке</span>
-<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">transform</span><span class="p">(</span><span class="n">str</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">str</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span><span class="w"> </span><span class="n">str</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span>
-<span class="w">                 </span><span class="p">[](</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">c</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">toupper</span><span class="p">(</span><span class="n">c</span><span class="p">);</span><span class="w"> </span><span class="p">});</span>
-<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">str</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div>
-Использование <code>std::transform</code> из библиотеки <code>&lt;algorithm&gt;</code> считается более «взрослым» способом. Это избавляет от написания циклов вручную и сводит задачу к одной строчке кода.</p>
 </details>
 
 
