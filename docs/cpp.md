@@ -2112,7 +2112,7 @@ solution(10); // возвращает 23 (3 + 5 + 6 + 9)
 
 ---
 
-## Задача 37: [Codewars: "Split Strings"](https://codewars.com)
+## Задача 36: [Codewars: "Split Strings"](https://codewars.com)
 
 Complete the solution so that it splits the string into strings of two characters in a list/array. If the string contains an odd number of characters then it should replace the missing second character of the final pair with an underscore ('_').
 
@@ -2192,3 +2192,73 @@ solution("abcdef"); // возвращает {"ab", "cd", "ef"}
     }
     ```
     Метод `substr` делает код более читаемым («вырезать подстроку»), избавляя от ручного сложения отдельных символов через оператор `+=`.
+---
+
+---
+
+---
+
+---
+
+---
+
+## Задача 37: [Codewars: "Disemvowel Trolls"](https://codewars.com)
+
+Trolls are attacking your comment section! A common way to deal with this situation is to remove all of the vowels from the trolls' comments, neutralizing the threat. Your task is to write a function that takes a string and return a new string with all vowels removed.
+
+???+ "На русском:" 
+    Тролли атакуют ваши комментарии! Распространенный способ справиться с этой ситуацией — удалить все гласные из комментариев троллей, нейтрализуя угрозу. Ваша задача — написать функцию, которая принимает строку и возвращает новую строку, в которой удалены все гласные. (Для справки: в английском языке буква "y" не считается гласной в этой задаче).
+
+```cpp
+// Пример использования:
+disemvowel("This website is for losers LOL!"); // возвращает "Ths wbst s fr lsrs LL!"
+```
+
+???+ "Решение:"
+    ```cpp
+    #include <string>
+
+    std::string disemvowel(const std::string& str) {
+      std::string result = "";
+      std::string vowels = "aeiouAEIOU";
+
+      for (char c : str) {
+        if (vowels.find(c) == std::string::npos) {
+          result += c;
+        }
+      }
+        
+      return result;
+    }
+    ```
+
+???+ "На заметку:"
+    <small>**`std::string::npos`** — возвращается методом `find`, если символ не найден.  
+    **`for (char c : str)`** — итерируется по каждому символу строки.  
+    **`vowels.find(c)`** — проверяет наличие текущего символа в списке «запрещенных».  
+    **Регистр (A/a)** — поиск чувствителен к регистру, поэтому в строке `vowels` указаны оба варианта.</small>
+
+<br>
+> <big>Инсайт дня: Инструмент под задачу</big>
+
+Использование **RegEx** (регулярных выражений) превращает код в декларативное описание: мы не пишем алгоритм удаления, мы описываем «что именно» должно исчезнуть.
+
+**Почему это важно:**  
+Это сокращает количество строк и делает код легко масштабируемым. Если условия задачи изменятся (например, нужно будет удалять еще и цифры), вам достаточно будет изменить только строку шаблона, не трогая логику программы.
+
+> **Вывод:** Регулярные выражения — самый мощный инструмент для сложной обработки текста, хотя они и чуть медленнее обычных циклов.
+
+???+ "Best Practices:"
+    ```cpp
+    #include <string>
+    #include <regex>
+
+    std::string disemvowel(std::string str) {
+      // 1. Создаем регулярное выражение, описывающее все гласные
+      std::regex vowels("[aeiouAEIOU]");
+      
+      // 2. Заменяем все совпадения на пустую строку ""
+      return std::regex_replace(str, vowels, "");
+    }
+    ```
+    Метод `std::regex_replace` — это "золотой стандарт" для задач на замену или удаление подстрок по шаблону. Он избавляет от необходимости писать ручные циклы и проверки, делая код максимально чистым и понятным.
