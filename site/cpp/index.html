@@ -667,28 +667,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#36-codewars-split-strings" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Задача 36: Codewars: "Split Strings"
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#37-codewars-disemvowel-trolls" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Задача 37: Codewars: "Disemvowel Trolls"
-      
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -1102,28 +1080,6 @@
     <span class="md-ellipsis">
       
         Задача 35: Codewars: "Multiples of 3 or 5"
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#36-codewars-split-strings" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Задача 36: Codewars: "Split Strings"
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#37-codewars-disemvowel-trolls" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Задача 37: Codewars: "Disemvowel Trolls"
       
     </span>
   </a>
@@ -2820,7 +2776,12 @@ Can you finish the game so all the rules are met?</p>
 <h1><b><strong><p style="color: black;">Respect. You have ranked up to 6 kyu in C++.</p></strong></b></h1>
 
 <hr />
-<p><br>
+<p>До этого я решал только 8кю задачи (за редкими исключениями).<br />
+С этого момента я решаю задачи 8кю + ВСЕ similar kata для более глубоко изучения!<br />
+До тех пор пока задачи 8кю НЕ КОНЧАТСЯ (132 на текущий момент).<br />
+Думаю, мне это поможет дойти до автоматизма, узнать много нового, пусть даже простого, а также понимать, что есть задачи куда интереснее!
+Как только пойму что на 8кю уже, действительно скучно и ничего нового не узнаю и не закрепляю, что вряд ли, поднимусь до 7кю.
+<br>
 <br>
 <br></p>
 <hr />
@@ -2965,154 +2926,6 @@ Can you finish the game so all the rules are met?</p>
 <span class="p">}</span>
 </code></pre></div>
 Это решение считается лучшим, так как оно оптимизирует старт цикла (пропуская заведомо неподходящие 0, 1, 2) и использует максимально прозрачную структуру условий.</p>
-</details>
-<hr />
-<hr />
-<hr />
-<hr />
-<hr />
-<h2 id="36-codewars-split-strings">Задача 36: <a href="https://codewars.com">Codewars: "Split Strings"</a></h2>
-<p>Complete the solution so that it splits the string into strings of two characters in a list/array. If the string contains an odd number of characters then it should replace the missing second character of the final pair with an underscore ('_').</p>
-<details open="open">
-<summary>На русском:</summary>
-<p>Напишите функцию, которая разбивает строку на пары из двух символов и возвращает их в виде вектора. Если в строке нечетное количество символов, то последний символ в паре должен быть дополнен нижним подчеркиванием ('_').</p>
-</details>
-<div class="highlight"><pre><span></span><code><span class="c1">// Пример использования:</span>
-<span class="n">solution</span><span class="p">(</span><span class="s">&quot;abc&quot;</span><span class="p">);</span><span class="w">    </span><span class="c1">// возвращает {&quot;ab&quot;, &quot;c_&quot;}</span>
-<span class="n">solution</span><span class="p">(</span><span class="s">&quot;abcdef&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// возвращает {&quot;ab&quot;, &quot;cd&quot;, &quot;ef&quot;}</span>
-</code></pre></div>
-<details open="open">
-<summary>Решение:</summary>
-<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string&gt;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;vector&gt;</span>
-
-<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span><span class="w"> </span><span class="n">solution</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="o">&amp;</span><span class="n">s</span><span class="p">)</span>
-<span class="p">{</span>
-<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span><span class="w"> </span><span class="n">result</span><span class="p">;</span>
-
-<span class="w">  </span><span class="c1">// 1. Проходим циклом по строке с шагом 2</span>
-<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-
-<span class="w">    </span><span class="c1">// 2. Создаем временную строку для текущей пары</span>
-<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">pair</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">;</span>
-<span class="w">    </span><span class="n">pair</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
-
-<span class="w">    </span><span class="c1">// 3. Если есть следующий символ — добавляем его, иначе — добавляем &#39;_&#39;</span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">size</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="n">pair</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">];</span>
-<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="n">pair</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="sc">&#39;_&#39;</span><span class="p">;</span>
-<span class="w">    </span><span class="p">}</span>
-
-<span class="w">    </span><span class="c1">// 4. Добавляем готовую пару в результирующий вектор</span>
-<span class="w">    </span><span class="n">result</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">pair</span><span class="p">);</span>
-<span class="w">  </span><span class="p">}</span>
-
-<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">result</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div>
-</details>
-<details open="open">
-<summary>На заметку:</summary>
-<p><small><strong><code>i += 2</code></strong> — позволяет сразу переходить к началу следующей пары, не обрабатывая каждый символ отдельно.<br />
-<strong><code>s.size()</code></strong> — используется для проверки границ строки, чтобы избежать выхода за пределы массива при обращении к <code>s[i + 1]</code>.<br />
-<strong><code>pair += '_'</code></strong> — это условие срабатывает только один раз в самом конце, если общее количество символов было нечетным.<br />
-<strong><code>result.push_back(pair)</code></strong> — помещает сформированную строку из двух символов в конец нашего списка ответов.</small></p>
-</details>
-<p><br></p>
-<blockquote>
-<p><big>Инсайт дня: Шаг цикла определяет структуру</big></p>
-</blockquote>
-<p>Когда нужно сгруппировать данные (например, по 2, 3 или 10 элементов), проще всего управлять этим через <strong>шаг итерации</strong> в цикле <code>for</code>. </p>
-<p><strong>Почему это важно:</strong><br />
-Вместо того чтобы внутри цикла писать сложную логику «накопления» символов, мы заранее говорим программе: «прыгай через один». Это делает код предсказуемым: внутри цикла мы всегда работаем только с текущим окном данных.</p>
-<blockquote>
-<p><strong>Вывод:</strong> Алгоритм «Цикл с кастомным шагом + проверка соседа» — самый надежный способ сегментации любых последовательностей.</p>
-</blockquote>
-<details open="open">
-<summary>Best Practices (через substr):</summary>
-<p><div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string&gt;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;vector&gt;</span>
-
-<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span><span class="w"> </span><span class="n">solution</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="o">&amp;</span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span><span class="w"> </span><span class="n">res</span><span class="p">;</span>
-<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">length</span><span class="p">();</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="c1">// Вырезаем 2 символа. Если символ один, substr возьмет только его.</span>
-<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">part</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">substr</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span>
-
-<span class="w">    </span><span class="c1">// Если длина куска меньше 2, дополняем подчеркиванием</span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">part</span><span class="p">.</span><span class="n">length</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="n">part</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="sc">&#39;_&#39;</span><span class="p">;</span>
-
-<span class="w">    </span><span class="n">res</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">part</span><span class="p">);</span>
-<span class="w">  </span><span class="p">}</span>
-<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">res</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div>
-Метод <code>substr</code> делает код более читаемым («вырезать подстроку»), избавляя от ручного сложения отдельных символов через оператор <code>+=</code>.</p>
-</details>
-<hr />
-<hr />
-<hr />
-<hr />
-<hr />
-<h2 id="37-codewars-disemvowel-trolls">Задача 37: <a href="https://codewars.com">Codewars: "Disemvowel Trolls"</a></h2>
-<p>Trolls are attacking your comment section! A common way to deal with this situation is to remove all of the vowels from the trolls' comments, neutralizing the threat. Your task is to write a function that takes a string and return a new string with all vowels removed.</p>
-<details open="open">
-<summary>На русском:</summary>
-<p>Тролли атакуют ваши комментарии! Распространенный способ справиться с этой ситуацией — удалить все гласные из комментариев троллей, нейтрализуя угрозу. Ваша задача — написать функцию, которая принимает строку и возвращает новую строку, в которой удалены все гласные. (Для справки: в английском языке буква "y" не считается гласной в этой задаче).</p>
-</details>
-<div class="highlight"><pre><span></span><code><span class="c1">// Пример использования:</span>
-<span class="n">disemvowel</span><span class="p">(</span><span class="s">&quot;This website is for losers LOL!&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// возвращает &quot;Ths wbst s fr lsrs LL!&quot;</span>
-</code></pre></div>
-<details open="open">
-<summary>Решение:</summary>
-<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string&gt;</span>
-
-<span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="nf">disemvowel</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span><span class="w"> </span><span class="n">str</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">;</span>
-<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">vowels</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;aeiouAEIOU&quot;</span><span class="p">;</span>
-
-<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">char</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">str</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">vowels</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="n">c</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">::</span><span class="n">npos</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="n">result</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">c</span><span class="p">;</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="w">  </span><span class="p">}</span>
-
-<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">result</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div>
-</details>
-<details open="open">
-<summary>На заметку:</summary>
-<p><small><strong><code>std::string::npos</code></strong> — возвращается методом <code>find</code>, если символ не найден.<br />
-<strong><code>for (char c : str)</code></strong> — итерируется по каждому символу строки.<br />
-<strong><code>vowels.find(c)</code></strong> — проверяет наличие текущего символа в списке «запрещенных».<br />
-<strong>Регистр (A/a)</strong> — поиск чувствителен к регистру, поэтому в строке <code>vowels</code> указаны оба варианта.</small></p>
-</details>
-<p><br></p>
-<blockquote>
-<p><big>Инсайт дня: Инструмент под задачу</big></p>
-</blockquote>
-<p>Использование <strong>RegEx</strong> (регулярных выражений) превращает код в декларативное описание: мы не пишем алгоритм удаления, мы описываем «что именно» должно исчезнуть.</p>
-<p><strong>Почему это важно:</strong><br />
-Это сокращает количество строк и делает код легко масштабируемым. Если условия задачи изменятся (например, нужно будет удалять еще и цифры), вам достаточно будет изменить только строку шаблона, не трогая логику программы.</p>
-<blockquote>
-<p><strong>Вывод:</strong> Регулярные выражения — самый мощный инструмент для сложной обработки текста, хотя они и чуть медленнее обычных циклов.</p>
-</blockquote>
-<details open="open">
-<summary>Best Practices:</summary>
-<p><div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string&gt;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;regex&gt;</span>
-
-<span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="nf">disemvowel</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">str</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="c1">// 1. Создаем регулярное выражение, описывающее все гласные</span>
-<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">regex</span><span class="w"> </span><span class="n">vowels</span><span class="p">(</span><span class="s">&quot;[aeiouAEIOU]&quot;</span><span class="p">);</span>
-
-<span class="w">  </span><span class="c1">// 2. Заменяем все совпадения на пустую строку &quot;&quot;</span>
-<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">regex_replace</span><span class="p">(</span><span class="n">str</span><span class="p">,</span><span class="w"> </span><span class="n">vowels</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">);</span>
-<span class="p">}</span>
-</code></pre></div>
-Метод <code>std::regex_replace</code> — это "золотой стандарт" для задач на замену или удаление подстрок по шаблону. Он избавляет от необходимости писать ручные циклы и проверки, делая код максимально чистым и понятным.</p>
 </details>
 
 
