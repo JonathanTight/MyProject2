@@ -2262,3 +2262,146 @@ disemvowel("This website is for losers LOL!"); // возвращает "Ths wbst
     }
     ```
     Метод `std::regex_replace` — это "золотой стандарт" для задач на замену или удаление подстрок по шаблону. Он избавляет от необходимости писать ручные циклы и проверки, делая код максимально чистым и понятным.
+
+---
+
+---
+
+---
+
+---
+
+---
+
+## Задача 38: [Codewars: "Who likes it?"](https://codewars.com)
+
+You probably know the "like" system from Facebook and other pages. People can "like" blog posts, pictures or other items. We want to create the text that should be displayed next to such an item. Implement the function which takes an array containing the names of people that like an item.
+
+???+ "На русском:" 
+    Вы, вероятно, знакомы с системой «лайков» в Facebook. Люди могут лайкать посты, фотографии и другое. Нужно создать текст, который будет отображаться рядом с таким элементом. Реализуйте функцию, которая принимает массив имен людей, которым понравился элемент.
+
+```cpp
+// Примеры использования:
+likes({}) // "no one likes this"
+likes({"Peter"}) // "Peter likes this"
+likes({"Jacob", "Alex"}) // "Jacob and Alex like this"
+likes({"Max", "John", "Mark"}) // "Max, John and Mark like this"
+likes({"Alex", "Jacob", "Mark", "Max"}) // "Alex, Jacob and 2 others like this"
+```
+
+???+ "Решение:"
+    ```cpp
+    #include <string>
+    #include <vector>
+
+    std::string likes(const std::vector<std::string> &names) {
+      if (names.size() == 0) return "no one likes this";
+      else if (names.size() == 1) return names[0] + " likes this";
+      else if (names.size() == 2) return names[0] + " and " + names[1] + " like this";
+      else if (names.size() == 3) return names[0] + ", " + names[1] + " and " + names[2] + " like this";
+      else return names[0] + ", " + names[1] + " and " + std::to_string(names.size() - 2) + " others like this";
+    }
+    ```
+
+???+ "На заметку:"
+    <small>**`names.size()`** — возвращает количество элементов в векторе.  
+    **`std::to_string()`** — преобразует число (размер вектора минус 2) в строку для конкатенации.  
+    **`names[0], names[1]`** — доступ к элементам вектора по индексу.  
+    **Грамматика** — обратите внимание, что для одного человека используется `likes`, а для нескольких — `like`.</small>
+
+<br>
+> <big>Инсайт дня: Масштабируемость условий</big>
+
+В задачах, где вывод сильно зависит от количества входных данных, использование простых условий `if/else` или `switch` является наиболее эффективным и читаемым решением.
+
+**Почему это важно:**  
+Попытка написать «универсальный» цикл для такой задачи часто приводит к усложнению кода и появлению лишних запятых или союзов «and» там, где они не нужны. Прямое описание каждого случая исключает логические ошибки.
+
+> **Вывод:** Если вариантов вывода всего несколько (0, 1, 2, 3, 4+), не бойтесь использовать явные условия вместо сложных алгоритмов.
+
+???+ "Best Practices (Switch):"
+    ```cpp
+    #include <string>
+    #include <vector>
+
+    std::string likes(const std::vector<std::string> &names) {
+      switch (names.size()) {
+        case 0: return "no one likes this";
+        case 1: return names[0] + " likes this";
+        case 2: return names[0] + " and " + names[1] + " like this";
+        case 3: return names[0] + ", " + names[1] + " and " + names[2] + " like this";
+        default: return names[0] + ", " + names[1] + " and " + std::to_string(names.size() - 2) + " others like this";
+      }
+    }
+    ```
+    Использование `switch` делает структуру кода еще более наглядной, четко разделяя логику обработки для каждого конкретного случая.
+
+---
+
+---
+
+---
+
+---
+
+---
+
+## Задача 39: [Codewars: "Create Phone Number"](https://codewars.com)
+
+Write a function that accepts an array of 10 integers (between 0 and 9), that returns a string of those numbers in the form of a phone number.
+
+???+ "На русском:" 
+    Напишите функцию, которая принимает массив из 10 целых чисел (от 0 до 9) и возвращает строку в формате телефонного номера: `(123) 456-7890`.
+
+```cpp
+// Пример использования:
+createPhoneNumber(int{1, 2, 3, 4, 5, 6, 7, 8, 9, 0}) // => returns "(123) 456-7890"
+```
+
+???+ "Решение:"
+    ```cpp
+    #include <string>
+    #include <cstdio>
+
+    std::string createPhoneNumber(const int arr[10]) {
+      char buf[15];
+      snprintf(buf, sizeof(buf), "(%d%d%d) %d%d%d-%d%d%d%d", 
+               arr[0], arr[1], arr[2], arr[3], arr[4], 
+               arr[5], arr[6], arr[7], arr[8], arr[9]);
+      return buf;
+    }
+    ```
+
+???+ "На заметку:"
+    <small>**`char buf[15]`** — выделение фиксированной памяти под 14 символов и нулевой терминатор.  
+    **`snprintf`** (**s**tring **n**umber **f**ormatted) — записывает данные в буфер по шаблону, ограничивая длину (`n`) для безопасности.    
+    **`sizeof(buf)`** — ограничитель, гарантирующий, что запись не выйдет за границы массива.  
+    **`%d`** — спецификатор для подстановки целых чисел.</small>
+
+<br>
+> <big>Инсайт дня: Эффективность шаблонов</big>
+
+Использование низкоуровневых функций форматирования позволяет избежать создания множества временных строковых объектов, что критически важно для производительности в C++.
+
+**Почему это важно:**  
+На собеседованиях знание функций семейства `printf` и понимание устройства `char` массивов показывает, что вы понимаете, как программа работает с памятью «под капотом».
+
+> **Вывод:** Для строго фиксированных форматов данных `snprintf` — самый эффективный и наглядный инструмент.
+
+???+ "Best Practices:"
+    ```cpp
+    #include <string>
+
+    std::string createPhoneNumber(const int arr[10]) {
+      std::string res = "(000) 000-0000";
+      int a = 0;
+      
+      for (int i = 0; i < res.size(); i++) {
+        if (res[i] == '0') {
+          res[i] = arr[a++] + '0';
+        }
+      }
+      return res;
+    }
+    ```
+    Этот подход считается более гибким («best practice» для сложных задач), так как он отделяет маску (шаблон) от логики заполнения. Это упрощает поддержку кода при изменении формата номера.
