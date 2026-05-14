@@ -689,28 +689,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#38-codewars-who-likes-it" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Задача 38: Codewars: "Who likes it?"
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#39-codewars-create-phone-number" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Задача 39: Codewars: "Create Phone Number"
-      
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -1146,28 +1124,6 @@
     <span class="md-ellipsis">
       
         Задача 37: Codewars: "Disemvowel Trolls"
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#38-codewars-who-likes-it" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Задача 38: Codewars: "Who likes it?"
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#39-codewars-create-phone-number" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Задача 39: Codewars: "Create Phone Number"
       
     </span>
   </a>
@@ -3157,135 +3113,6 @@ Can you finish the game so all the rules are met?</p>
 <span class="p">}</span>
 </code></pre></div>
 Метод <code>std::regex_replace</code> — это "золотой стандарт" для задач на замену или удаление подстрок по шаблону. Он избавляет от необходимости писать ручные циклы и проверки, делая код максимально чистым и понятным.</p>
-</details>
-<hr />
-<hr />
-<hr />
-<hr />
-<hr />
-<h2 id="38-codewars-who-likes-it">Задача 38: <a href="https://codewars.com">Codewars: "Who likes it?"</a></h2>
-<p>You probably know the "like" system from Facebook and other pages. People can "like" blog posts, pictures or other items. We want to create the text that should be displayed next to such an item. Implement the function which takes an array containing the names of people that like an item.</p>
-<details open="open">
-<summary>На русском:</summary>
-<p>Вы, вероятно, знакомы с системой «лайков» в Facebook. Люди могут лайкать посты, фотографии и другое. Нужно создать текст, который будет отображаться рядом с таким элементом. Реализуйте функцию, которая принимает массив имен людей, которым понравился элемент.</p>
-</details>
-<div class="highlight"><pre><span></span><code><span class="c1">// Примеры использования:</span>
-<span class="n">likes</span><span class="p">({})</span><span class="w"> </span><span class="c1">// &quot;no one likes this&quot;</span>
-<span class="n">likes</span><span class="p">({</span><span class="s">&quot;Peter&quot;</span><span class="p">})</span><span class="w"> </span><span class="c1">// &quot;Peter likes this&quot;</span>
-<span class="n">likes</span><span class="p">({</span><span class="s">&quot;Jacob&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Alex&quot;</span><span class="p">})</span><span class="w"> </span><span class="c1">// &quot;Jacob and Alex like this&quot;</span>
-<span class="n">likes</span><span class="p">({</span><span class="s">&quot;Max&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;John&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Mark&quot;</span><span class="p">})</span><span class="w"> </span><span class="c1">// &quot;Max, John and Mark like this&quot;</span>
-<span class="n">likes</span><span class="p">({</span><span class="s">&quot;Alex&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Jacob&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Mark&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Max&quot;</span><span class="p">})</span><span class="w"> </span><span class="c1">// &quot;Alex, Jacob and 2 others like this&quot;</span>
-</code></pre></div>
-<details open="open">
-<summary>Решение:</summary>
-<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string&gt;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;vector&gt;</span>
-
-<span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="nf">likes</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">names</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">names</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="s">&quot;no one likes this&quot;</span><span class="p">;</span>
-<span class="w">  </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">names</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">names</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; likes this&quot;</span><span class="p">;</span>
-<span class="w">  </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">names</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">names</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; and &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">names</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; like this&quot;</span><span class="p">;</span>
-<span class="w">  </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">names</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">3</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">names</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;, &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">names</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; and &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">names</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; like this&quot;</span><span class="p">;</span>
-<span class="w">  </span><span class="k">else</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">names</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;, &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">names</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; and &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">to_string</span><span class="p">(</span><span class="n">names</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; others like this&quot;</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div>
-</details>
-<details open="open">
-<summary>На заметку:</summary>
-<p><small><strong><code>names.size()</code></strong> — возвращает количество элементов в векторе.<br />
-<strong><code>std::to_string()</code></strong> — преобразует число (размер вектора минус 2) в строку для конкатенации.<br />
-<strong><code>names[0], names[1]</code></strong> — доступ к элементам вектора по индексу.<br />
-<strong>Грамматика</strong> — обратите внимание, что для одного человека используется <code>likes</code>, а для нескольких — <code>like</code>.</small></p>
-</details>
-<p><br></p>
-<blockquote>
-<p><big>Инсайт дня: Масштабируемость условий</big></p>
-</blockquote>
-<p>В задачах, где вывод сильно зависит от количества входных данных, использование простых условий <code>if/else</code> или <code>switch</code> является наиболее эффективным и читаемым решением.</p>
-<p><strong>Почему это важно:</strong><br />
-Попытка написать «универсальный» цикл для такой задачи часто приводит к усложнению кода и появлению лишних запятых или союзов «and» там, где они не нужны. Прямое описание каждого случая исключает логические ошибки.</p>
-<blockquote>
-<p><strong>Вывод:</strong> Если вариантов вывода всего несколько (0, 1, 2, 3, 4+), не бойтесь использовать явные условия вместо сложных алгоритмов.</p>
-</blockquote>
-<details open="open">
-<summary>Best Practices (Switch):</summary>
-<p><div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string&gt;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;vector&gt;</span>
-
-<span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="nf">likes</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">names</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">names</span><span class="p">.</span><span class="n">size</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="mi">0</span><span class="p">:</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="s">&quot;no one likes this&quot;</span><span class="p">;</span>
-<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">names</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; likes this&quot;</span><span class="p">;</span>
-<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="mi">2</span><span class="p">:</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">names</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; and &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">names</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; like this&quot;</span><span class="p">;</span>
-<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="mi">3</span><span class="p">:</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">names</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;, &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">names</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; and &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">names</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; like this&quot;</span><span class="p">;</span>
-<span class="w">    </span><span class="k">default</span><span class="o">:</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">names</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;, &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">names</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; and &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">to_string</span><span class="p">(</span><span class="n">names</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; others like this&quot;</span><span class="p">;</span>
-<span class="w">  </span><span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div>
-Использование <code>switch</code> делает структуру кода еще более наглядной, четко разделяя логику обработки для каждого конкретного случая.</p>
-</details>
-<hr />
-<hr />
-<hr />
-<hr />
-<hr />
-<h2 id="39-codewars-create-phone-number">Задача 39: <a href="https://codewars.com">Codewars: "Create Phone Number"</a></h2>
-<p>Write a function that accepts an array of 10 integers (between 0 and 9), that returns a string of those numbers in the form of a phone number.</p>
-<details open="open">
-<summary>На русском:</summary>
-<p>Напишите функцию, которая принимает массив из 10 целых чисел (от 0 до 9) и возвращает строку в формате телефонного номера: <code>(123) 456-7890</code>.</p>
-</details>
-<div class="highlight"><pre><span></span><code><span class="c1">// Пример использования:</span>
-<span class="n">createPhoneNumber</span><span class="p">(</span><span class="kt">int</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">})</span><span class="w"> </span><span class="c1">// =&gt; returns &quot;(123) 456-7890&quot;</span>
-</code></pre></div>
-<details open="open">
-<summary>Решение:</summary>
-<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string&gt;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;cstdio&gt;</span>
-
-<span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="nf">createPhoneNumber</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">arr</span><span class="p">[</span><span class="mi">10</span><span class="p">])</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="kt">char</span><span class="w"> </span><span class="n">buf</span><span class="p">[</span><span class="mi">15</span><span class="p">];</span>
-<span class="w">  </span><span class="n">snprintf</span><span class="p">(</span><span class="n">buf</span><span class="p">,</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">buf</span><span class="p">),</span><span class="w"> </span><span class="s">&quot;(%d%d%d) %d%d%d-%d%d%d%d&quot;</span><span class="p">,</span><span class="w"> </span>
-<span class="w">           </span><span class="n">arr</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="w"> </span><span class="n">arr</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="w"> </span><span class="n">arr</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span><span class="w"> </span><span class="n">arr</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span><span class="w"> </span><span class="n">arr</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span><span class="w"> </span>
-<span class="w">           </span><span class="n">arr</span><span class="p">[</span><span class="mi">5</span><span class="p">],</span><span class="w"> </span><span class="n">arr</span><span class="p">[</span><span class="mi">6</span><span class="p">],</span><span class="w"> </span><span class="n">arr</span><span class="p">[</span><span class="mi">7</span><span class="p">],</span><span class="w"> </span><span class="n">arr</span><span class="p">[</span><span class="mi">8</span><span class="p">],</span><span class="w"> </span><span class="n">arr</span><span class="p">[</span><span class="mi">9</span><span class="p">]);</span>
-<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">buf</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div>
-</details>
-<details open="open">
-<summary>На заметку:</summary>
-<p><small><strong><code>char buf[15]</code></strong> — выделение фиксированной памяти под 14 символов и нулевой терминатор.<br />
-<strong><code>snprintf</code></strong> (<strong>s</strong>tring <strong>n</strong>umber <strong>f</strong>ormatted) — записывает данные в буфер по шаблону, ограничивая длину (<code>n</code>) для безопасности.  <br />
-<strong><code>sizeof(buf)</code></strong> — ограничитель, гарантирующий, что запись не выйдет за границы массива.<br />
-<strong><code>%d</code></strong> — спецификатор для подстановки целых чисел.</small></p>
-</details>
-<p><br></p>
-<blockquote>
-<p><big>Инсайт дня: Эффективность шаблонов</big></p>
-</blockquote>
-<p>Использование низкоуровневых функций форматирования позволяет избежать создания множества временных строковых объектов, что критически важно для производительности в C++.</p>
-<p><strong>Почему это важно:</strong><br />
-На собеседованиях знание функций семейства <code>printf</code> и понимание устройства <code>char</code> массивов показывает, что вы понимаете, как программа работает с памятью «под капотом».</p>
-<blockquote>
-<p><strong>Вывод:</strong> Для строго фиксированных форматов данных <code>snprintf</code> — самый эффективный и наглядный инструмент.</p>
-</blockquote>
-<details open="open">
-<summary>Best Practices:</summary>
-<p><div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string&gt;</span>
-
-<span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="nf">createPhoneNumber</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">arr</span><span class="p">[</span><span class="mi">10</span><span class="p">])</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;(000) 000-0000&quot;</span><span class="p">;</span>
-<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-
-<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">res</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">res</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="sc">&#39;0&#39;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="n">res</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">arr</span><span class="p">[</span><span class="n">a</span><span class="o">++</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="sc">&#39;0&#39;</span><span class="p">;</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="w">  </span><span class="p">}</span>
-<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">res</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div>
-Этот подход считается более гибким («best practice» для сложных задач), так как он отделяет маску (шаблон) от логики заполнения. Это упрощает поддержку кода при изменении формата номера.</p>
 </details>
 
 
