@@ -8,5 +8,6 @@ markdown_extensions:
 extra_css:
   - css/styles.css
 nav:
-  - Home: index.md
-  - C++: cpp.md
+  - SA: index.md
+  - C++ CodeWars: cpp.md
+  - C++ Stroustrup: Learn.md

@@ -1,6 +1,6 @@
 # Мои успехи в C++
 
-## Задача 1: [Codewars: "Two Sum"](https://www.codewars.com/kata/52c31f8e6605bcc646000082/train/cpp) <small>(*[Based on Leetcode](https://leetcode.com/problems/two-sum/)*)</small>
+## Задача 1: "Two Sum"
 
 Write a function that takes an array of numbers (integers for the tests) and a target number. It should find two different items in the array that, when added together, give the target value. The indexes of these items should then be returned in a tuple / list (depending on your language) like so: (index1, index2).
 
@@ -70,7 +70,7 @@ two_sum({3, 2, 4}, 6); // returns {1, 2} or {2, 1}
 
 ---  
 
-## Задача 2: [Codewars: "Even or Odd"](https://codewars.com)
+## Задача 2: "Even or Odd"
 
 Create a function that takes an integer as an argument and returns "Even" for even numbers or "Odd" for odd numbers.
 
@@ -128,7 +128,7 @@ even_or_odd(-42);  // returns "Even"
 
 
 
-## Задача 3: [Codewars: "Convert a Number to a String!"](https://codewars.com)
+## Задача 3: "Convert a Number to a String!"
 
 We need a function that can transform a number (integer) into a string. What ways of achieving this do you know?
 
@@ -181,7 +181,7 @@ We need a function that can transform a number (integer) into a string. What way
 
 
 
-## Задача 4: [Codewars: "Guess the Number Game"](https://codewars.com)
+## Задача 4: "Guess the Number Game"
 
 Imagine you are creating a game where the user has to guess the correct number. But there is a limit of how many guesses the user can do.
 
@@ -268,7 +268,7 @@ game.guess(1);  // выбрасывает std::runtime_error
 ---
 
 ---
-## Задача 5: [Codewars: "Reversed Strings"](https://codewars.com)
+## Задача 5: "Reversed Strings"
 
 Complete the solution so that it reverses the string passed into it.
 
@@ -333,7 +333,7 @@ reverseString("word");  // возвращает "drow"
 ---  
 
 
-## Задача 6: [Codewars: "Return Negative"](https://codewars.com)
+## Задача 6: "Return Negative"
 
 In this simple assignment you are given a number and have to make it negative. But maybe the number is already negative?
 
@@ -396,7 +396,7 @@ makeNegative(0);  // возвращает 0
 <br>
 <br>
 
-## Задача 7: [Codewars: "Convert boolean values to strings 'Yes' or 'No'"](https://codewars.com)
+## Задача 7: "Convert boolean values to strings 'Yes' or 'No'"
 
 Complete the method that takes a boolean value and return a "Yes" string for true, or a "No" string for false.
 
@@ -453,7 +453,7 @@ bool_to_word(false); // возвращает "No"
 
 ---
 
-## Задача 8: [Codewars: "Opposite number"](https://codewars.com)
+## Задача 8: "Opposite number"
 
 Very simple, given a number, find its opposite (additive inverse).
 
@@ -503,7 +503,7 @@ opposite(-14);  // возвращает 14
 
 
 
-## Задача 9: [Codewars: "Vowel Count"](https://codewars.com)
+## Задача 9: "Vowel Count"
 
 Return the number (count) of vowels in the given string. We will consider a, e, i, o, u as vowels for this Kata (but not y).
 
@@ -565,7 +565,7 @@ getCount("celebration"); // возвращает 5
 ---  
 
 
-## Задача 10: [Codewars: "Sum of positive"](https://codewars.com)
+## Задача 10: "Sum of positive"
 
 You get an array of numbers, return the sum of all of the positives ones.
 
@@ -627,7 +627,7 @@ You get an array of numbers, return the sum of all of the positives ones.
 ---  
 
 
-## Задача 11: [Codewars: "String repeat"](https://codewars.com)
+## Задача 11: "String repeat"
 
 Write a function that accepts a non-negative integer n and a string s as parameters, and returns a string of s repeated exactly n times.
 
@@ -683,7 +683,7 @@ repeat_str(5, "Hello"); // возвращает "HelloHelloHelloHelloHello"
 
 ---  
 
-## Задача 12: [Codewars: "Remove First and Last Character"](https://codewars.com)
+## Задача 12: "Remove First and Last Character"
 
 It's pretty straightforward. Your goal is to create a function that removes the first and last characters of a string. 
 
@@ -742,7 +742,7 @@ sliceString("country");  // возвращает "ountr"
 
 ---  
 
-## Задача 13: [Codewars: "Square(n) Sum"](https://codewars.com)
+## Задача 13: "Square(n) Sum"
 
 Complete the square sum function so that it squares each number passed into it and then sums the results together.
 
@@ -800,7 +800,7 @@ square_sum({2, 6});    // возвращает 40 (2^2 + 6^2 = 40)
 
 ---  
 
-## Задача 14: [Codewars: "Find the smallest integer in the array"](https://codewars.com)
+## Задача 14: "Find the smallest integer in the array"
 
 Your goal is to create a function that finds the smallest integer in the given array.
 
@@ -864,7 +864,7 @@ findSmallest({34, 15, 88, 2}); // возвращает 2
 ---  
 
 
-## Задача 15: [Codewars: "Returning Strings"](https://codewars.com)
+## Задача 15: "Returning Strings"
 
 Make a simple function called greet that returns the most-famous "hello world!".
 
@@ -913,7 +913,7 @@ greet(); // возвращает "hello world"
 ---  
 
 
-## Задача 16: [Codewars: "Grasshopper - Summation"](https://codewars.com)
+## Задача 16: "Grasshopper - Summation"
 
 Write a program that finds the summation of every number from 1 to num. The number will always be a positive integer greater than 0.
 
@@ -966,7 +966,7 @@ summation(3); // возвращает 6 (1+2+3)
 ---  
 
 
-## Задача 17: [Codewars: "Counting sheep..."](https://codewars.com)
+## Задача 17: "Counting sheep..."
 
 Consider an array/list of sheep where some sheep may be missing from their place. We need a function that counts the number of sheep present in the array (true means present).
 
@@ -1026,7 +1026,7 @@ count_sheep({true,  true,  false, true}); // возвращает 3
 ---  
 
 
-## Задача 18: [Codewars: "Remove String Spaces"](https://codewars.com)
+## Задача 18: "Remove String Spaces"
 
 Write a function that removes the spaces from the string, then return the resultant string.
 
@@ -1085,7 +1085,7 @@ no_space("Hello World"); // возвращает "HelloWorld"
 ---  
 
 
-## Задача 19: [Codewars: "You Can't Code Under Pressure #1"](https://codewars.com)
+## Задача 19: "You Can't Code Under Pressure #1"
 
 Code as fast as you can! You need to double the integer and return it.
 
@@ -1134,7 +1134,7 @@ double_integer(5); // возвращает 10
 ---  
 
 
-## Задача 20: [Codewars: "Convert a Boolean to a String"](https://codewars.com)
+## Задача 20: "Convert a Boolean to a String"
 
 Implement a function which convert the given boolean value into its string representation.
 
@@ -1184,7 +1184,7 @@ boolean_to_string(false); // возвращает "false"
 ---  
 
 
-## Задача 21: [Codewars: "Returning Strings"](https://codewars.com)
+## Задача 21: "Returning Strings"
 
 Create a function that accepts a parameter representing a name and returns the message: "Hello, <name> how are you doing today?".
 
@@ -1234,7 +1234,7 @@ greet("Ryan"); // возвращает "Hello, Ryan how are you doing today?"
 ---  
 
 
-## Задача 22: [Codewars: "Keep Hydrated!"](https://codewars.com)
+## Задача 22: "Keep Hydrated!"
 
 Nathan loves cycling. He drinks 0.5 litres of water per hour of cycling. You get given the time in hours and you need to return the number of litres Nathan will drink, rounded down.
 
@@ -1284,7 +1284,7 @@ litres(11.8);  // возвращает 5 (11.8 * 0.5 = 5.9, округляем �
 ---  
 
 
-## Задача 23: [Codewars: "Basic Mathematical Operations"](https://codewars.com)
+## Задача 23: "Basic Mathematical Operations"
 
 Your task is to create a function that does four basic mathematical operations. The function should take three arguments - operation(string/char), value1(number), value2(number).
 
@@ -1335,7 +1335,7 @@ basicOp('/', 49, 7); // возвращает 7
 ---  
 
 
-## Задача 24: [Codewars: "Century From Year"](https://codewars.com)
+## Задача 24: "Century From Year"
 
 The first century spans from the year 1 up to and including the year 100, the second century - from the year 101 up to and including the year 200, etc. Given a year, return the century it is in.
 
@@ -1385,7 +1385,7 @@ centuryFromYear(1900); // возвращает 19
 ---  
 
 
-## Задача 25: [Codewars: "Sum Arrays"](https://codewars.com)
+## Задача 25: "Sum Arrays"
 
 Write a function that takes an array of numbers and returns the sum of the numbers. The numbers can be negative. If the array is empty, return 0.
 
@@ -1436,7 +1436,7 @@ sum({});               // возвращает 0
 ---  
 
 
-## Задача 26: [Codewars: "Opposites Attract"](https://codewars.com)
+## Задача 26: "Opposites Attract"
 
 Timmy and Sarah think they are in love, but around where they live, they will only know once they pick a flower each. If one of the flowers has an even number of petals and the other has an odd number of petals it means they are in love.
 
@@ -1484,7 +1484,7 @@ lovefunc(2, 2); // возвращает false (оба четные)
 ---  
 
 
-## Задача 27: [Codewars: "Convert number to reversed array of digits"](https://codewars.com)
+## Задача 27: "Convert number to reversed array of digits"
 
 Given a random non-negative number, you have to return the digits of this number within an array in reverse order.
 
@@ -1553,7 +1553,7 @@ digitize(0);     // возвращает [0]
 ---  
 
 
-## Задача 28: [Codewars: "Beginner - Lost Without a Map"](https://codewars.com)
+## Задача 28: "Beginner - Lost Without a Map"
 
 Given an array of integers, return a new array with each value doubled.
 
@@ -1618,7 +1618,7 @@ maps({4, 1, 1}); // возвращает
 
 ---
 
-## Задача 29: [Codewars: "MakeUpperCase"](https://codewars.com)
+## Задача 29: "MakeUpperCase"
 
 Write a function which converts the input string to uppercase.
 
@@ -1689,7 +1689,7 @@ makeUpperCase("C++ is cool"); // возвращает "C++ IS COOL"
 
 ---
 
-## Задача 30: [Codewars: "Paperwork"](https://codewars.com)
+## Задача 30: "Paperwork"
 
 Your classmates asked you to copy some paperwork for them. You know that there are 'n' classmates and the paperwork has 'm' pages. Your task is to calculate how many blank pages do you need. If n < 0 or m < 0 return 0.
 
@@ -1748,7 +1748,7 @@ paperwork(5, 0);   // возвращает 0
 
 ---
 
-## Задача 31: [Codewars: "Simple multiplication"](https://codewars.com)
+## Задача 31: "Simple multiplication"
 
 This kata is about multiplying a given number by eight if it is an even number and by nine otherwise.
 
@@ -1803,7 +1803,7 @@ simpleMultiplication(3); // возвращает 27 (нечетное: 3 * 9)
 
 ---
 
-## Задача 32: [Codewars: "Beginner Series #2 Clock"](https://codewars.com)
+## Задача 32: "Beginner Series #2 Clock"
 
 Clock shows `h` hours, `m` minutes and `s` seconds after midnight. Your task is to write a function which returns the time since midnight in milliseconds.
 
@@ -1859,7 +1859,7 @@ past(1, 0, 0); // возвращает 3600000
 
 ---
 
-## Задача 33: [Codewars: "Abbreviate a Two Word Name"](https://codewars.com)
+## Задача 33: "Abbreviate a Two Word Name"
 
 Write a function to convert a name into initials. This kata strictly takes two words with one space in between them. The output should be two capital letters with a dot separating them.
 
@@ -1955,7 +1955,7 @@ abbrevName("patrick feeney"); // возвращает "P.F"
 
 ---
 
-## Задача 34: [Codewars: "A Needle in the Haystack"](https://codewars.com)
+## Задача 34: "A Needle in the Haystack"
 
 Can you find the needle in the haystack? Write a function `findNeedle()` that takes an array full of junk but containing one "needle". After your function finds the needle it should return a message (as a string) that says: "found the needle at position " plus the index it found the needle.
 
@@ -2033,7 +2033,7 @@ findNeedle({"hay", "junk", "needle"}); // возвращает "found the needle
 
 ---
 
-## Задача 35: [Codewars: "Multiples of 3 or 5"](https://codewars.com)
+## Задача 35: "Multiples of 3 or 5"
 
 If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23. Finish the solution so that it returns the sum of all the multiples of 3 or 5 below the number passed in. Additionally, if the number is negative, return 0.
 
@@ -2112,7 +2112,7 @@ solution(10); // возвращает 23 (3 + 5 + 6 + 9)
 
 ---
 
-## Задача 36: [Codewars: "Split Strings"](https://codewars.com)
+## Задача 36: "Split Strings"
 
 Complete the solution so that it splits the string into strings of two characters in a list/array. If the string contains an odd number of characters then it should replace the missing second character of the final pair with an underscore ('_').
 
@@ -2202,7 +2202,7 @@ solution("abcdef"); // возвращает {"ab", "cd", "ef"}
 
 ---
 
-## Задача 37: [Codewars: "Disemvowel Trolls"](https://codewars.com)
+## Задача 37: "Disemvowel Trolls"
 
 Trolls are attacking your comment section! A common way to deal with this situation is to remove all of the vowels from the trolls' comments, neutralizing the threat. Your task is to write a function that takes a string and return a new string with all vowels removed.
 
@@ -2273,7 +2273,7 @@ disemvowel("This website is for losers LOL!"); // возвращает "Ths wbst
 
 ---
 
-## Задача 38: [Codewars: "Who likes it?"](https://codewars.com)
+## Задача 38: "Who likes it?"
 
 You probably know the "like" system from Facebook and other pages. People can "like" blog posts, pictures or other items. We want to create the text that should be displayed next to such an item. Implement the function which takes an array containing the names of people that like an item.
 
@@ -2346,7 +2346,7 @@ likes({"Alex", "Jacob", "Mark", "Max"}) // "Alex, Jacob and 2 others like this"
 
 ---
 
-## Задача 39: [Codewars: "Create Phone Number"](https://codewars.com)
+## Задача 39: "Create Phone Number"
 
 Write a function that accepts an array of 10 integers (between 0 and 9), that returns a string of those numbers in the form of a phone number.
 
@@ -2415,7 +2415,7 @@ createPhoneNumber(int{1, 2, 3, 4, 5, 6, 7, 8, 9, 0}) // => returns "(123) 456-78
 
 ---
 
-## Задача 40: [Codewars: "Square Every Digit"](https://codewars.com)
+## Задача 40: "Square Every Digit"
 
 Welcome. In this kata, you are asked to square every digit of a number and concatenate them. For example, if we run 9119 through the function, 811181 will come out, because 9² is 81 and 1² is 1.
 
@@ -2471,7 +2471,7 @@ square_digits(765)  //  returns 493625
 
 > **Вывод:** Если нужно разобрать число посимвольно слева направо и склеить результаты, строки — самый простой и очевидный путь.
 
-???+ "Best Practices (Чистая математика):"
+???+ "Best Practices:"
     ```cpp
     int square_digits(int n) {
       int a = 1;
@@ -2485,4 +2485,239 @@ square_digits(765)  //  returns 493625
       return m;
     }
     ```
-    Этот подход считается «best practice» для высоконагруженных систем, так как он работает без выделения памяти под строки. Он идет с конца числа через `% 10`, но сдвигает квадраты влево с помощью множителя `a`, подстраивая его размер (`10` или `100`) под длину получившегося квадрата.
+    Этот подход считается лучшим для высоконагруженных систем, так как он работает без выделения памяти под строки. Он идет с конца числа через `% 10`, но сдвигает квадраты влево с помощью множителя `a`, подстраивая его размер (`10` или `100`) под длину получившегося квадрата.
+
+---
+
+---
+
+---
+
+---
+
+---
+
+## Задача 41: "Highest and Lowest"
+
+In this assignment you are given a string of space separated numbers, and have to return the highest and lowest number.
+
+???+ "На русском:" 
+    Напишите функцию, которая принимает строку из чисел, разделенных пробелами, и возвращает самое большое и самое маленькое число через пробел. Максимум должен идти первым.
+
+```cpp
+// Пример использования:
+highAndLow("1 2 3 4 5");  // => returns "5 1"
+highAndLow("1 2 -3 4 5"); // => returns "5 -3"
+highAndLow("1 9 3 4 -5"); // => returns "9 -5"
+```
+
+???+ "Решение:"
+    ```cpp
+    #include <string>
+    #include <sstream>
+    #include <algorithm> // Для функций std::max и std::min
+
+    std::string highAndLow(const std::string& numbers){
+        std::stringstream ss(numbers);
+        int num;
+        
+        // Считываем самое первое число для инициализации минимума и максимума
+        ss >> num;
+        int max = num;
+        int min = num;
+        
+        // Читаем все остальные числа из потока по очереди
+        while (ss >> num) {
+            max = std::max(max, num);
+            min = std::min(min, num);
+        }
+        
+        // Склеиваем результат в строку: максимум, пробел, минимум
+        return std::to_string(max) + " " + std::to_string(min);
+    }
+    ```
+
+???+ "На заметку:"
+    <small>**`std::stringstream`** — превращает строку в поток данных. Позволяет читать слова или числа по очереди, автоматически пропуская пробелы.  
+    **`ss >> num`** — считывает следующее число из потока. Возвращает `false`, когда числа в строке закончились, что идеально подходит для условия цикла `while`.  
+    **`std::max / std::min`** — встроенные функции, которые выбирают наибольшее или наименьшее из двух переданных чисел.  
+    **`std::to_string`** — переводит итоговые числа обратно в текстовый формат `std::string` перед склейкой.</small>
+
+<br>
+> <big>Инсайт дня: Потоковое чтение против ручного парсинга</big>
+
+Использование `stringstream` избавляет от необходимости вручную искать пробелы, резать строку на подстроки и проверять знаки минус у отрицательных чисел. Поток сам понимает, где кончается одно число и начинается другое.
+
+**Почему это важно:**  
+Инициализация `min` и `max` первым прочитанным числом защищает от ошибок. Если вместо этого использовать `0`, код сработает неверно на строке, состоящей только из отрицательных чисел (например, `"-5 -10 -3"` ошибочно выдаст максимум `0`).
+
+> **Вывод:** Для разбора строк с неизвестным количеством чисел, разделенных пробелами или табами, `stringstream` — самый надежный и лаконичный инструмент в C++.
+
+???+ "Best Practices:"
+    ```cpp
+    #include <string>
+    #include <sstream>
+    #include <climits>
+
+    std::string highAndLow(const std::string& numbers) {
+        std::stringstream ss(numbers);
+        int i, min = INT_MAX, max = INT_MIN;
+        while (ss >> i) {
+            if (i < min) min = i;
+            if (i > max) max = i;
+        }
+        return std::to_string(max) + " " + std::to_string(min);
+    }
+    ```
+    Этот подход считается лучшим, так как переменные здесь инициализируются экстремальными значениями (`INT_MIN` и `INT_MAX`) из библиотеки `<climits>`. Любое реальное число из строки гарантированно окажется больше `INT_MIN` и меньше `INT_MAX` при первой же проверке внутри цикла.
+
+---
+
+---
+
+---
+
+---
+
+---
+
+## Задача 42: "Find the odd int"
+
+Given an array of integers, find the one that appears an odd number of times.
+
+There will always be only one integer that appears an odd number of times.
+
+???+ "На русском:" 
+    Дан массив целых чисел. Найдите то число, которое встречается нечетное количество раз. В массиве всегда будет только одно такое число.
+
+```cpp
+// Пример использования:
+findOdd({7});                                   // => returns 7 (встречается 1 раз)
+findOdd({0, 1, 0, 1, 0});                       // => returns 0 (встречается 3 раза)
+findOdd({1, 2, 2, 3, 3, 3, 4, 3, 3, 3, 2, 2, 1}); // => returns 4 (встречается 1 раз)
+```
+
+???+ "Решение:"
+    ```cpp
+    #include <vector>
+
+    int findOdd(const std::vector<int>& numbers){
+        int a = 0;
+        
+        // Перебираем все элементы массива и применяем XOR
+        for (int i = 0; i < numbers.size(); i++) {
+            a ^= numbers[i];
+        }
+        
+        return a;
+    }
+    ```
+
+???+ "На заметку:"
+    <small>**`^=`** — оператор побитового исключающего ИЛИ (XOR) с присваиванием. Строка `a ^= numbers[i];` эквивалентна `a = a ^ numbers[i];`.  
+    **`A ^ A = 0`** — фундаментальное свойство XOR. Любое число, примененное само к себе через эту операцию, уничтожает себя и дает ноль.  
+    **`A ^ 0 = A`** — любое число при операции с нулем остается неизменным.  
+    **Порядок операций** — для XOR порядок не имеет значения (`A ^ B ^ A` превратится в `0 ^ B`, что равно `B`). Это позволяет «гасить» парные числа, в каком бы месте массива они ни находились.</small>
+
+<br>
+> <big>Инсайт дня: Низкоуровневая магия железа против лишней памяти</big>
+
+Использование побитовой операции `XOR` позволяет решить задачу за один единственный проход по массиву, не используя массивы-счетчики, сортировку или сложные структуры данных для подсчета частоты.
+
+**Почему это важно:**  
+Все числа, которые встречаются четное количество раз, гарантированно уничтожат друг друга в процессе вычислений (превратятся в 0). В переменной-аккумуляторе останется только то единственное число, у которого не оказалось пары. Это дает максимальную скорость работы алгоритма (O(N) по времени) и нулевые затраты по оперативной памяти (O(1) по памяти).
+
+> **Вывод:** Для поиска одиночных элементов среди парных дубликатов побитовый XOR — самый быстрый, эффективный и элегантный инструмент в C++.
+
+???+ "Best Practices:"
+    ```cpp
+    #include <vector>
+
+    int findOdd(const std::vector<int>& numbers) {
+        int a = 0;
+        for (auto const& num : numbers) {
+            a ^= num;
+        }
+        return a;
+    }
+    ```
+    Этот подход использует современный цикл **`range-based for`** (for-each). Он избавляет код от ручной работы с индексами `[i]` и проверок `numbers.size()`. Конструкция `auto const& num` автоматически и безопасно берет каждый элемент массива по очереди, делая код чище и защищая от случайного выхода за границы памяти.
+
+---
+
+---
+
+---
+
+---
+
+---
+
+## Задача 43: "Descending Order"
+
+Your task is to make a function that can take any non-negative integer as an argument and return it with its digits in descending order. Essentially, rearrange the digits to create the highest possible number.
+
+???+ "На русском:" 
+    Напишите функцию, которая принимает любое неотрицательное целое число и возвращает его же, но так, чтобы все цифры были отсортированы по убыванию (от большей к меньшей). Фактически, нужно составить максимально возможное число из этих цифр.
+
+```cpp
+// Пример использования:
+descendingOrder(42145);  // => returns 54421
+descendingOrder(145263); // => returns 654321
+descendingOrder(123456); // => returns 654321
+```
+
+???+ "Решение:"
+    ```cpp
+    #include <cinttypes>
+    #include <string>
+    #include <utility> // Для функции std::swap
+
+    uint64_t descendingOrder(uint64_t a)
+    {
+        std::string res = std::to_string(a);
+        
+        // Сортировка пузырьком (Bubble Sort) по убыванию
+        for (size_t i = 0; i < res.size(); i++) {
+            for (size_t j = i + 1; j < res.size(); j++) {
+                if (res[i] < res[j]) {
+                    std::swap(res[i], res[j]);
+                }
+            }
+        }
+        
+        return std::stoull(res);
+    }
+    ```
+
+???+ "На заметку:"
+    <small>**`uint64_t`** — строго 64-битное целое положительное число. Используется, когда нужно гарантировать одинаковый огромный размер переменной на любых процессорах.  
+    **`std::to_string`** — превращает число в строку `std::string`, что позволяет работать с отдельными цифрами как с символами.  
+    **`res[i] < res[j]`** — проверка порядка. Если левая цифра меньше правой, значит, они стоят не по убыванию и их нужно поменять местами.  
+    **`std::swap`** — встроенная функция, которая эффективно меняет содержимое двух ячеек памяти местами.  
+    **`std::stoull`** — переводит строку обратно в 64-битное беззнаковое число (`unsigned long long`), предотвращая переполнение памяти.</small>
+
+<br>
+> <big>Инсайт дня: Строковый парсинг против математических разрядов</big>
+
+Перевод числа в строковый формат перед сортировкой избавляет от необходимости вручную разбирать число на разряды через деление на 10, сохранять их в промежуточные массивы, а затем собирать число обратно через умножение.
+
+**Почему это важно:**  
+При работе с огромными 64-битными числами (до 18 квинтиллионов) ручная математическая сборка перевернутого числа может легко привести к ошибкам переполнения типов данных на промежуточных этапах. Строка выступает безопасным и наглядным буфером, где каждая цифра изолирована в своей ячейке памяти.
+
+> **Вывод:** Когда задача требует перегруппировать, отсортировать или переставить цифры внутри числа, самый безопасный и читаемый путь в C++ — временно превратить число в `std::string`.
+
+???+ "Best Practices:"
+    ```cpp
+    #include <cinttypes>
+    #include <string>
+    #include <algorithm>
+    #include <functional>
+
+    uint64_t descendingOrder(uint64_t a) {
+        std::string res = std::to_string(a);
+        std::sort(res.begin(), res.end(), std::greater<char>());
+        return std::stoull(res);
+    }
+    ```
+    Этот подход считается лучшим, так как вместо ручных вложенных циклов использует встроенную функцию **`std::sort`**. Флаг **`std::greater<char>()`** указывает алгоритму, что сортировать строку нужно в обратном порядке (по убыванию). Это сокращает код до трех строчек и работает быстрее ручного «пузырька» на больших строках.
