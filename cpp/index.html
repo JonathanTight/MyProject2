@@ -757,6 +757,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#44-stop-gninnips-my-sdrow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 44: "Stop gninnipS My sdroW!"
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1285,6 +1296,17 @@
     <span class="md-ellipsis">
       
         Задача 43: "Descending Order"
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#44-stop-gninnips-my-sdrow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 44: "Stop gninnipS My sdroW!"
       
     </span>
   </a>
@@ -3682,15 +3704,110 @@ Can you finish the game so all the rules are met?</p>
 <p><div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;cinttypes&gt;</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string&gt;</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;algorithm&gt;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;functional&gt;</span>
 
 <span class="kt">uint64_t</span><span class="w"> </span><span class="nf">descendingOrder</span><span class="p">(</span><span class="kt">uint64_t</span><span class="w"> </span><span class="n">a</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">to_string</span><span class="p">(</span><span class="n">a</span><span class="p">);</span>
-<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">sort</span><span class="p">(</span><span class="n">res</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">res</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">greater</span><span class="o">&lt;</span><span class="kt">char</span><span class="o">&gt;</span><span class="p">());</span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">stoull</span><span class="p">(</span><span class="n">res</span><span class="p">);</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">to_string</span><span class="p">(</span><span class="n">a</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">// Сортировка с использованием обратных итераторов (по убыванию)</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">sort</span><span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="n">rbegin</span><span class="p">(),</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">rend</span><span class="p">());</span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">stoull</span><span class="p">(</span><span class="n">s</span><span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div>
-Этот подход считается лучшим, так как вместо ручных вложенных циклов использует встроенную функцию <strong><code>std::sort</code></strong>. Флаг <strong><code>std::greater&lt;char&gt;()</code></strong> указывает алгоритму, что сортировать строку нужно в обратном порядке (по убыванию). Это сокращает код до трех строчек и работает быстрее ручного «пузырька» на больших строках.</p>
+Этот подход считается ультимативным лучшим решением, так как вместо ручных вложенных циклов использует встроенную эффективную функцию <strong><code>std::sort</code></strong>. Обратные итераторы <strong><code>rbegin()</code></strong> и <strong><code>rend()</code></strong> заставляют алгоритм сортировать контейнер «задом наперед» (от большего к меньшему), избавляя от необходимости подключать библиотеку <code>&lt;functional&gt;</code> для использования флага <code>std::greater</code>.</p>
+</details>
+<hr />
+<hr />
+<hr />
+<hr />
+<hr />
+<h2 id="44-stop-gninnips-my-sdrow">Задача 44: "Stop gninnipS My sdroW!"</h2>
+<p>Your task is to make a function that takes in a string of one or more words, and returns the same string, but with all words that have five or more letters reversed (just like the name of this kata). Strings passed in will consist of only letters and spaces. Spaces will be included only when more than one word is present.</p>
+<details open="open">
+<summary>На русском:</summary>
+<p>Напишите функцию, которая принимает строку, состоящую из одного или нескольких слов, и возвращает ту же строку, но с перевернутыми словами, длина которых составляет пять или более букв. Входные строки содержат только буквы и пробелы. Пробелы добавляются только тогда, когда в строке присутствует более одного слова.</p>
+</details>
+<div class="highlight"><pre><span></span><code><span class="c1">// Пример использования:</span>
+<span class="n">spinWords</span><span class="p">(</span><span class="s">&quot;Hey fellow warriors&quot;</span><span class="p">);</span><span class="w">  </span><span class="c1">// =&gt; returns &quot;Hey wollef sroirraw&quot;</span>
+<span class="n">spinWords</span><span class="p">(</span><span class="s">&quot;This is a test&quot;</span><span class="p">);</span><span class="w">        </span><span class="c1">// =&gt; returns &quot;This is a test&quot;</span>
+<span class="n">spinWords</span><span class="p">(</span><span class="s">&quot;This is another test&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// =&gt; returns &quot;This is rehtona test&quot;</span>
+</code></pre></div>
+<details open="open">
+<summary>Решение:</summary>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;algorithm&gt;</span><span class="c1"> // Для функции std::reverse</span>
+
+<span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="nf">spinWords</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="o">&amp;</span><span class="n">str</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">;</span>
+
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">size_t</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">str</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">str</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="sc">&#39; &#39;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">s</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">str</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="c1">// Если встретили пробел, проверяем длину накопленного слова</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">5</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="n">std</span><span class="o">::</span><span class="n">reverse</span><span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">end</span><span class="p">());</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">            </span><span class="n">result</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="p">;</span>
+<span class="w">            </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">;</span><span class="w"> </span><span class="c1">// Очищаем буфер для следующего слова</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// Обработка последнего слова после выхода из цикла (так как в конце строки нет пробела)</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">5</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">reverse</span><span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">end</span><span class="p">());</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="n">result</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">s</span><span class="p">;</span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">result</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+</details>
+<details open="open">
+<summary>На заметку:</summary>
+<p><small><strong><code>std::reverse</code></strong> — стандартная функция, переворачивающая элементы в заданном диапазоне (изменяет саму строку <code>s</code> на месте).<br />
+<strong><code>s.size() &gt;= 5</code></strong> — ключевое условие задачи. Проверяет, состоит ли текущее слово из пяти или более символов.<br />
+<strong><code>result += s + " "</code></strong> — конкатенация строк. Добавляет обработанное слово и возвращает пробел на место в результирующую строку.<br />
+<strong><code>s = ""</code></strong> — операция сброса строкового буфера. Необходима, чтобы буквы нового слова не приклеивались к концу предыдущего.<br />
+<strong><code>result += s</code></strong> — финальное добавление хвоста строки вне цикла. Защищает алгоритм от потери последнего слова, за которым не следовал пробел.</small></p>
+</details>
+<p><br></p>
+<blockquote>
+<p><big>Инсайт дня: Логика граничных условий в посимвольном парсинге</big></p>
+</blockquote>
+<p>При ручном разборе строки посимвольно (через цикл <code>for</code>) триггером для окончания обработки слова обычно выступает разделитель — в данном случае пробел. Однако реальные текстовые строки практически никогда не заканчиваются пробелом, они заканчиваются концом самой строки (<code>\0</code>).</p>
+<p><strong>Почему это важно:</strong><br />
+Если забыть обработать накопленный буфер <code>s</code> сразу после завершения цикла, программа совершит критическую логическую ошибку — «потеряет» последнее слово строки. Ввод <code>"Hey warriors"</code> вернет только <code>"Hey "</code>, так как слово <code>"warriors"</code> останется заблокированным внутри переменной <code>s</code>.</p>
+<blockquote>
+<p><strong>Вывод:</strong> При написании кастомных парсеров, завязанных на символы-разделители, всегда проверяйте состояние буферов после выхода из основного цикла. Последний элемент коллекции всегда требует индивидуальной ручной доработки.</p>
+</blockquote>
+<details open="open">
+<summary>Best Practices:</summary>
+<p><div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;sstream&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;algorithm&gt;</span>
+
+<span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="nf">spinWords</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="o">&amp;</span><span class="n">str</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">stringstream</span><span class="w"> </span><span class="n">ss</span><span class="p">(</span><span class="n">str</span><span class="p">);</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">word</span><span class="p">;</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">;</span>
+
+<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">ss</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">word</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">word</span><span class="p">.</span><span class="n">length</span><span class="p">()</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">5</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">std</span><span class="o">::</span><span class="n">reverse</span><span class="p">(</span><span class="n">word</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">word</span><span class="p">.</span><span class="n">end</span><span class="p">());</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">result</span><span class="p">.</span><span class="n">empty</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">result</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="p">;</span><span class="w"> </span><span class="c1">// Добавляем пробел перед каждым словом, кроме первого</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="n">result</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">word</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">result</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+Данный подход является эталонным для C++. Использование <strong><code>std::stringstream</code></strong> элегантно решает проблему «последнего слова», так как строковый поток самостоятельно извлекает слова по пробелам и корректно завершает цикл <code>while</code>, когда поток пустеет. Проверка <code>!result.empty()</code> избавляет от появления лишних пробелов в начале или конце итоговой строки.</p>
 </details>
 
 
