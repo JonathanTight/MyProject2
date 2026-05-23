@@ -768,28 +768,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#45-youre-a-square" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Задача 45: "You're a square!"
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#46-sum-of-digits-digital-root" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Задача 46: "Sum of Digits / Digital Root"
-      
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -1329,28 +1307,6 @@
     <span class="md-ellipsis">
       
         Задача 44: "Stop gninnipS My sdroW!"
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#45-youre-a-square" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Задача 45: "You're a square!"
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#46-sum-of-digits-digital-root" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Задача 46: "Sum of Digits / Digital Root"
       
     </span>
   </a>
@@ -3853,127 +3809,6 @@ Can you finish the game so all the rules are met?</p>
 </code></pre></div>
 Данный подход является эталонным для C++. Использование <strong><code>std::stringstream</code></strong> элегантно решает проблему «последнего слова», так как строковый поток самостоятельно извлекает слова по пробелам и корректно завершает цикл <code>while</code>, когда поток пустеет. Проверка <code>!result.empty()</code> избавляет от появления лишних пробелов в начале или конце итоговой строки.</p>
 </details>
-<hr />
-<hr />
-<hr />
-<hr />
-<hr />
-<h2 id="45-youre-a-square">Задача 45: "You're a square!"</h2>
-<p>A square of squares. You like building blocks. You especially like building blocks that are squares. And what you even like more, is to arrange them into a square of square building blocks! Task: Given an integral number, determine if it's a square number.</p>
-<details open="open">
-<summary>На русском:</summary>
-<p>Напишите функцию, которая принимает целое число и определяет, является ли оно полным квадратом. Полный квадрат (или квадратное число) — это целое число, которое является квадратом другого целого числа. Простыми словами: это результат умножения какого-то целого числа на самого себя.</p>
-</details>
-<div class="highlight"><pre><span></span><code><span class="c1">// Пример использования:</span>
-<span class="n">is_square</span><span class="p">(</span><span class="mi">-1</span><span class="p">);</span><span class="w"> </span><span class="c1">// =&gt; returns false</span>
-<span class="n">is_square</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span><span class="w">  </span><span class="c1">// =&gt; returns true</span>
-<span class="n">is_square</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span><span class="w">  </span><span class="c1">// =&gt; returns false</span>
-<span class="n">is_square</span><span class="p">(</span><span class="mi">4</span><span class="p">);</span><span class="w">  </span><span class="c1">// =&gt; returns true</span>
-<span class="n">is_square</span><span class="p">(</span><span class="mi">25</span><span class="p">);</span><span class="w"> </span><span class="c1">// =&gt; returns true</span>
-<span class="n">is_square</span><span class="p">(</span><span class="mi">26</span><span class="p">);</span><span class="w"> </span><span class="c1">// =&gt; returns false</span>
-</code></pre></div>
-<details open="open">
-<summary>Решение:</summary>
-<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;cmath&gt;</span><span class="c1"> // Для функции std::sqrt</span>
-
-<span class="kt">bool</span><span class="w"> </span><span class="nf">is_square</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="c1">// Отрицательные числа не могут быть полными квадратами</span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
-<span class="w">    </span><span class="p">}</span>
-
-<span class="w">    </span><span class="c1">// Извлекаем корень и отбрасываем дробную часть при записи в int</span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">root</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">sqrt</span><span class="p">(</span><span class="n">n</span><span class="p">);</span>
-
-<span class="w">    </span><span class="c1">// Проверяем, вернет ли обратное умножение исходное число</span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">root</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">root</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">n</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div>
-</details>
-<details open="open">
-<summary>На заметку:</summary>
-<p><small><strong><code>bool</code></strong> — логический тип данных, который может принимать только два значения: <code>true</code> (истина) или <code>false</code> (ложь).<br />
-<strong><code>n &lt; 0</code></strong> — обязательный защитный барьер. Без него функция <code>std::sqrt</code> от отрицательного числа вернет <code>NaN</code>, что приведет к ошибкам компилятора или неверным результатам тестов.<br />
-<strong><code>std::sqrt</code></strong> — встроенная функция, которая высчитывает квадратный корень из числа. Для <code>25</code> вернет <code>5.0</code>, для <code>26</code> вернет <code>5.099...</code>.<br />
-<strong><code>int root</code></strong> — целочисленная переменная. При сохранении в нее дробного результата функции <code>sqrt</code>, язык C++ принудительно отсекает (а не округляет) всю дробную часть. Из <code>5.099</code> получится чистая <code>5</code>.<br />
-<strong><code>root * root == n</code></strong> — проверка «честности» корня. Мы умножаем полученное целое число само на себя и сверяем с оригиналом.</small></p>
-</details>
-<p><br></p>
-<blockquote>
-<p><big>Инсайт дня: Опасность "NaN" при работе с математическими функциями</big>
-Передача отрицательного аргумента в функцию извлечения корня <code>std::sqrt()</code> — классическая уязвимость в C++. Математически корень из минус единицы не определен среди действительных чисел, поэтому функция возвращает значение <code>NaN</code> (Not a Number). 
-<strong>Почему это важно:</strong> При попытке насильно преобразовать <code>NaN</code> в целое число <code>int</code>, в коде возникает неопределенное поведение (undefined behavior). Разные компиляторы обрабатывают это по-разному: один превратит его в ноль (и тогда <code>0 * 0 == 0</code> ошибочно вернет <code>true</code> для отрицательного числа), а другой выдаст критический сбой памяти. 
-<strong>Вывод:</strong> При работе со стандартными математическими библиотеками всегда делайте предварительную валидацию входных данных (аргументов) до того, как передать их в функцию.</p>
-</blockquote>
-<details open="open">
-<summary>Best Practices:</summary>
-<p><div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;cmath&gt;</span>
-
-<span class="kt">bool</span><span class="w"> </span><span class="nf">is_square</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="c1">// Короткая однострочная запись с ленивым вычислением</span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">std</span><span class="o">::</span><span class="n">sqrt</span><span class="p">(</span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">std</span><span class="o">::</span><span class="n">sqrt</span><span class="p">(</span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">n</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div>
-Этот подход считается ультимативным коротким решением. Логический оператор <strong><code>&amp;&amp;</code> (И)</strong> в C++ работает по «ленивому» принципу (short-circuit evaluation): если первая часть условия <code>n &gt;= 0</code> оказывается ложной, то вторая часть с функцией <code>std::sqrt</code> даже не начинает вычисляться. Это гарантирует стопроцентную безопасность кода и защиту от передачи отрицательных чисел в корень.</p>
-</details>
-<hr />
-<hr />
-<hr />
-<hr />
-<hr />
-<h2 id="46-sum-of-digits-digital-root">Задача 46: "Sum of Digits / Digital Root"</h2>
-<p>Digital root is the recursive sum of all the digits in a number. Given n, take the sum of the digits of n. If that value has more than one digit, continue reducing in this way until a single-digit number is produced. The input will be a non-negative integer.</p>
-<details open="open">
-<summary>На русском:</summary>
-</details>
-<p>Напишите функцию, которая принимает целое неотрицательное число и вычисляет его цифровой корень. Полный цифровой корень — это однозначное число, полученное в результате повторяющегося сложения всех цифр исходного числа, пока не останется одна цифра.</p>
-<div class="highlight"><pre><span></span><code><span class="c1">// Пример использования:</span>
-<span class="n">digital_root</span><span class="p">(</span><span class="mi">16</span><span class="p">);</span><span class="w">      </span><span class="c1">// =&gt; returns 7</span>
-<span class="n">digital_root</span><span class="p">(</span><span class="mi">942</span><span class="p">);</span><span class="w">     </span><span class="c1">// =&gt; returns 6</span>
-<span class="n">digital_root</span><span class="p">(</span><span class="mi">132189</span><span class="p">);</span><span class="w">  </span><span class="c1">// =&gt; returns 6</span>
-<span class="n">digital_root</span><span class="p">(</span><span class="mi">493193</span><span class="p">);</span><span class="w">  </span><span class="c1">// =&gt; returns 6</span>
-</code></pre></div>
-<details open="open">
-<summary>Решение:</summary>
-</details>
-<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="nf">digital_root</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="c1">// Внешний цикл: крутится до тех пор, пока число n не станет однозначным (меньше 10)</span>
-<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">10</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="c1">// Переменная-копилка для суммы цифр на текущем круге</span>
-
-<span class="w">        </span><span class="c1">// Внутренний цикл: полностью разбирает число n по цифрам и складывает их</span>
-<span class="w">        </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="n">res</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"> </span><span class="c1">// Забираем последнюю цифру в res</span>
-<span class="w">            </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w">    </span><span class="c1">// Отрезаем её от числа n</span>
-<span class="w">        </span><span class="p">}</span>
-
-<span class="w">        </span><span class="c1">// Переносим полученную сумму res обратно в n для следующей проверки</span>
-<span class="w">        </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">res</span><span class="p">;</span><span class="w"> </span>
-<span class="w">    </span><span class="p">}</span>
-
-<span class="w">    </span><span class="c1">// Как только число n упало ниже 10, цикл завершается и функция возвращает результат</span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span>
-<span class="p">}</span>
-</code></pre></div>
-<details open="open">
-<summary>На заметку:</summary>
-</details>
-<p><small><strong><code>while (n &gt;= 10)</code></strong> — главный управляющий цикл. Он гарантирует, что программа не закроется раньше времени, если после первого подсчета сумма цифр все еще осталась двузначной (например, из огромного числа получилось <code>18</code>, а не <code>9</code>). <strong><code>int res = 0</code></strong> — переменная создается заново на каждом круге внешнего цикла. Это важно, чтобы сумма цифр каждый раз считалась с чистого листа, а не прибавлялась к старым результатам. <strong><code>n % 10</code></strong> — операция взятия остатка от деления на 10. В C++ это самый надежный способ достать крайнюю правую цифру любого целого числа. <strong><code>n = n / 10</code></strong> — целочисленное деление на 10. Поскольку <code>n</code> имеет тип <code>int</code>, дробная часть просто отбрасывается. Это позволяет «стереть» уже посчитанную последнюю цифру и сдвинуть число влево. <strong><code>n = res</code></strong> — ключевой трюк алгоритма. Мы заменяем старое число новой суммой его цифр и отправляем его на повторную проверку в условие <code>n &gt;= 10</code>.</small></p>
-<p><br></p>
-<blockquote>
-<p><big>Инсайт дня: Вложенные циклы как инструмент пошагового сжатия данных</big>
-Использование одного цикла внутри другого — это классический паттерн «матрешки» в программировании. Внутренний цикл выполняет простую локальную работу (схлопывает число <code>942</code> в <code>15</code>), а внешний цикл контролирует глобальный бизнес-процесс (спрашивает: <em>«Результат уже готов или нужно запустить схлопывание еще раз?»</em>). Понимание того, как внутренний цикл передает свои результаты внешнему через переменную <code>n = res</code>, избавляет от необходимости писать три, четыре или десять одинаковых блоков кода вручную.</p>
-<p><strong>Вывод:</strong> Если вам нужно повторять одну и ту же операцию неизвестное количество раз до достижения конкретного критерия (например, пока число не станет маленьким), всегда оборачивайте рабочий цикл в еще один контролирующий цикл <code>while</code>.</p>
-</blockquote>
-<details open="open">
-<summary>Best Practices:</summary>
-</details>
-<p><div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="nf">digital_root</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="c1">// Ультимативное математическое решение без использования циклов</span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">9</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div>
-Этот подход считается ультимативным коротким решением. В высшей математике этот алгоритм называется <strong>цифровым вычетом</strong> по модулю 9. Из-за особенностей десятичной системы счисления, остаток от деления любого числа на <code>9</code> совпадает с суммой его цифр. Формула <code>(n - 1) % 9 + 1</code> идеально обрабатывает абсолютно любые числа за одну микросекунду, избегая бесконечных циклов и полностью решая проблему чисел, кратных девяти (для которых обычный оператор <code>% 9</code> возвращал бы ошибочный <code>0</code> вместо <code>9</code>).</p>
 
 
 
