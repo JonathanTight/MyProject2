@@ -790,17 +790,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#47-get-the-middle-character" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Задача 47: "Get the Middle Character"
-      
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -1362,17 +1351,6 @@
     <span class="md-ellipsis">
       
         Задача 46: "Sum of Digits / Digital Root"
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#47-get-the-middle-character" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Задача 47: "Get the Middle Character"
       
     </span>
   </a>
@@ -3996,64 +3974,6 @@ Can you finish the game so all the rules are met?</p>
 <span class="p">}</span>
 </code></pre></div>
 Этот подход считается ультимативным коротким решением. В высшей математике этот алгоритм называется <strong>цифровым вычетом</strong> по модулю 9. Из-за особенностей десятичной системы счисления, остаток от деления любого числа на <code>9</code> совпадает с суммой его цифр. Формула <code>(n - 1) % 9 + 1</code> идеально обрабатывает абсолютно любые числа за одну микросекунду, избегая бесконечных циклов и полностью решая проблему чисел, кратных девяти (для которых обычный оператор <code>% 9</code> возвращал бы ошибочный <code>0</code> вместо <code>9</code>).</p>
-<hr />
-<hr />
-<hr />
-<hr />
-<hr />
-<h2 id="47-get-the-middle-character">Задача 47: "Get the Middle Character"</h2>
-<p>You are going to be given a non-empty string. Your job is to return the middle character(s) of the string. If the string's length is odd, return the middle character. If the string's length is even, return the middle 2 characters.</p>
-<details open="open">
-<summary>На русском:</summary>
-<p>Напишите функцию, которая принимает непустую строку и возвращает её центральный символ (или символы). Если длина строки нечетная, нужно вернуть один средний символ. Если длина четная — верните два средних символа.</p>
-<div class="highlight"><pre><span></span><code><span class="c1">// Пример использования:</span>
-<span class="n">get_middle</span><span class="p">(</span><span class="s">&quot;test&quot;</span><span class="p">);</span><span class="w">    </span><span class="c1">// =&gt; returns &quot;es&quot;</span>
-<span class="n">get_middle</span><span class="p">(</span><span class="s">&quot;testing&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// =&gt; returns &quot;t&quot;</span>
-<span class="n">get_middle</span><span class="p">(</span><span class="s">&quot;middle&quot;</span><span class="p">);</span><span class="w">  </span><span class="c1">// =&gt; returns &quot;dd&quot;</span>
-<span class="n">get_middle</span><span class="p">(</span><span class="s">&quot;A&quot;</span><span class="p">);</span><span class="w">       </span><span class="c1">// =&gt; returns &quot;A&quot;</span>
-</code></pre></div>
-</details>
-<details open="open">
-<summary>Решение:</summary>
-<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string&gt;</span>
-
-<span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="nf">get_middle</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">input</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="c1">// Проверяем, четное ли количество букв в слове</span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">input</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="c1">// Для четной длины: берем 2 символа, начиная с позиции (середина - 1)</span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">input</span><span class="p">.</span><span class="n">substr</span><span class="p">((</span><span class="n">input</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span>
-<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="c1">// Для нечетной длины: берем 1 символ из самой середины</span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">input</span><span class="p">.</span><span class="n">substr</span><span class="p">(</span><span class="n">input</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div>
-</details>
-<details open="open">
-<summary>На заметку:</summary>
-<p><small><strong><code>input.size()</code></strong> — встроенный метод, который возвращает общее количество символов в строке.<br />
-<strong><code>% 2 == 0</code></strong> — проверка на четность с помощью оператора остатка от деления (<code>%</code>). Обрати внимание на два знака равенства <code>==</code> — в C++ это строгая проверка на равенство, а не присваивание <code>=</code>.<br />
-<strong><code>input.size() / 2</code></strong> — целочисленное деление. В C++ при делении целых чисел дробная часть отбрасывается. Например, для строки из 7 символов <code>7 / 2</code> даст ровно <code>3</code>.<br />
-<strong><code>input.substr()</code></strong> — функция вырезания подстроки. Принимает два аргумента: <code>(откуда_начать, сколько_символов_взять)</code>. Эти два числа никак не связаны между собой: левое вычисляет индекс старта, а правое жестко ограничивает длину вырезки (1 для нечетных, 2 для четных).</small></p>
-</details>
-<p><br></p>
-<blockquote>
-<p><big>Инсайт дня: Ловушка путаницы присваивания (<code>=</code>) и сравнения (<code>==</code>)</big>
-Использование одиночного знака <code>=</code> вместо двойного <code>==</code> внутри условий <code>if</code> — одна из главных причин багов у новичков в C++. Одиночный знак <code>=</code> принудительно перезаписывает значение переменной, в то время как <code>==</code> просто сравнивает левую и правую части, возвращая <code>true</code> или <code>false</code>.
-<strong>Почему это важно:</strong> Если случайно написать <code>if (x = 0)</code>, компилятор запишет <code>0</code> в переменную <code>x</code>, а само условие <code>if</code> посчитает ложным (так как ноль в C++ эквивалентен <code>false</code>). Код скомпилируется без явных ошибок, но логика программы полностью сломается.
-<strong>Вывод:</strong> Всегда внимательно проверяйте условия <code>if</code>: для проверки равенства обязаны стоять два символа <code>==</code>.</p>
-</blockquote>
-<details open="open">
-<summary>Best Practices:</summary>
-<p><div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string&gt;</span>
-
-<span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="nf">get_middle</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">input</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="c1">// Короткая запись в одну строчку через тернарный оператор</span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">input</span><span class="p">.</span><span class="n">substr</span><span class="p">((</span><span class="n">input</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="p">(</span><span class="n">input</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">2</span><span class="p">));</span>
-<span class="p">}</span>
-</code></pre></div>
-Этот подход использует чистую математику для устранения условий <code>if-else</code>. Выражение <code>(input.size() - 1) / 2</code> автоматически находит правильный стартовый индекс как для четной, так и для нечетной длины строки благодаря правилам целочисленного деления C++. Длина вырезаемой части регулируется формулой <code>2 - (input.size() % 2)</code>: если длина четная, остаток равен <code>0</code> и вырезается <code>2</code> символа; если нечетная — остаток равен <code>1</code> и вырезается <code>1</code> символ. Это делает код максимально компактным и производительным.</p>
-</details>
 
 
 
