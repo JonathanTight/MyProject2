@@ -801,28 +801,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#48-isogram" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Задача 48: "Isogram"
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#49-exes-and-ohs" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Задача 49: "Exes and Ohs"
-      
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -1395,28 +1373,6 @@
     <span class="md-ellipsis">
       
         Задача 47: "Get the Middle Character"
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#48-isogram" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Задача 48: "Isogram"
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#49-exes-and-ohs" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Задача 49: "Exes and Ohs"
       
     </span>
   </a>
@@ -4097,136 +4053,6 @@ Can you finish the game so all the rules are met?</p>
 <span class="p">}</span>
 </code></pre></div>
 Этот подход использует чистую математику для устранения условий <code>if-else</code>. Выражение <code>(input.size() - 1) / 2</code> автоматически находит правильный стартовый индекс как для четной, так и для нечетной длины строки благодаря правилам целочисленного деления C++. Длина вырезаемой части регулируется формулой <code>2 - (input.size() % 2)</code>: если длина четная, остаток равен <code>0</code> и вырезается <code>2</code> символа; если нечетная — остаток равен <code>1</code> и вырезается <code>1</code> символ. Это делает код максимально компактным и производительным.</p>
-</details>
-<hr />
-<hr />
-<hr />
-<hr />
-<hr />
-<h2 id="48-isogram">Задача 48: "Isogram"</h2>
-<p>An isogram is a word that has no repeating letters, consecutive or non-consecutive. Implement a function that determines whether a string that contains only letters is an isogram. Assume the empty string is an isogram. Ignore letter case.</p>
-<details open="open">
-<summary>На русском:</summary>
-<p>Напишите функцию, которая проверяет, является ли слово изограммой. Изограмма — это слово, в котором нет повторяющихся букв, независимо от того, стоят они рядом или в разных частях слова. Функция должна игнорировать регистр букв (большие и маленькие буквы считаются одинаковыми). Пустая строка считается изограммой.</p>
-<div class="highlight"><pre><span></span><code><span class="c1">// Пример использования:</span>
-<span class="n">is_isogram</span><span class="p">(</span><span class="s">&quot;Dermatoglyphics&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// =&gt; returns true</span>
-<span class="n">is_isogram</span><span class="p">(</span><span class="s">&quot;aba&quot;</span><span class="p">);</span><span class="w">             </span><span class="c1">// =&gt; returns false</span>
-<span class="n">is_isogram</span><span class="p">(</span><span class="s">&quot;moOse&quot;</span><span class="p">);</span><span class="w">           </span><span class="c1">// =&gt; returns false (регистр игнорируется)</span>
-</code></pre></div>
-</details>
-<details open="open">
-<summary>Решение:</summary>
-<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string&gt;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;cctype&gt;</span>
-
-<span class="kt">bool</span><span class="w"> </span><span class="nf">is_isogram</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span><span class="w"> </span><span class="n">str</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">size_t</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">str</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">size_t</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">str</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="w"> </span><span class="n">j</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">tolower</span><span class="p">(</span><span class="n">str</span><span class="p">[</span><span class="n">i</span><span class="p">])</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">tolower</span><span class="p">(</span><span class="n">str</span><span class="p">[</span><span class="n">j</span><span class="p">]))</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
-<span class="w">            </span><span class="p">}</span>
-<span class="w">        </span><span class="p">}</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div>
-</details>
-<details open="open">
-<summary>На заметку:</summary>
-<p><small><strong><code>#include &lt;cctype&gt;</code></strong> — библиотека, необходимая для работы с посимвольными функциями, включая приведение регистра букв.</small>
-<br>
-<small><strong><code>std::tolower()</code></strong> — функция, которая принимает символ и возвращает его в нижнем (маленьком) регистре. Если символ уже строчный или не является буквой, он остается без изменений.</small>
-<br>
-<small><strong><code>Вложенный цикл</code></strong> — внешний цикл фиксирует текущую букву по индексу <code>i</code>, а внутренний цикл с переменной <code>j = i + 1</code> проверяет только те символы, которые идут строго <em>после</em> неё. Это исключает повторное сравнение одних и тех же пар и сравнение буквы самой с собой.</small>
-<br>
-<small><strong><code>return false;</code></strong> — инструкция мгновенного выхода из функции. Как только внутренний <code>if</code> находит первое совпадение букв, выполнение всей функции прекращается, возвращая результат. Внешний код не тратит время на проверку остатка строки.</small></p>
-</details>
-<p><br></p>
-<blockquote>
-<p><big>Инсайт дня: Область видимости переменных (Variable Scope)</big>
-Переменные, созданные внутри круглых скобок цикла <code>for (size_t i = 0; ...)</code>, существуют и «видны» компилятору только внутри тела этого конкретного цикла (между его фигурными скобками <code>{ }</code>). </p>
-<p><strong>Почему это важно:</strong> Если закрыть фигурные скобки первого цикла, а затем ниже попытаться открыть второй цикл и использовать в нем переменную <code>i</code> (например, <code>j = i + 1</code>), компилятор выдаст ошибку <code>error: ‘i’ was not declared in this scope</code>. Для того чтобы внутренний цикл имел доступ к индексу <code>i</code>, он физически должен находиться <em>внутри</em> фигурных скобок внешнего цикла.</p>
-<p><strong>Вывод:</strong> Всегда следите за вложенностью блоков кода: переменные «живут» только внутри тех фигурных скобок, где они были объявлены.</p>
-</blockquote>
-<details open="open">
-<summary>Best Practices:</summary>
-<p><div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string&gt;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;set&gt;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;cctype&gt;</span>
-
-<span class="kt">bool</span><span class="w"> </span><span class="nf">is_isogram</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span><span class="w"> </span><span class="n">str</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">set</span><span class="o">&lt;</span><span class="kt">char</span><span class="o">&gt;</span><span class="w"> </span><span class="n">unique_letters</span><span class="p">;</span>
-<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">char</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">str</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">unique_letters</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">tolower</span><span class="p">(</span><span class="n">c</span><span class="p">));</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">unique_letters</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">str</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
-<span class="p">}</span>
-</code></pre></div>
-Использование двойного цикла заставляет компьютер совершать слишком много сравнений на длинных строках. В промышленной разработке и для лучшего решения на CodeWars используют структуру данных <code>std::set</code> (множество). Особенность множества в том, что оно хранит только уникальные значения. Мы перебираем строку быстрым циклом <code>for (char c : str)</code> и складываем буквы в <code>set</code>. Если в слове были повторы, <code>set</code> их просто не добавит. В конце мы сравниваем размер множества с длиной исходной строки: если они равны — дубликатов не было.</p>
-</details>
-<hr />
-<hr />
-<hr />
-<hr />
-<hr />
-<h2 id="49-exes-and-ohs">Задача 49: "Exes and Ohs"</h2>
-<p>Check to see if a string has the same amount of 'x's and 'o's. The method must return a boolean and be case insensitive. The string can contain any char.</p>
-<details open="open">
-<summary>На русском:</summary>
-<p>Напишите функцию, которая проверяет, содержит ли строка одинаковое количество букв 'x' и 'o'. Функция должна возвращать логическое значение (true/false) и игнорировать регистр букв. Строка может содержать любые символы.</p>
-<div class="highlight"><pre><span></span><code><span class="c1">// Пример использования:</span>
-<span class="n">XO</span><span class="p">(</span><span class="s">&quot;ooxx&quot;</span><span class="p">);</span><span class="w">    </span><span class="c1">// =&gt; returns true</span>
-<span class="n">XO</span><span class="p">(</span><span class="s">&quot;xooxx&quot;</span><span class="p">);</span><span class="w">   </span><span class="c1">// =&gt; returns false</span>
-<span class="n">XO</span><span class="p">(</span><span class="s">&quot;ooxXm&quot;</span><span class="p">);</span><span class="w">   </span><span class="c1">// =&gt; returns true (регистр игнорируется)</span>
-<span class="n">XO</span><span class="p">(</span><span class="s">&quot;zpzpzpp&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// =&gt; returns true (когда нет ни x, ни o, то 0 == 0)</span>
-</code></pre></div>
-</details>
-<details open="open">
-<summary>Решение:</summary>
-<div class="highlight"><pre><span></span><code><span class="kt">bool</span><span class="w"> </span><span class="nf">XO</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span><span class="w"> </span><span class="n">str</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">o</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span>
-<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">str</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">){</span><span class="w"> </span>
-<span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">tolower</span><span class="p">(</span><span class="n">str</span><span class="p">[</span><span class="n">i</span><span class="p">])</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="sc">&#39;x&#39;</span><span class="p">)</span><span class="w"> </span><span class="n">x</span><span class="o">++</span><span class="p">;</span><span class="w"> </span>
-<span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">tolower</span><span class="p">(</span><span class="n">str</span><span class="p">[</span><span class="n">i</span><span class="p">])</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="sc">&#39;o&#39;</span><span class="p">)</span><span class="w"> </span><span class="n">o</span><span class="o">++</span><span class="p">;</span><span class="w"> </span>
-<span class="w">    </span><span class="p">}</span><span class="w"> </span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">o</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span><span class="w"> </span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span><span class="w"> </span>
-<span class="p">}</span>
-</code></pre></div>
-</details>
-<details open="open">
-<summary>На заметку:</summary>
-<p><small><strong><code>int x = 0</code> и <code>int o = 0</code></strong> — переменные-счетчики. Они создаются до начала цикла, чтобы сохранять и накапливать количество найденных букв при каждой итерации.</small>
-<br>
-<small><strong><code>'x'</code> и <code>'o'</code></strong> — одиночные символы. В C++ они обязательно записываются в одинарных кавычках. Двойные кавычки используются только для целых строк (<code>"строка"</code>).</small>
-<br>
-<small><strong><code>str[i]</code></strong> — обращение к конкретному символу строки по его индексу. Переменная <code>i</code> увеличивается на каждом шаге цикла, позволяя проверить всю строку от начала до конца.</small>
-<br>
-<small><strong><code>Финал функции</code></strong> — сравнение <code>if (x == o)</code> происходит строго <em>после</em> закрытия фигурной скобки цикла <code>for</code>. Функция возвращает результат только тогда, когда компьютер перебрал абсолютно все символы в строке.</small></p>
-</details>
-<p><br></p>
-<blockquote>
-<p><big>Инсайт дня: Разница между подсчетом и мгновенным выходом</big>
-Если внутри цикла написать <code>return</code>, то функция мгновенно прекратит свою работу, и цикл дальше не пойдет. Это полезно, когда нужно найти один дубликат (как в задаче с изограммой). Но если нужно узнать <em>общее количество</em> чего-либо, то делать <code>return</code> внутри цикла нельзя. Компьютер должен сначала завершить весь цикл, сосчитать все элементы, и только в самом конце выдать результат.</p>
-</blockquote>
-<details open="open">
-<summary>Best Practices:</summary>
-<p><div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string&gt;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;algorithm&gt;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;cctype&gt;</span>
-
-<span class="kt">bool</span><span class="w"> </span><span class="nf">XO</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span><span class="w"> </span><span class="n">str</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">o</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">char</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">str</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">tolower</span><span class="p">(</span><span class="n">c</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="sc">&#39;x&#39;</span><span class="p">)</span><span class="w"> </span><span class="n">x</span><span class="o">++</span><span class="p">;</span>
-<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">tolower</span><span class="p">(</span><span class="n">c</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="sc">&#39;o&#39;</span><span class="p">)</span><span class="w"> </span><span class="n">o</span><span class="o">++</span><span class="p">;</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">o</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div>
-В более продвинутом варианте используется компактный синтаксис. Запись <code>x++</code> делает ровно то же самое, что и <code>x = x + 1</code>. Вместо громоздкой конструкции <code>if-else</code> в конце пишется строка <code>return x == o;</code>. Компьютер сам вычислит это равенство: если оно верное, вернется <code>true</code>, если неверное — <code>false</code>. Использование цикла <code>for (char c : str)</code> избавляет от необходимости вручную работать с индексами строки.</p>
 </details>
 
 
