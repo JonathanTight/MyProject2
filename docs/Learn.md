@@ -1,29 +1,21 @@
-ПРИВЕТ! Здесь я буду проходить практику по Страуструпу от А до Я!
-Будет теория и задачи. Или нет.
+##1: Переписать вручную КОД и запустить
 
-[Ссылка на книгу](https://www.rulit.me/books/programmirovanie-principy-i-praktika-ispolzovaniya-c-ispravlennoe-izdanie-read-809700-36.html)
+???+ "Код:" 
+    ```cpp
+    #include <iostream>
 
-
-
-```cpp
-Код:
-//Эта программа выводит на экран сообщение "Hello, World!"
-#include<iostream>
-#include<string>
-#include<vector>
-#include<algorithm>
-#include<cmath>
-using namespace std;
+    int main()
+    {
+        std::cout << "Hello, World! \n";
+        return 0;
+    }
+    ```
 
 
-int main() // Программы на C++ начинаются с выполнения функции main
-{
-    cout << "Hello, programming! \n";
-    cout << "Here we go!\n";
+???+ "Терминал:"
+    `Hello, World!`
 
-    return 0;
-}
 
-Терминал:
-Hello, World!
-```
+
+
+
