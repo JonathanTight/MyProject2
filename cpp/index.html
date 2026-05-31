@@ -4074,13 +4074,13 @@ Can you finish the game so all the rules are met?</p>
 <details open="open">
 <summary>На русском:</summary>
 <p>Напишите функцию, которая принимает непустую строку и возвращает её центральный символ (или символы). Если длина строки нечетная, нужно вернуть один средний символ. Если длина четная — верните два средних символа.</p>
+</details>
 <div class="highlight"><pre><span></span><code><span class="c1">// Пример использования:</span>
 <span class="n">get_middle</span><span class="p">(</span><span class="s">&quot;test&quot;</span><span class="p">);</span><span class="w">    </span><span class="c1">// =&gt; returns &quot;es&quot;</span>
 <span class="n">get_middle</span><span class="p">(</span><span class="s">&quot;testing&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// =&gt; returns &quot;t&quot;</span>
 <span class="n">get_middle</span><span class="p">(</span><span class="s">&quot;middle&quot;</span><span class="p">);</span><span class="w">  </span><span class="c1">// =&gt; returns &quot;dd&quot;</span>
 <span class="n">get_middle</span><span class="p">(</span><span class="s">&quot;A&quot;</span><span class="p">);</span><span class="w">       </span><span class="c1">// =&gt; returns &quot;A&quot;</span>
 </code></pre></div>
-</details>
 <details open="open">
 <summary>Решение:</summary>
 <div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string&gt;</span>
@@ -4132,12 +4132,12 @@ Can you finish the game so all the rules are met?</p>
 <details open="open">
 <summary>На русском:</summary>
 <p>Напишите функцию, которая проверяет, является ли слово изограммой. Изограмма — это слово, в котором нет повторяющихся букв, независимо от того, стоят они рядом или в разных частях слова. Функция должна игнорировать регистр букв (большие и маленькие буквы считаются одинаковыми). Пустая строка считается изограммой.</p>
+</details>
 <div class="highlight"><pre><span></span><code><span class="c1">// Пример использования:</span>
 <span class="n">is_isogram</span><span class="p">(</span><span class="s">&quot;Dermatoglyphics&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// =&gt; returns true</span>
 <span class="n">is_isogram</span><span class="p">(</span><span class="s">&quot;aba&quot;</span><span class="p">);</span><span class="w">             </span><span class="c1">// =&gt; returns false</span>
 <span class="n">is_isogram</span><span class="p">(</span><span class="s">&quot;moOse&quot;</span><span class="p">);</span><span class="w">           </span><span class="c1">// =&gt; returns false (регистр игнорируется)</span>
 </code></pre></div>
-</details>
 <details open="open">
 <summary>Решение:</summary>
 <div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string&gt;</span>
@@ -4198,13 +4198,13 @@ Can you finish the game so all the rules are met?</p>
 <details open="open">
 <summary>На русском:</summary>
 <p>Напишите функцию, которая проверяет, содержит ли строка одинаковое количество букв 'x' и 'o'. Функция должна возвращать логическое значение (true/false) и игнорировать регистр букв. Строка может содержать любые символы.</p>
+</details>
 <div class="highlight"><pre><span></span><code><span class="c1">// Пример использования:</span>
 <span class="n">XO</span><span class="p">(</span><span class="s">&quot;ooxx&quot;</span><span class="p">);</span><span class="w">    </span><span class="c1">// =&gt; returns true</span>
 <span class="n">XO</span><span class="p">(</span><span class="s">&quot;xooxx&quot;</span><span class="p">);</span><span class="w">   </span><span class="c1">// =&gt; returns false</span>
 <span class="n">XO</span><span class="p">(</span><span class="s">&quot;ooxXm&quot;</span><span class="p">);</span><span class="w">   </span><span class="c1">// =&gt; returns true (регистр игнорируется)</span>
 <span class="n">XO</span><span class="p">(</span><span class="s">&quot;zpzpzpp&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// =&gt; returns true (когда нет ни x, ни o, то 0 == 0)</span>
 </code></pre></div>
-</details>
 <details open="open">
 <summary>Решение:</summary>
 <div class="highlight"><pre><span></span><code><span class="kt">bool</span><span class="w"> </span><span class="nf">XO</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span><span class="w"> </span><span class="n">str</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
