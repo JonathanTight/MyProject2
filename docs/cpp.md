@@ -2980,13 +2980,13 @@ You are going to be given a non-empty string. Your job is to return the middle c
 ???+ "На русском:"
     Напишите функцию, которая принимает непустую строку и возвращает её центральный символ (или символы). Если длина строки нечетная, нужно вернуть один средний символ. Если длина четная — верните два средних символа.
     
-    ```cpp
-    // Пример использования:
-    get_middle("test");    // => returns "es"
-    get_middle("testing"); // => returns "t"
-    get_middle("middle");  // => returns "dd"
-    get_middle("A");       // => returns "A"
-    ```
+```cpp
+// Пример использования:
+get_middle("test");    // => returns "es"
+get_middle("testing"); // => returns "t"
+get_middle("middle");  // => returns "dd"
+get_middle("A");       // => returns "A"
+```
 
 ???+ "Решение:"
     ```cpp
@@ -3046,12 +3046,12 @@ An isogram is a word that has no repeating letters, consecutive or non-consecuti
 ???+ "На русском:"
     Напишите функцию, которая проверяет, является ли слово изограммой. Изограмма — это слово, в котором нет повторяющихся букв, независимо от того, стоят они рядом или в разных частях слова. Функция должна игнорировать регистр букв (большие и маленькие буквы считаются одинаковыми). Пустая строка считается изограммой.
 
-    ```cpp
-    // Пример использования:
-    is_isogram("Dermatoglyphics"); // => returns true
-    is_isogram("aba");             // => returns false
-    is_isogram("moOse");           // => returns false (регистр игнорируется)
-    ```
+```cpp
+// Пример использования:
+is_isogram("Dermatoglyphics"); // => returns true
+is_isogram("aba");             // => returns false
+is_isogram("moOse");           // => returns false (регистр игнорируется)
+```
 
 ???+ "Решение:"
     ```cpp
@@ -3122,13 +3122,13 @@ Check to see if a string has the same amount of 'x's and 'o's. The method must r
 ???+ "На русском:"
     Напишите функцию, которая проверяет, содержит ли строка одинаковое количество букв 'x' и 'o'. Функция должна возвращать логическое значение (true/false) и игнорировать регистр букв. Строка может содержать любые символы.
 
-    ```cpp
-    // Пример использования:
-    XO("ooxx");    // => returns true
-    XO("xooxx");   // => returns false
-    XO("ooxXm");   // => returns true (регистр игнорируется)
-    XO("zpzpzpp"); // => returns true (когда нет ни x, ни o, то 0 == 0)
-    ```
+```cpp
+// Пример использования:
+XO("ooxx");    // => returns true
+XO("xooxx");   // => returns false
+XO("ooxXm");   // => returns true (регистр игнорируется)
+XO("zpzpzpp"); // => returns true (когда нет ни x, ни o, то 0 == 0)
+```
 
 ???+ "Решение:"
     ```cpp

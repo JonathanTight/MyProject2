@@ -823,6 +823,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#50-string-ends-with" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 50: "String Ends With?"
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1417,6 +1428,17 @@
     <span class="md-ellipsis">
       
         Задача 49: "Exes and Ohs"
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#50-string-ends-with" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Задача 50: "String Ends With?"
       
     </span>
   </a>
@@ -3966,10 +3988,12 @@ Can you finish the game so all the rules are met?</p>
 </details>
 <p><br></p>
 <blockquote>
-<p><big>Инсайт дня: Опасность "NaN" при работе с математическими функциями</big>
-Передача отрицательного аргумента в функцию извлечения корня <code>std::sqrt()</code> — классическая уязвимость в C++. Математически корень из минус единицы не определен среди действительных чисел, поэтому функция возвращает значение <code>NaN</code> (Not a Number). 
-<strong>Почему это важно:</strong> При попытке насильно преобразовать <code>NaN</code> в целое число <code>int</code>, в коде возникает неопределенное поведение (undefined behavior). Разные компиляторы обрабатывают это по-разному: один превратит его в ноль (и тогда <code>0 * 0 == 0</code> ошибочно вернет <code>true</code> для отрицательного числа), а другой выдаст критический сбой памяти. 
-<strong>Вывод:</strong> При работе со стандартными математическими библиотеками всегда делайте предварительную валидацию входных данных (аргументов) до того, как передать их в функцию.</p>
+<p><big>Инсайт дня: Опасность "NaN" при работе с математическими функциями</big>  </p>
+</blockquote>
+<p>Передача отрицательного аргумента в функцию извлечения корня <code>std::sqrt()</code> — классическая уязвимость в C++. Математически корень из минус единицы не определен среди действительных чисел, поэтому функция возвращает значение <code>NaN</code> (Not a Number). 
+<strong>Почему это важно:</strong> При попытке насильно преобразовать <code>NaN</code> в целое число <code>int</code>, в коде возникает неопределенное поведение (undefined behavior). Разные компиляторы обрабатывают это по-разному: один превратит его в ноль (и тогда <code>0 * 0 == 0</code> ошибочно вернет <code>true</code> для отрицательного числа), а другой выдаст критический сбой памяти. </p>
+<blockquote>
+<p><strong>Вывод:</strong> При работе со стандартными математическими библиотеками всегда делайте предварительную валидацию входных данных (аргументов) до того, как передать их в функцию.</p>
 </blockquote>
 <details open="open">
 <summary>Best Practices:</summary>
@@ -3991,8 +4015,8 @@ Can you finish the game so all the rules are met?</p>
 <p>Digital root is the recursive sum of all the digits in a number. Given n, take the sum of the digits of n. If that value has more than one digit, continue reducing in this way until a single-digit number is produced. The input will be a non-negative integer.</p>
 <details open="open">
 <summary>На русском:</summary>
-</details>
 <p>Напишите функцию, которая принимает целое неотрицательное число и вычисляет его цифровой корень. Полный цифровой корень — это однозначное число, полученное в результате повторяющегося сложения всех цифр исходного числа, пока не останется одна цифра.</p>
+</details>
 <div class="highlight"><pre><span></span><code><span class="c1">// Пример использования:</span>
 <span class="n">digital_root</span><span class="p">(</span><span class="mi">16</span><span class="p">);</span><span class="w">      </span><span class="c1">// =&gt; returns 7</span>
 <span class="n">digital_root</span><span class="p">(</span><span class="mi">942</span><span class="p">);</span><span class="w">     </span><span class="c1">// =&gt; returns 6</span>
@@ -4001,45 +4025,45 @@ Can you finish the game so all the rules are met?</p>
 </code></pre></div>
 <details open="open">
 <summary>Решение:</summary>
-</details>
 <div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="nf">digital_root</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="c1">// Внешний цикл: крутится до тех пор, пока число n не станет однозначным (меньше 10)</span>
-<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">10</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="c1">// Переменная-копилка для суммы цифр на текущем круге</span>
+<span class="c1">// Внешний цикл: крутится до тех пор, пока число n не станет однозначным (меньше 10)</span>
+<span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">10</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="c1">// Переменная-копилка для суммы цифр на текущем круге</span>
 
-<span class="w">        </span><span class="c1">// Внутренний цикл: полностью разбирает число n по цифрам и складывает их</span>
-<span class="w">        </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="n">res</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"> </span><span class="c1">// Забираем последнюю цифру в res</span>
-<span class="w">            </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w">    </span><span class="c1">// Отрезаем её от числа n</span>
-<span class="w">        </span><span class="p">}</span>
-
-<span class="w">        </span><span class="c1">// Переносим полученную сумму res обратно в n для следующей проверки</span>
-<span class="w">        </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">res</span><span class="p">;</span><span class="w"> </span>
+<span class="w">    </span><span class="c1">// Внутренний цикл: полностью разбирает число n по цифрам и складывает их</span>
+<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">res</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"> </span><span class="c1">// Забираем последнюю цифру в res</span>
+<span class="w">        </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w">    </span><span class="c1">// Отрезаем её от числа n</span>
 <span class="w">    </span><span class="p">}</span>
 
-<span class="w">    </span><span class="c1">// Как только число n упало ниже 10, цикл завершается и функция возвращает результат</span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span>
+<span class="w">    </span><span class="c1">// Переносим полученную сумму res обратно в n для следующей проверки</span>
+<span class="w">    </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">res</span><span class="p">;</span><span class="w"> </span>
+<span class="p">}</span>
+
+<span class="c1">// Как только число n упало ниже 10, цикл завершается и функция возвращает результат</span>
+<span class="k">return</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span>
 <span class="p">}</span>
 </code></pre></div>
+</details>
 <details open="open">
 <summary>На заметку:</summary>
-</details>
 <p><small><strong><code>while (n &gt;= 10)</code></strong> — главный управляющий цикл. Он гарантирует, что программа не закроется раньше времени, если после первого подсчета сумма цифр все еще осталась двузначной (например, из огромного числа получилось <code>18</code>, а не <code>9</code>). <strong><code>int res = 0</code></strong> — переменная создается заново на каждом круге внешнего цикла. Это важно, чтобы сумма цифр каждый раз считалась с чистого листа, а не прибавлялась к старым результатам. <strong><code>n % 10</code></strong> — операция взятия остатка от деления на 10. В C++ это самый надежный способ достать крайнюю правую цифру любого целого числа. <strong><code>n = n / 10</code></strong> — целочисленное деление на 10. Поскольку <code>n</code> имеет тип <code>int</code>, дробная часть просто отбрасывается. Это позволяет «стереть» уже посчитанную последнюю цифру и сдвинуть число влево. <strong><code>n = res</code></strong> — ключевой трюк алгоритма. Мы заменяем старое число новой суммой его цифр и отправляем его на повторную проверку в условие <code>n &gt;= 10</code>.</small></p>
+</details>
 <p><br></p>
 <blockquote>
-<p><big>Инсайт дня: Вложенные циклы как инструмент пошагового сжатия данных</big>
-Использование одного цикла внутри другого — это классический паттерн «матрешки» в программировании. Внутренний цикл выполняет простую локальную работу (схлопывает число <code>942</code> в <code>15</code>), а внешний цикл контролирует глобальный бизнес-процесс (спрашивает: <em>«Результат уже готов или нужно запустить схлопывание еще раз?»</em>). Понимание того, как внутренний цикл передает свои результаты внешнему через переменную <code>n = res</code>, избавляет от необходимости писать три, четыре или десять одинаковых блоков кода вручную.</p>
-<p><strong>Вывод:</strong> Если вам нужно повторять одну и ту же операцию неизвестное количество раз до достижения конкретного критерия (например, пока число не станет маленьким), всегда оборачивайте рабочий цикл в еще один контролирующий цикл <code>while</code>.</p>
+<p><big>Инсайт дня: Вложенные циклы как инструмент пошагового сжатия данных</big>  </p>
 </blockquote>
+<p>Использование одного цикла внутри другого — это классический паттерн «матрешки» в программировании. Внутренний цикл выполняет простую локальную работу (схлопывает число <code>942</code> в <code>15</code>), а внешний цикл контролирует глобальный бизнес-процесс (спрашивает: <em>«Результат уже готов или нужно запустить схлопывание еще раз?»</em>). Понимание того, как внутренний цикл передает свои результаты внешнему через переменную <code>n = res</code>, избавляет от необходимости писать три, четыре или десять одинаковых блоков кода вручную.</p>
+<p><strong>Вывод:</strong> Если вам нужно повторять одну и ту же операцию неизвестное количество раз до достижения конкретного критерия (например, пока число не станет маленьким), всегда оборачивайте рабочий цикл в еще один контролирующий цикл <code>while</code>.</p>
 <details open="open">
 <summary>Best Practices:</summary>
-</details>
-<p><div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="nf">digital_root</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="c1">// Ультимативное математическое решение без использования циклов</span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">9</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="nf">digital_root</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="c1">// Ультимативное математическое решение без использования циклов</span>
+<span class="k">return</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">9</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-Этот подход считается ультимативным коротким решением. В высшей математике этот алгоритм называется <strong>цифровым вычетом</strong> по модулю 9. Из-за особенностей десятичной системы счисления, остаток от деления любого числа на <code>9</code> совпадает с суммой его цифр. Формула <code>(n - 1) % 9 + 1</code> идеально обрабатывает абсолютно любые числа за одну микросекунду, избегая бесконечных циклов и полностью решая проблему чисел, кратных девяти (для которых обычный оператор <code>% 9</code> возвращал бы ошибочный <code>0</code> вместо <code>9</code>).</p>
+</details>
+<p>Этот подход считается ультимативным коротким решением. В высшей математике этот алгоритм называется <strong>цифровым вычетом</strong> по модулю 9. Из-за особенностей десятичной системы счисления, остаток от деления любого числа на <code>9</code> совпадает с суммой его цифр. Формула <code>(n - 1) % 9 + 1</code> идеально обрабатывает абсолютно любые числа за одну микросекунду, избегая бесконечных циклов и полностью решая проблему чисел, кратных девяти (для которых обычный оператор <code>% 9</code> возвращал бы ошибочный <code>0</code> вместо <code>9</code>).</p>
 <hr />
 <hr />
 <hr />
@@ -4082,11 +4106,11 @@ Can you finish the game so all the rules are met?</p>
 </details>
 <p><br></p>
 <blockquote>
-<p><big>Инсайт дня: Ловушка путаницы присваивания (<code>=</code>) и сравнения (<code>==</code>)</big>
-Использование одиночного знака <code>=</code> вместо двойного <code>==</code> внутри условий <code>if</code> — одна из главных причин багов у новичков в C++. Одиночный знак <code>=</code> принудительно перезаписывает значение переменной, в то время как <code>==</code> просто сравнивает левую и правую части, возвращая <code>true</code> или <code>false</code>.
+<p><big>Инсайт дня: Ловушка путаницы присваивания (<code>=</code>) и сравнения (<code>==</code>)</big>  </p>
+</blockquote>
+<p>Использование одиночного знака <code>=</code> вместо двойного <code>==</code> внутри условий <code>if</code> — одна из главных причин багов у новичков в C++. Одиночный знак <code>=</code> принудительно перезаписывает значение переменной, в то время как <code>==</code> просто сравнивает левую и правую части, возвращая <code>true</code> или <code>false</code>.
 <strong>Почему это важно:</strong> Если случайно написать <code>if (x = 0)</code>, компилятор запишет <code>0</code> в переменную <code>x</code>, а само условие <code>if</code> посчитает ложным (так как ноль в C++ эквивалентен <code>false</code>). Код скомпилируется без явных ошибок, но логика программы полностью сломается.
 <strong>Вывод:</strong> Всегда внимательно проверяйте условия <code>if</code>: для проверки равенства обязаны стоять два символа <code>==</code>.</p>
-</blockquote>
 <details open="open">
 <summary>Best Practices:</summary>
 <p><div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string&gt;</span>
@@ -4143,11 +4167,11 @@ Can you finish the game so all the rules are met?</p>
 </details>
 <p><br></p>
 <blockquote>
-<p><big>Инсайт дня: Область видимости переменных (Variable Scope)</big>
-Переменные, созданные внутри круглых скобок цикла <code>for (size_t i = 0; ...)</code>, существуют и «видны» компилятору только внутри тела этого конкретного цикла (между его фигурными скобками <code>{ }</code>). </p>
+<p><big>Инсайт дня: Область видимости переменных (Variable Scope)</big>  </p>
+</blockquote>
+<p>Переменные, созданные внутри круглых скобок цикла <code>for (size_t i = 0; ...)</code>, существуют и «видны» компилятору только внутри тела этого конкретного цикла (между его фигурными скобками <code>{ }</code>). </p>
 <p><strong>Почему это важно:</strong> Если закрыть фигурные скобки первого цикла, а затем ниже попытаться открыть второй цикл и использовать в нем переменную <code>i</code> (например, <code>j = i + 1</code>), компилятор выдаст ошибку <code>error: ‘i’ was not declared in this scope</code>. Для того чтобы внутренний цикл имел доступ к индексу <code>i</code>, он физически должен находиться <em>внутри</em> фигурных скобок внешнего цикла.</p>
 <p><strong>Вывод:</strong> Всегда следите за вложенностью блоков кода: переменные «живут» только внутри тех фигурных скобок, где они были объявлены.</p>
-</blockquote>
 <details open="open">
 <summary>Best Practices:</summary>
 <p><div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string&gt;</span>
@@ -4207,9 +4231,9 @@ Can you finish the game so all the rules are met?</p>
 </details>
 <p><br></p>
 <blockquote>
-<p><big>Инсайт дня: Разница между подсчетом и мгновенным выходом</big>
-Если внутри цикла написать <code>return</code>, то функция мгновенно прекратит свою работу, и цикл дальше не пойдет. Это полезно, когда нужно найти один дубликат (как в задаче с изограммой). Но если нужно узнать <em>общее количество</em> чего-либо, то делать <code>return</code> внутри цикла нельзя. Компьютер должен сначала завершить весь цикл, сосчитать все элементы, и только в самом конце выдать результат.</p>
+<p><big>Инсайт дня: Разница между подсчетом и мгновенным выходом</big>  </p>
 </blockquote>
+<p>Если внутри цикла написать <code>return</code>, то функция мгновенно прекратит свою работу, и цикл дальше не пойдет. Это полезно, когда нужно найти один дубликат (как в задаче с изограммой). Но если нужно узнать <em>общее количество</em> чего-либо, то делать <code>return</code> внутри цикла нельзя. Компьютер должен сначала завершить весь цикл, сосчитать все элементы, и только в самом конце выдать результат.</p>
 <details open="open">
 <summary>Best Practices:</summary>
 <p><div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string&gt;</span>
@@ -4227,6 +4251,62 @@ Can you finish the game so all the rules are met?</p>
 <span class="p">}</span>
 </code></pre></div>
 В более продвинутом варианте используется компактный синтаксис. Запись <code>x++</code> делает ровно то же самое, что и <code>x = x + 1</code>. Вместо громоздкой конструкции <code>if-else</code> в конце пишется строка <code>return x == o;</code>. Компьютер сам вычислит это равенство: если оно верное, вернется <code>true</code>, если неверное — <code>false</code>. Использование цикла <code>for (char c : str)</code> избавляет от необходимости вручную работать с индексами строки.</p>
+</details>
+<hr />
+<hr />
+<hr />
+<hr />
+<hr />
+<h2 id="50-string-ends-with">Задача 50: "String Ends With?"</h2>
+<p>Check to see if the first argument (string) passed in ends with the 2nd argument (also a string). The method must return a boolean.</p>
+<details open="open">
+<summary>На русском:</summary>
+<p>Напишите функцию, которая проверяет, заканчивается ли первая строка (<code>str</code>) второй строкой (<code>ending</code>). Функция должна возвращать логическое значение (<code>true</code>/<code>false</code>).</p>
+</details>
+<div class="highlight"><pre><span></span><code><span class="c1">// Пример использования:</span>
+<span class="n">solution</span><span class="p">(</span><span class="s">&quot;abc&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;bc&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// =&gt; returns true</span>
+<span class="n">solution</span><span class="p">(</span><span class="s">&quot;abc&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;d&quot;</span><span class="p">);</span><span class="w">  </span><span class="c1">// =&gt; returns false</span>
+<span class="n">solution</span><span class="p">(</span><span class="s">&quot;abcde&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// =&gt; returns true (пустая строка всегда в конце)</span>
+</code></pre></div>
+<details open="open">
+<summary>Решение:</summary>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string&gt;</span>
+
+<span class="kt">bool</span><span class="w"> </span><span class="nf">solution</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span><span class="w"> </span><span class="n">str</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span><span class="w"> </span><span class="n">ending</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">str</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">ending</span><span class="p">.</span><span class="n">size</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="k">return</span><span class="w"> </span><span class="n">str</span><span class="p">.</span><span class="n">substr</span><span class="p">(</span><span class="n">str</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">ending</span><span class="p">.</span><span class="n">size</span><span class="p">())</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">ending</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+</details>
+<details open="open">
+<summary>На заметку:</summary>
+<p><small><strong><code>str.size() &lt; ending.size()</code></strong> — обязательная защитная проверка. Если искомая концовка длиннее самой строки, то строка физически не может ей заканчиваться. Без этой проверки программа выдаст ошибку при попытке обрезать строку.</small>
+<br>
+<small><strong><code>str.substr()</code></strong> — метод, который «отрезает» и возвращает кусочек (подстроку) из исходной строки <code>str</code>. Ему нужно передать индекс, с которого начнется вырезка.</small>
+<br>
+<small><strong><code>str.size() - ending.size()</code></strong> — математическая формула для поиска точки старта. Мы вычитаем длину концовки из полной длины строки, чтобы получить точный индекс, с которого должен начинаться хвост строки.</small>
+<br>
+<small><strong><code>Финал функции</code></strong> — оператор <code>==</code> сравнивает вырезанный хвост строки с искомым значением <code>ending</code> и сразу возвращает результат (<code>true</code>, если они совпали, и <code>false</code>, если нет).</small>
+<br></p>
+</details>
+<blockquote>
+<p><big>Инсайт дня: Безопасность при работе с памятью и индексами</big>  </p>
+</blockquote>
+<p>В C++ метод <code>str.substr()</code> вызовет критическую ошибку <code>std::out_of_range</code>, если передать в него отрицательный индекс. Именно поэтому предварительная проверка <code>str.size() &lt; ending.size()</code> критически важна. Она гарантирует, что разность длин всегда будет больше или равна нулю, защищая программу от аварийного завершения.</p>
+<details open="open">
+<summary>Best Practices:</summary>
+<p><div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string&gt;</span>
+
+<span class="kt">bool</span><span class="w"> </span><span class="nf">solution</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span><span class="w"> </span><span class="n">str</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span><span class="w"> </span><span class="n">ending</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">str</span><span class="p">.</span><span class="n">length</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">ending</span><span class="p">.</span><span class="n">length</span><span class="p">())</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
+
+<span class="k">return</span><span class="w"> </span><span class="n">str</span><span class="p">.</span><span class="n">compare</span><span class="p">(</span><span class="n">str</span><span class="p">.</span><span class="n">length</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">ending</span><span class="p">.</span><span class="n">length</span><span class="p">(),</span><span class="w"> </span><span class="n">ending</span><span class="p">.</span><span class="n">length</span><span class="p">(),</span><span class="w"> </span><span class="n">ending</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+В более продвинутом варианте используется метод <code>str.compare()</code>. В отличие от <code>substr()</code>, он не создает новую подстроку в памяти компьютера, а просто сверяет символы по указанным индексам «на месте». Запись расшифровывается так: берем строку <code>str</code>, отступаем с конца длину <code>ending</code>, отсчитываем ровно столько символов, сколько длится <code>ending</code>, и сравниваем с самой строкой <code>ending</code>. Если метод возвращает <code>0</code>, значит, строки абсолютно идентичны. Это решение работает быстрее и экономит оперативную память.</p>
+<p>Если в C++20 и новее, для этой задачи появился стандартный встроенный метод <code>str.ends_with(ending)</code>, который делает весь этот процесс одной короткой командой.</p>
 </details>
 
 
